@@ -16,7 +16,7 @@ Le 23/11/2026, à la demande de l'utilisateur, la page « Les attaques » (`site
 
 ## Compromission de comptes
 - Authentification multi-facteur sur chaque compte.
-- Une phrase de passe unique par service, rangée dans un gestionnaire de mots de passe.
+- Un mot de passe long et unique par service, rangé dans un gestionnaire de mots de passe.
 - Refuser toute demande de validation MFA que l'on n'a pas lancée (fatigue MFA).
 - En cas de doute : changer le mot de passe depuis un autre appareil, consulter le journal des connexions, prévenir Practilio, qui coupe les sessions ouvertes.
 
