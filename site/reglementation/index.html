@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Réglementation · Practilio Cyber Repères</title>
+<meta name="description" content="Plateforme fictive de sensibilisation et d'orientation cyber pour les utilisateurs de Practilio — projet pédagogique EPITA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Sora:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body data-page="reglementation">
+<!-- LAYOUT:HEADER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<div class="fiction gutter" role="note">⚠ Projet pédagogique EPITA (ECSI3, évaluation 01). <strong>Practilio est une entreprise fictive</strong> : ce site n'est pas un service réel, aucun contact ni numéro « Practilio » n'est opérationnel.</div>
+
+<header class="top">
+  <div class="wrap gutter">
+    <div class="brandrow">
+      <div class="brand-left">
+        <button type="button" class="burger" id="menu-btn" aria-expanded="false" aria-controls="drawer" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      <a class="logo" href="../accueil/index.html" aria-label="Accueil Practilio Cyber Repères">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="1" y="1" width="26" height="26" rx="7" fill="var(--brand)"/><path d="M14 6v16M6 14h16" stroke="var(--surface)" stroke-width="3.2" stroke-linecap="round"/></svg>
+        <span>Practilio Cyber Repères <small>· FICTIF</small></span>
+      </a>
+      </div>
+      <div class="top-actions">
+        <button type="button" class="ghost" id="tuto-toggle" aria-pressed="true">Mode tutoriel : activé</button>
+        <a class="urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<div class="drawer-backdrop" id="drawer-backdrop"></div>
+<aside class="drawer" id="drawer" aria-label="Menu principal">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button type="button" class="ghost drawer-close" id="menu-close" aria-label="Fermer le menu">✕</button>
+  </div>
+  <nav aria-label="Navigation principale" id="nav">
+    <p class="nav-group">Urgence</p>
+    <ul>
+      <li><a class="nav-urgent" href="../qui-contacter/index.html"><span class="num">SOS</span>Qui contacter</a></li>
+    </ul>
+    <p class="nav-group">Comprendre</p>
+    <ul>
+      <li><a href="../accueil/index.html"><span class="num"></span>Accueil</a></li>
+      <li><a href="../bonnes-pratiques/index.html"><span class="num"></span>10 bonnes pratiques</a></li>
+      <li><a href="../pourquoi/index.html"><span class="num">01</span>Pourquoi Practilio vous sensibilise</a></li>
+      <li><a href="../notions/index.html"><span class="num">02</span>Notions clés</a></li>
+      <li><a href="../menaces/index.html"><span class="num">03</span>Les attaques</a></li>
+      <li><a href="../contextes/index.html"><span class="num">04</span>Contexte de votre établissement</a></li>
+      <li><a href="../ia/index.html"><span class="num">05</span>IA et données patients</a></li>
+    </ul>
+    <p class="nav-group">Se protéger</p>
+    <ul>
+      <li><a href="../practilio/index.html"><span class="num">06</span>Réduire sa surface d'attaque</a></li>
+    </ul>
+    <p class="nav-group">S'orienter</p>
+    <ul>
+      <li><a href="../reglementation/index.html"><span class="num">07</span>Réglementation</a></li>
+      <li><a href="../attaque_ransomware/index.html"><span class="num">08</span>Attaque par rançongiciel</a></li>
+      <li><a href="../assurance/index.html"><span class="num">09</span>Assurance &amp; risque</a></li>
+      <li><a href="../acteurs/index.html"><span class="num">10</span>Acteurs publics</a></li>
+    </ul>
+    <p class="nav-group">Se former</p>
+    <ul>
+      <li><a href="../sensibilisation/index.html"><span class="num">11</span>Sensibilisation &amp; quiz</a></li>
+    </ul>
+    <p class="nav-group">Ressources</p>
+    <ul>
+      <li><a href="../prestataires/index.html"><span class="num">12</span>Prestataires</a></li>
+      <li><a href="../outils/index.html"><span class="num">13</span>Outils</a></li>
+      <li><a href="../sources/index.html"><span class="num">14</span>Sources &amp; glossaire</a></li>
+    </ul>
+  </nav>
+  <a class="urgent drawer-urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+</aside>
+<!-- /LAYOUT:HEADER -->
+
+<main class="wrap gutter">
+<section class="view" id="v-reglementation">
+  <p class="eyebrow">Orientation réglementaire et normative</p>
+  <h1>Quelles obligations pour ma structure ?</h1>
+  <p class="lead">Répondez à quelques questions : nous listons les textes et référentiels applicables ou probables, leur périmètre, ce qu'ils impliquent concrètement et les premières actions à lancer. Cette restitution oriente. Elle ne remplace pas un conseil juridique.</p>
+  <form class="wizard" id="regl-form">
+    <fieldset><legend>Type de structure</legend>
+      <label class="opt"><input type="radio" name="rctx" value="cabinet" id="r-cab" checked> Cabinet libéral</label>
+      <label class="opt"><input type="radio" name="rctx" value="msp" id="r-msp"> Maison ou centre de santé</label>
+      <label class="opt"><input type="radio" name="rctx" value="clinique" id="r-cli"> Clinique, établissement de santé</label>
+    </fieldset>
+    <fieldset><legend>Taille</legend>
+      <label class="opt"><input type="radio" name="rsize" value="small" id="r-small" checked> Moins de 50 personnes et chiffre d'affaires ≤ 10 M€</label>
+      <label class="opt"><input type="radio" name="rsize" value="big" id="r-big"> 50 personnes ou plus, ou chiffre d'affaires &gt; 10 M€</label>
+    </fieldset>
+    <fieldset><legend>Vos usages</legend>
+      <label class="opt"><input type="checkbox" name="rot" id="r-ot"> Nous avons des équipements biomédicaux connectés ou une GTB</label>
+      <label class="opt"><input type="checkbox" name="rhost" id="r-host"> Nous stockons des données de santé ailleurs que sur Practilio (serveur local, cloud, autre logiciel)</label>
+      <label class="opt"><input type="checkbox" name="ria" id="r-ia"> Nous utilisons ou envisageons des outils d'IA (transcription, rédaction)</label>
+    </fieldset>
+    <div><button type="submit">Voir mes obligations</button></div>
+  </form>
+  <div id="regl-out" class="result" aria-live="polite"></div>
+  <p class="note"><em>Sources consultées le 23/11/2026. Pour NIS 2 : le projet de loi « Résilience » a été adopté en première lecture par l'Assemblée nationale le 17/11/2026 (Sénat : 12/03/2025). Une commission mixte paritaire doit encore se réunir. À cette date, la loi n'est pas promulguée et les décrets d'application ne sont pas publiés.</em></p>
+</section>
+</main>
+
+<!-- LAYOUT:FOOTER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<footer class="gutter">
+  <div class="wrap">
+    <p><strong>Projet pédagogique EPITA – ECSI3-Evaluation-01.</strong> Practilio est une entreprise fictive. Ce site n'est pas un service réel et ne s'adresse à aucun professionnel de santé réel. Les coordonnées « Practilio » sont fictives.</p>
+    <p>Les organismes publics, prestataires et éditeurs cités existent ; ils sont mentionnés à titre d'orientation, sans reproduction de leurs logos ni de leurs chartes graphiques, et sans partenariat. Informations vérifiées le 23/11/2026.</p>
+  </div>
+</footer>
+<!-- /LAYOUT:FOOTER -->
+
+<script src="../shared/dialogues.js"></script>
+<script src="../shared/common.js"></script>
+<script src="reglementation.js"></script>
+</body>
+</html>

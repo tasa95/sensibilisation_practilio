@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sources &amp; glossaire · Practilio Cyber Repères</title>
+<meta name="description" content="Plateforme fictive de sensibilisation et d'orientation cyber pour les utilisateurs de Practilio — projet pédagogique EPITA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Sora:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body data-page="sources">
+<!-- LAYOUT:HEADER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<div class="fiction gutter" role="note">⚠ Projet pédagogique EPITA (ECSI3, évaluation 01). <strong>Practilio est une entreprise fictive</strong> : ce site n'est pas un service réel, aucun contact ni numéro « Practilio » n'est opérationnel.</div>
+
+<header class="top">
+  <div class="wrap gutter">
+    <div class="brandrow">
+      <div class="brand-left">
+        <button type="button" class="burger" id="menu-btn" aria-expanded="false" aria-controls="drawer" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      <a class="logo" href="../accueil/index.html" aria-label="Accueil Practilio Cyber Repères">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="1" y="1" width="26" height="26" rx="7" fill="var(--brand)"/><path d="M14 6v16M6 14h16" stroke="var(--surface)" stroke-width="3.2" stroke-linecap="round"/></svg>
+        <span>Practilio Cyber Repères <small>· FICTIF</small></span>
+      </a>
+      </div>
+      <div class="top-actions">
+        <button type="button" class="ghost" id="tuto-toggle" aria-pressed="true">Mode tutoriel : activé</button>
+        <a class="urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<div class="drawer-backdrop" id="drawer-backdrop"></div>
+<aside class="drawer" id="drawer" aria-label="Menu principal">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button type="button" class="ghost drawer-close" id="menu-close" aria-label="Fermer le menu">✕</button>
+  </div>
+  <nav aria-label="Navigation principale" id="nav">
+    <p class="nav-group">Urgence</p>
+    <ul>
+      <li><a class="nav-urgent" href="../qui-contacter/index.html"><span class="num">SOS</span>Qui contacter</a></li>
+    </ul>
+    <p class="nav-group">Comprendre</p>
+    <ul>
+      <li><a href="../accueil/index.html"><span class="num"></span>Accueil</a></li>
+      <li><a href="../bonnes-pratiques/index.html"><span class="num"></span>10 bonnes pratiques</a></li>
+      <li><a href="../pourquoi/index.html"><span class="num">01</span>Pourquoi Practilio vous sensibilise</a></li>
+      <li><a href="../notions/index.html"><span class="num">02</span>Notions clés</a></li>
+      <li><a href="../menaces/index.html"><span class="num">03</span>Les attaques</a></li>
+      <li><a href="../contextes/index.html"><span class="num">04</span>Contexte de votre établissement</a></li>
+      <li><a href="../ia/index.html"><span class="num">05</span>IA et données patients</a></li>
+    </ul>
+    <p class="nav-group">Se protéger</p>
+    <ul>
+      <li><a href="../practilio/index.html"><span class="num">06</span>Réduire sa surface d'attaque</a></li>
+    </ul>
+    <p class="nav-group">S'orienter</p>
+    <ul>
+      <li><a href="../reglementation/index.html"><span class="num">07</span>Réglementation</a></li>
+      <li><a href="../attaque_ransomware/index.html"><span class="num">08</span>Attaque par rançongiciel</a></li>
+      <li><a href="../assurance/index.html"><span class="num">09</span>Assurance &amp; risque</a></li>
+      <li><a href="../acteurs/index.html"><span class="num">10</span>Acteurs publics</a></li>
+    </ul>
+    <p class="nav-group">Se former</p>
+    <ul>
+      <li><a href="../sensibilisation/index.html"><span class="num">11</span>Sensibilisation &amp; quiz</a></li>
+    </ul>
+    <p class="nav-group">Ressources</p>
+    <ul>
+      <li><a href="../prestataires/index.html"><span class="num">12</span>Prestataires</a></li>
+      <li><a href="../outils/index.html"><span class="num">13</span>Outils</a></li>
+      <li><a href="../sources/index.html"><span class="num">14</span>Sources &amp; glossaire</a></li>
+    </ul>
+  </nav>
+  <a class="urgent drawer-urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+</aside>
+<!-- /LAYOUT:HEADER -->
+
+<main class="wrap gutter">
+<section class="view" id="v-sources">
+  <p class="eyebrow">Sources et glossaire</p>
+  <h1>Sources consultées et glossaire</h1>
+  <h2>Textes et référentiels (consultés le 23/11/2026)</h2>
+  <ul>
+    <li>RGPD, règlement (UE) 2016/679 : <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank" rel="noopener">EUR-Lex</a></li>
+    <li>NIS 2, directive (UE) 2022/2555 : <a href="https://eur-lex.europa.eu/eli/dir/2022/2555/oj" target="_blank" rel="noopener">EUR-Lex</a> ; espace ANSSI : <a href="https://monespacenis2.cyber.gouv.fr" target="_blank" rel="noopener">MonEspaceNIS2</a> ; état de la transposition : projet de loi Résilience adopté par l'Assemblée nationale le 17/11/2026, non promulgué</li>
+    <li>Cyber Resilience Act, règlement (UE) 2024/2847 : <a href="https://eur-lex.europa.eu/eli/reg/2024/2847/oj" target="_blank" rel="noopener">EUR-Lex</a> ; <a href="https://www.enisa.europa.eu/topics/product-security-and-certification/single-reporting-platform-srp" target="_blank" rel="noopener">plateforme unique de signalement ENISA</a></li>
+    <li>AI Act, règlement (UE) 2024/1689 : <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj" target="_blank" rel="noopener">EUR-Lex</a></li>
+    <li>Code de la santé publique (art. L.1110-4 secret, L.1111-8 HDS, L.1111-8-2 déclaration des incidents) : <a href="https://www.legifrance.gouv.fr" target="_blank" rel="noopener">Légifrance</a></li>
+    <li>Certification HDS (référentiel v2, fin de transition le 16/05/2026) : <a href="https://esante.gouv.fr/produits-services/hds" target="_blank" rel="noopener">ANS</a></li>
+    <li>PGSSI-S : <a href="https://esante.gouv.fr/produits-services/pgssi-s" target="_blank" rel="noopener">ANS</a></li>
+    <li>Programme CaRE : <a href="https://esante.gouv.fr/strategie-nationale/cybersecurite" target="_blank" rel="noopener">ANS</a></li>
+    <li>e-CPS et Pro Santé Connect : <a href="https://esante.gouv.fr/e-cps" target="_blank" rel="noopener">e-CPS</a>, <a href="https://esante.gouv.fr/produits-services/pro-sante-connect" target="_blank" rel="noopener">Pro Santé Connect</a></li>
+    <li>ANSSI et DACG (ministère de la Justice), <em>Attaques par rançongiciels, tous concernés – Comment les anticiper et réagir en cas d'incident</em>, v1.0, 2020 : <a href="https://messervices.cyber.gouv.fr/guides/attaques-par-rancongiciels-tous-concernes" target="_blank" rel="noopener">cyber.gouv.fr</a> ; outil de collecte DFIR ORC : <a href="https://github.com/DFIR-ORC/dfir-orc" target="_blank" rel="noopener">GitHub</a></li>
+    <li>ANSSI, Guide d'hygiène informatique : <a href="https://cyber.gouv.fr/publications/guide-dhygiene-informatique" target="_blank" rel="noopener">cyber.gouv.fr</a></li>
+    <li>Code des assurances, art. L.12-10-1 (plainte sous 72 h, loi LOPMI) : <a href="https://entreprendre.service-public.gouv.fr/actualites/A16531" target="_blank" rel="noopener">service-public.fr</a></li>
+    <li>Rapports sur le risque : <a href="https://commercial.allianz.com/news-and-insights/reports/allianz-risk-barometer.html" target="_blank" rel="noopener">Allianz Risk Barometer 2026</a> ; <a href="https://www.weforum.org/publications/global-risks-report-2026/" target="_blank" rel="noopener">WEF Global Risks Report 2026</a> ; <a href="https://www.amrae.fr/lucy-light-upon-cyber-insurance-2026-edition" target="_blank" rel="noopener">AMRAE LUCY 2026</a></li>
+    <li>ANSSI, ReCyF et MonAideCyber : <a href="https://cyber.gouv.fr/la-directive-nis-2" target="_blank" rel="noopener">cyber.gouv.fr</a>, <a href="https://monaide.cyber.gouv.fr" target="_blank" rel="noopener">monaide.cyber.gouv.fr</a></li>
+    <li>CNIL, recommandation mots de passe (2022) : <a href="https://www.cnil.fr/fr/mots-de-passe-une-nouvelle-recommandation-pour-maitriser-sa-securite" target="_blank" rel="noopener">cnil.fr</a> ; Guide de la sécurité des données personnelles : <a href="https://www.cnil.fr/fr/guide-de-la-securite-des-donnees-personnelles" target="_blank" rel="noopener">cnil.fr</a></li>
+  </ul>
+  <h2>Glossaire</h2>
+  <dl class="gloss">
+    <dt>Actif</dt><dd>Tout ce qui a de la valeur pour la structure et nécessite une protection : données, matériels, logiciels, personnes, réputation. On protège en priorité les actifs dont la perte arrêterait l'activité.</dd>
+    <dt>APT (Advanced Persistent Threat)</dt><dd>Groupe de menace structuré, souvent soutenu par un État, menant des campagnes d'attaque prolongées et discrètes, principalement à des fins d'espionnage ou de déstabilisation.</dd>
+    <dt>Attaque</dt><dd>Concrétisation d'une menace : exploitation effective d'une vulnérabilité.</dd>
+    <dt>Assurance cyber (transfert du risque)</dt><dd>Contrat par lequel un assureur prend en charge tout ou partie des conséquences financières d'un incident cyber (frais de réponse, restauration, pertes d'exploitation, responsabilité civile). C'est une option de traitement du risque, à côté de la réduction, de l'évitement et de l'acceptation ; elle ne réduit ni la probabilité ni l'impact opérationnel de l'incident.</dd>
+    <dt>Botnet</dt><dd>Réseau de machines compromises (« bots » ou machines zombies) contrôlées à distance par un attaquant, généralement via une infrastructure C2, et utilisées notamment pour des attaques par déni de service distribué.</dd>
+    <dt>C2 (Command and Control)</dt><dd>Infrastructure utilisée par un attaquant pour piloter à distance des machines compromises.</dd>
+    <dt>CERT / CSIRT</dt><dd>Équipe de réponse aux incidents de sécurité informatique. En France : CERT-FR (national, ANSSI), CERT Santé (secteur santé, ANS), CSIRT régionaux.</dd>
+    <dt>CNAPP (Cloud-Native Application Protection Platform)</dt><dd>Plateforme unifiée qui protège les applications hébergées dans le cloud, de leur configuration à leur exécution ; elle regroupe notamment le CSPM et la protection des charges de travail.</dd>
+    <dt>CSPM (Cloud Security Posture Management)</dt><dd>Outil qui détecte les erreurs de configuration des services cloud (stockage ouvert au public, droits trop larges, chiffrement absent) et aide à les corriger.</dd>
+    <dt>DoS (Denial of Service)</dt><dd>Attaque visant à rendre un service indisponible en saturant ses ressources (bande passante, mémoire, capacité de traitement).</dd>
+    <dt>DDoS (Distributed Denial of Service)</dt><dd>Variante distribuée du DoS, menée simultanément depuis un grand nombre de machines compromises (botnet), ce qui démultiplie le volume et complique la parade.</dd>
+    <dt>EDR (Endpoint Detection and Response)</dt><dd>Logiciel installé sur les postes et serveurs qui détecte les comportements malveillants et permet d'y répondre (isolement du poste, arrêt d'un processus). Le XDR étend cette détection à d'autres sources (messagerie, réseau, cloud).</dd>
+    <dt>GTB (Gestion Technique des Bâtiments)</dt><dd>Système qui supervise et pilote les équipements techniques d'un bâtiment (chauffage, ventilation, climatisation, éclairage, contrôle d'accès, fluides).</dd>
+    <dt>HDS (Hébergeur de Données de Santé)</dt><dd>Certification obligatoire en France pour toute personne qui héberge des données de santé à caractère personnel pour le compte de tiers (art. L.1111-8 du CSP). Elle couvre l'hébergement, pas les postes ni les pratiques des utilisateurs.</dd>
+    <dt>IAM (Identity and Access Management)</dt><dd>Gestion des identités et des accès : outils qui créent, contrôlent et suppriment les comptes et les droits des utilisateurs, et gèrent l'authentification (dont la MFA).</dd>
+    <dt>Impact</dt><dd>Conséquence sur un actif de la réalisation d'un risque.</dd>
+    <dt>Insider</dt><dd>Personne interne à l'organisation (salarié, prestataire) à l'origine d'un incident, volontairement (vengeance, gain, idéologie) ou par erreur.</dd>
+    <dt>IT / OT</dt><dd>IT (Information Technology) : informatique de gestion (postes, serveurs, messagerie). OT (Operational Technology) : systèmes qui pilotent des processus physiques (équipements biomédicaux, GTB, centrale de fluides médicaux).</dd>
+    <dt>Main courante</dt><dd>Journal tenu dès le début d'un incident, qui consigne heure par heure les constats, les actions menées, les décisions et les personnes prévenues. C'est le premier réflexe recommandé par l'ANSSI en cas d'attaque par rançongiciel ; il sert à piloter la crise, à l'enquête et à l'assurance.</dd>
+    <dt>DFIR ORC</dt><dd>Outil de collecte d'éléments techniques (journaux, registre, traces système) sur les postes Windows, développé par l'ANSSI et publié en open source en 2019. Il collecte les preuves sans les analyser ; le CERT Santé l'utilise pour ses collectes.</dd>
+    <dt>MDM (Mobile Device Management)</dt><dd>Outil de gestion centralisée des appareils mobiles et portables : configuration, chiffrement, applications autorisées, effacement à distance.</dd>
+    <dt>Menace</dt><dd>Cause potentielle d'un incident pouvant entraîner des dommages sur un actif si elle se concrétise.</dd>
+    <dt>MFA (authentification multifacteur)</dt><dd>Authentification combinant au moins deux facteurs de natures différentes : ce que je sais (mot de passe), ce que je possède (téléphone, clé, carte CPS), ce que je suis (biométrie).</dd>
+    <dt>MSSanté</dt><dd>Espace de confiance national de messageries sécurisées de santé, permettant aux professionnels d'échanger des données de santé de façon sécurisée.</dd>
+    <dt>MSSP / SOC</dt><dd>MSSP (Managed Security Service Provider) : prestataire de services de sécurité managés. SOC (Security Operations Center) : centre de supervision qui surveille en continu les événements de sécurité et détecte les incidents.</dd>
+    <dt>OSINT (Open Source Intelligence)</dt><dd>Renseignement à partir de sources ouvertes (sites web, annuaires, réseaux sociaux), utilisé par les attaquants pour préparer un spear phishing.</dd>
+    <dt>PCA (Plan de Continuité d'Activité)</dt><dd>Ensemble des mesures et procédures visant à assurer la poursuite des activités essentielles en cas de sinistre ou d'incident majeur.</dd>
+    <dt>Phishing (hameçonnage)</dt><dd>Attaque envoyée en masse, généralement par e-mail, se faisant passer pour un tiers de confiance (banque, administration, fournisseur) afin d'inciter la victime à communiquer des informations sensibles ou à effectuer une action (clic, virement, ouverture de pièce jointe).</dd>
+    <dt>PRA (Plan de Reprise d'Activité)</dt><dd>Sous-ensemble du PCA centré sur la restauration des systèmes informatiques après un sinistre ; c'est dans le PRA que s'inscrit la stratégie de sauvegarde.</dd>
+    <dt>Pretexting</dt><dd>Technique d'ingénierie sociale consistant à inventer un scénario ou une identité crédible (un « prétexte ») pour gagner la confiance d'une cible et l'amener à divulguer des informations ou à accorder un accès.</dd>
+    <dt>PRIS / PASSI / PDIS</dt><dd>Qualifications délivrées par l'ANSSI aux prestataires : PRIS (Prestataires de Réponse aux Incidents de Sécurité), PASSI (Prestataires d'Audit de la Sécurité des Systèmes d'Information), PDIS (Prestataires de Détection des Incidents de Sécurité).</dd>
+    <dt>ReCyF (Référentiel Cyber France)</dt><dd>Référentiel publié par l'ANSSI listant les mesures de sécurité recommandées pour atteindre les objectifs de la directive NIS 2, avec un principe de proportionnalité selon la taille et la maturité de l'entité (document de travail publié en mars 2026).</dd>
+    <dt>SASE / Zero Trust</dt><dd>SASE (Secure Access Service Edge) : convergence dans le cloud des fonctions réseau et sécurité (passerelle web, CASB, accès ZTNA). Zero Trust : modèle « ne jamais faire confiance, toujours vérifier », où chaque accès est authentifié et autorisé quelle que soit la position sur le réseau.</dd>
+    <dt>SIEM / SOAR</dt><dd>SIEM (Security Information and Event Management) : outil de collecte et de corrélation des journaux pour détecter les incidents. SOAR (Security Orchestration, Automation and Response) : orchestration et automatisation de la réponse aux incidents.</dd>
+    <dt>Rançongiciel (ransomware)</dt><dd>Logiciel malveillant qui chiffre les données et systèmes d'une victime et exige une rançon, souvent accompagné d'un vol préalable de données (double extorsion).</dd>
+    <dt>Responsable de traitement / sous-traitant</dt><dd>Au sens du RGPD, le responsable de traitement détermine les finalités et moyens du traitement (le praticien ou l'établissement pour ses patients) ; le sous-traitant traite les données pour son compte (Practilio).</dd>
+    <dt>Risque</dt><dd>Exploitation d'une vulnérabilité par une menace sur un actif, générant un ou plusieurs impacts ; il s'évalue par l'impact et la vraisemblance.</dd>
+    <dt>Shadow IT</dt><dd>Logiciels, services en ligne ou matériels installés et utilisés sans l'accord ni la supervision du référent informatique ou cybersécurité. Ils échappent aux mises à jour et aux contrôles, et les données qu'ils contiennent peuvent sortir de l'environnement maîtrisé.</dd>
+    <dt>Smishing</dt><dd>Hameçonnage réalisé par SMS (SMS + phishing).</dd>
+    <dt>Spear phishing</dt><dd>Variante ciblée du phishing : message personnalisé pour une personne ou une organisation précise, souvent après une phase de reconnaissance (OSINT), ce qui le rend plus crédible et plus difficile à détecter.</dd>
+    <dt>SPOF (Single Point of Failure)</dt><dd>Élément d'un système dont la défaillance entraîne l'arrêt total de ce système, faute de redondance.</dd>
+    <dt>Surface d'attaque</dt><dd>Ensemble des points d'entrée possibles pour un attaquant : comptes, postes, services exposés, accès distants, personnes.</dd>
+    <dt>Vishing</dt><dd>Hameçonnage réalisé par appel téléphonique (voice + phishing).</dd>
+    <dt>Vraisemblance (occurrence)</dt><dd>Probabilité qu'un risque se réalise.</dd>
+    <dt>Vulnérabilité</dt><dd>Faiblesse d'un actif, pouvant intervenir à la conception, la réalisation, l'installation, la configuration ou l'utilisation de cet actif.</dd>
+  </dl>
+</section>
+</main>
+
+<!-- LAYOUT:FOOTER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<footer class="gutter">
+  <div class="wrap">
+    <p><strong>Projet pédagogique EPITA – ECSI3-Evaluation-01.</strong> Practilio est une entreprise fictive. Ce site n'est pas un service réel et ne s'adresse à aucun professionnel de santé réel. Les coordonnées « Practilio » sont fictives.</p>
+    <p>Les organismes publics, prestataires et éditeurs cités existent ; ils sont mentionnés à titre d'orientation, sans reproduction de leurs logos ni de leurs chartes graphiques, et sans partenariat. Informations vérifiées le 23/11/2026.</p>
+  </div>
+</footer>
+<!-- /LAYOUT:FOOTER -->
+
+<script src="../shared/dialogues.js"></script>
+<script src="../shared/common.js"></script>
+<script src="sources.js"></script>
+</body>
+</html>

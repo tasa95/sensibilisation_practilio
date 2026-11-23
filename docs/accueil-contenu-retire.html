@@ -1,0 +1,59 @@
+<!-- Contenu retiré de la page d'accueil le 23/11/2026, à reporter sur une autre page.
+     Contient : la liste des leçons 02-14, le formulaire « personnaliser selon mon rôle » (logique dans site/accueil/accueil.js,
+     à déplacer avec lui), « Pourquoi Practilio publie ce site » et « Notre démarche de sensibilisation ».
+     Les liens sont relatifs à une page du site (../<page>/index.html).
+     RÉUTILISÉ le 23/11/2026 : « Pourquoi Practilio publie ce site » et « Notre démarche » sont repris dans site/pourquoi/index.html. -->
+  <h2>Chemin 2 : le parcours complet</h2>
+  <p>Vous êtes sur la leçon 01 (accueil). Suivez les leçons dans l'ordre, ou allez directement à celle qui vous intéresse.</p>
+  <nav class="lesson-list" aria-label="Les leçons du parcours">
+    <ol>
+        <li><a href="../notions/index.html"><span class="num">02</span><span><strong>Notions clés</strong> · le vocabulaire du risque</span></a></li>
+        <li><a href="../menaces/index.html"><span class="num">03</span><span><strong>Menaces</strong> · rançongiciel, spear phishing, faux rappels SMS, clés USB</span></a></li>
+        <li><a href="../contextes/index.html"><span class="num">04</span><span><strong>Mon contexte</strong> · cabinet, centre de santé ou clinique (IT et OT)</span></a></li>
+        <li><a href="../practilio/index.html"><span class="num">05</span><span><strong>Practilio et vous</strong> · ce que couvre l'HDS, qui a accès à quoi</span></a></li>
+        <li><a href="../sensibilisation/index.html"><span class="num">06</span><span><strong>Sensibilisation &amp; quiz</strong> · les bons gestes par profil, puis le quiz corrigé</span></a></li>
+        <li><a href="../ia/index.html"><span class="num">07</span><span><strong>IA et données patients</strong> · où partent les données</span></a></li>
+        <li><a href="../reglementation/index.html"><span class="num">08</span><span><strong>Réglementation</strong> · vos obligations, selon votre structure</span></a></li>
+        <li><a href="../incident/index.html"><span class="num">09</span><span><strong>Incident</strong> · les premières actions, qui contacter</span></a></li>
+        <li><a href="../assurance/index.html"><span class="num">10</span><span><strong>Assurance &amp; risque</strong> · transférer le risque financier</span></a></li>
+        <li><a href="../acteurs/index.html"><span class="num">11</span><span><strong>Acteurs publics</strong> · CERT Santé, ANSSI, CNIL, Cybermalveillance</span></a></li>
+        <li><a href="../prestataires/index.html"><span class="num">12</span><span><strong>Prestataires</strong> · qui solliciter, et quand</span></a></li>
+        <li><a href="../outils/index.html"><span class="num">13</span><span><strong>Outils</strong> · le socle avant les outils avancés</span></a></li>
+        <li><a href="../sources/index.html"><span class="num">14</span><span><strong>Sources &amp; glossaire</strong> · références datées et définitions</span></a></li>
+    </ol>
+  </nav>
+
+  <form class="wizard card" id="parcours-form" aria-labelledby="parcours-titre">
+    <h2 id="parcours-titre" style="margin:0">Chemin 2 : personnaliser selon mon rôle</h2>
+    <p>Deux questions pour savoir par quelles leçons commencer.</p>
+    <fieldset><legend>1. Votre structure</legend>
+      <label class="opt"><input type="radio" name="ctx" value="cabinet" id="p-ctx-cab" checked> Cabinet libéral (1 à 5 praticiens, sans informaticien)</label>
+      <label class="opt"><input type="radio" name="ctx" value="msp" id="p-ctx-msp"> Maison ou centre de santé pluriprofessionnel</label>
+      <label class="opt"><input type="radio" name="ctx" value="clinique" id="p-ctx-cli"> Clinique ou établissement partenaire (avec équipements biomédicaux)</label>
+    </fieldset>
+    <fieldset><legend>2. Votre rôle</legend>
+      <label class="opt"><input type="radio" name="role" value="employe" id="p-role-emp" checked> Secrétaire médicale, accueil, assistant·e</label>
+      <label class="opt"><input type="radio" name="role" value="it" id="p-role-it"> Administrateur technique de l'établissement, référent ou prestataire informatique, DSI</label>
+      <label class="opt"><input type="radio" name="role" value="dirigeant" id="p-role-dir"> Praticien, gérant·e, direction</label>
+    </fieldset>
+    <div><button type="submit">Afficher ma trajectoire</button></div>
+    <div id="parcours-out" class="result" aria-live="polite"></div>
+  </form>
+
+  <h2>Pourquoi Practilio publie ce site</h2>
+  <div class="split">
+    <div class="card"><h3>Le risque est aussi chez nos utilisateurs</h3><p>La plateforme Practilio est hébergée dans un environnement certifié HDS. Mais 25 000 praticiens et 28 établissements s'y connectent depuis des postes, des réseaux et des comptes que nous ne gérons pas. Un mot de passe volé dans un cabinet ouvre l'agenda et les données de ses patients, quelle que soit la qualité de notre hébergement.</p></div>
+    <div class="card"><h3>Vous êtes responsable de traitement</h3><p>Pour les données de vos patients, vous êtes <strong>responsable de traitement</strong> au sens du RGPD, et Practilio est votre <strong>sous-traitant</strong>. Beaucoup de structures ne savent pas à quelles obligations elles sont soumises : ce site les rend lisibles.</p></div>
+    <div class="card"><h3>Retour d'expérience</h3><p>Lors de l'incident sur notre module de facturation, le support a reçu de nombreux appels de cabinets qui ne savaient ni quoi vérifier chez eux, ni qui prévenir. Cette plateforme répond à ces deux questions.</p></div>
+    <div class="card"><h3>La confiance se construit ensemble</h3><p>Souveraineté et sécurité des données de santé ne s'arrêtent pas à notre centre d'hébergement. Un écosystème mieux protégé, c'est moins d'interruptions de soins et moins de fuites de données patients.</p></div>
+  </div>
+
+  <h2>Notre démarche de sensibilisation</h2>
+  <ol class="steps">
+    <li><div><strong>Se reconnaître.</strong> Trois contextes types et trois profils. Chacun ne lit que ce qui le concerne.</div></li>
+    <li><div><strong>Comprendre sans jargon.</strong> Quelques notions clés, illustrées par des cas réels du secteur de la santé.</div></li>
+    <li><div><strong>Agir tout de suite.</strong> Cinq gestes prioritaires : MFA, mots de passe robustes, méfiance face au spear phishing, aucune clé USB inconnue, sauvegardes hors ligne.</div></li>
+    <li><div><strong>Vérifier que le message est passé.</strong> Un quiz corrigé par profil, avec des indicateurs suivis par Practilio dans le temps.</div></li>
+    <li><div><strong>Savoir vers qui se tourner.</strong> Obligations, acteurs publics, prestataires et outils, selon votre situation et votre niveau d'urgence.</div></li>
+  </ol>
+  <p class="note">Notre approche : <strong>pas de culpabilisation</strong>. Une personne qui signale avoir cliqué sur un lien piégé rend service à toute la structure. Le message que nous voulons faire passer : « dans le doute, je signale ».</p>

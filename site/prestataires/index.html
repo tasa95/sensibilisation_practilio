@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prestataires · Practilio Cyber Repères</title>
+<meta name="description" content="Plateforme fictive de sensibilisation et d'orientation cyber pour les utilisateurs de Practilio — projet pédagogique EPITA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Sora:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body data-page="prestataires">
+<!-- LAYOUT:HEADER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<div class="fiction gutter" role="note">⚠ Projet pédagogique EPITA (ECSI3, évaluation 01). <strong>Practilio est une entreprise fictive</strong> : ce site n'est pas un service réel, aucun contact ni numéro « Practilio » n'est opérationnel.</div>
+
+<header class="top">
+  <div class="wrap gutter">
+    <div class="brandrow">
+      <div class="brand-left">
+        <button type="button" class="burger" id="menu-btn" aria-expanded="false" aria-controls="drawer" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      <a class="logo" href="../accueil/index.html" aria-label="Accueil Practilio Cyber Repères">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="1" y="1" width="26" height="26" rx="7" fill="var(--brand)"/><path d="M14 6v16M6 14h16" stroke="var(--surface)" stroke-width="3.2" stroke-linecap="round"/></svg>
+        <span>Practilio Cyber Repères <small>· FICTIF</small></span>
+      </a>
+      </div>
+      <div class="top-actions">
+        <button type="button" class="ghost" id="tuto-toggle" aria-pressed="true">Mode tutoriel : activé</button>
+        <a class="urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<div class="drawer-backdrop" id="drawer-backdrop"></div>
+<aside class="drawer" id="drawer" aria-label="Menu principal">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button type="button" class="ghost drawer-close" id="menu-close" aria-label="Fermer le menu">✕</button>
+  </div>
+  <nav aria-label="Navigation principale" id="nav">
+    <p class="nav-group">Urgence</p>
+    <ul>
+      <li><a class="nav-urgent" href="../qui-contacter/index.html"><span class="num">SOS</span>Qui contacter</a></li>
+    </ul>
+    <p class="nav-group">Comprendre</p>
+    <ul>
+      <li><a href="../accueil/index.html"><span class="num"></span>Accueil</a></li>
+      <li><a href="../bonnes-pratiques/index.html"><span class="num"></span>10 bonnes pratiques</a></li>
+      <li><a href="../pourquoi/index.html"><span class="num">01</span>Pourquoi Practilio vous sensibilise</a></li>
+      <li><a href="../notions/index.html"><span class="num">02</span>Notions clés</a></li>
+      <li><a href="../menaces/index.html"><span class="num">03</span>Les attaques</a></li>
+      <li><a href="../contextes/index.html"><span class="num">04</span>Contexte de votre établissement</a></li>
+      <li><a href="../ia/index.html"><span class="num">05</span>IA et données patients</a></li>
+    </ul>
+    <p class="nav-group">Se protéger</p>
+    <ul>
+      <li><a href="../practilio/index.html"><span class="num">06</span>Réduire sa surface d'attaque</a></li>
+    </ul>
+    <p class="nav-group">S'orienter</p>
+    <ul>
+      <li><a href="../reglementation/index.html"><span class="num">07</span>Réglementation</a></li>
+      <li><a href="../attaque_ransomware/index.html"><span class="num">08</span>Attaque par rançongiciel</a></li>
+      <li><a href="../assurance/index.html"><span class="num">09</span>Assurance &amp; risque</a></li>
+      <li><a href="../acteurs/index.html"><span class="num">10</span>Acteurs publics</a></li>
+    </ul>
+    <p class="nav-group">Se former</p>
+    <ul>
+      <li><a href="../sensibilisation/index.html"><span class="num">11</span>Sensibilisation &amp; quiz</a></li>
+    </ul>
+    <p class="nav-group">Ressources</p>
+    <ul>
+      <li><a href="../prestataires/index.html"><span class="num">12</span>Prestataires</a></li>
+      <li><a href="../outils/index.html"><span class="num">13</span>Outils</a></li>
+      <li><a href="../sources/index.html"><span class="num">14</span>Sources &amp; glossaire</a></li>
+    </ul>
+  </nav>
+  <a class="urgent drawer-urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+</aside>
+<!-- /LAYOUT:HEADER -->
+
+<main class="wrap gutter">
+<section class="view" id="v-prestataires">
+  <p class="eyebrow">Prestataires</p>
+  <h1>Choisir un prestataire selon votre besoin</h1>
+  <p class="lead">Practilio ne recommande aucun prestataire en particulier et n'a aucun lien commercial avec ceux cités. Ce sont des exemples d'acteurs existants du marché français, à comparer. Vérifiez toujours les qualifications en cours sur le site de l'ANSSI.</p>
+  <div class="note"><strong>Les repères de confiance :</strong> qualifications de l'ANSSI : <strong>PRIS</strong> pour la réponse à incident, <strong>PASSI</strong> pour l'audit, <strong>PDIS</strong> pour la détection, <a href="https://cyber.gouv.fr/offre-de-service/solutions-certifiees-et-qualifiees/services-de-securite-evalue/solutions-en-cours-de-qualification/pacs/" target="_blank" rel="noopener"><strong>PACS</strong></a> pour l'accompagnement et le conseil (un PACS analyse le risque, l'architecture et la préparation à la gestion de crise). Elles sont consultables sur <a href="https://cyber.gouv.fr/prestataires-de-reponse-aux-incidents-de-securite-pris" target="_blank" rel="noopener">cyber.gouv.fr</a> ; label <strong>ExpertCyber</strong> pour les prestataires de proximité via <a href="https://www.cybermalveillance.gouv.fr" target="_blank" rel="noopener">Cybermalveillance.gouv.fr</a> ; <a href="https://esante.gouv.fr/strategie-nationale/cybersecurite/catalogue-offres-cyber" target="_blank" rel="noopener">catalogue des offres cyber</a> de l'ANS pour le secteur santé.</div>
+  <div class="tablebox"><table>
+    <thead><tr><th>Besoin</th><th>Pour qui</th><th>Exemples de prestataires</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Assistance de proximité</strong> (dépannage, sécurisation de base)</td><td>Cabinet, MSP</td><td>Prestataires labellisés ExpertCyber près de chez vous, trouvés via <a href="https://www.cybermalveillance.gouv.fr" target="_blank" rel="noopener">Cybermalveillance.gouv.fr</a></td></tr>
+      <tr><td><strong>MSSP / SOC</strong> (surveillance 24/7)</td><td>Clinique, gros centre</td><td><a href="https://www.orangecyberdefense.com/fr/" target="_blank" rel="noopener">Orange Cyberdefense</a>, <a href="https://www.advens.fr" target="_blank" rel="noopener">Advens</a>, <a href="https://www.i-tracing.com" target="_blank" rel="noopener">I-Tracing</a>, <a href="https://www.thalesgroup.com/fr/marches/securite-numerique-et-cybersecurite" target="_blank" rel="noopener">Thales</a>, <a href="https://www.accenture.com" target="_blank" rel="noopener">Accenture</a>, <a href="https://www.ibm.com/fr-fr/security" target="_blank" rel="noopener">IBM</a></td></tr>
+      <tr><td><strong>Réponse à incident</strong> (CERT, forensic, gestion de crise)</td><td>Tous, en urgence</td><td><a href="https://www.intrinsec.com" target="_blank" rel="noopener">Intrinsec</a>, <a href="https://www.wavestone.com/fr/" target="_blank" rel="noopener">Wavestone</a>, <a href="https://www.orangecyberdefense.com/fr/" target="_blank" rel="noopener">Orange Cyberdefense</a>, <a href="https://www.soprasteria.fr" target="_blank" rel="noopener">Sopra Steria</a></td></tr>
+      <tr><td><strong>Audit et test d'intrusion</strong></td><td>Clinique, MSP</td><td><a href="https://www.synacktiv.com" target="_blank" rel="noopener">Synacktiv</a>, <a href="https://www.almond.eu" target="_blank" rel="noopener">Almond</a>, <a href="https://www.wavestone.com/fr/" target="_blank" rel="noopener">Wavestone</a>, <a href="https://www.intrinsec.com" target="_blank" rel="noopener">Intrinsec</a></td></tr>
+      <tr><td><strong>Sensibilisation</strong> (e-learning, phishing simulé)</td><td>Tous</td><td><a href="https://www.conscio-technologies.com" target="_blank" rel="noopener">Conscio Technologies</a>, <a href="https://arsen.co" target="_blank" rel="noopener">Arsen</a>, <a href="https://sosafe-awareness.com/fr/" target="_blank" rel="noopener">SoSafe</a></td></tr>
+    </tbody></table></div>
+  <h2>Quoi prioriser selon votre contexte</h2>
+  <div class="split">
+    <div class="card"><h3>Cabinet</h3><ol class="prio"><li>Prestataire de proximité labellisé pour sécuriser postes, box et sauvegardes.</li><li>Sensibilisation courte de l'équipe.</li><li>Garder le numéro d'un prestataire d'urgence.</li></ol></div>
+    <div class="card"><h3>Maison / centre de santé</h3><ol class="prio"><li>Contrat avec le prestataire incluant sauvegardes testées et gestion des comptes.</li><li>Campagne de phishing simulé annuelle.</li><li>Audit de configuration ponctuel.</li></ol></div>
+    <div class="card"><h3>Clinique</h3><ol class="prio"><li>Contrat de réponse à incident (PRIS) signé <strong>avant</strong> la crise.</li><li>SOC / MSSP couvrant IT et OT.</li><li>Tests d'intrusion annuels, y compris sur l'exposition internet.</li></ol></div>
+  </div>
+</section>
+</main>
+
+<!-- LAYOUT:FOOTER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<footer class="gutter">
+  <div class="wrap">
+    <p><strong>Projet pédagogique EPITA – ECSI3-Evaluation-01.</strong> Practilio est une entreprise fictive. Ce site n'est pas un service réel et ne s'adresse à aucun professionnel de santé réel. Les coordonnées « Practilio » sont fictives.</p>
+    <p>Les organismes publics, prestataires et éditeurs cités existent ; ils sont mentionnés à titre d'orientation, sans reproduction de leurs logos ni de leurs chartes graphiques, et sans partenariat. Informations vérifiées le 23/11/2026.</p>
+  </div>
+</footer>
+<!-- /LAYOUT:FOOTER -->
+
+<script src="../shared/dialogues.js"></script>
+<script src="../shared/common.js"></script>
+<script src="prestataires.js"></script>
+</body>
+</html>

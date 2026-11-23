@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mon contexte · Practilio Cyber Repères</title>
+<meta name="description" content="Plateforme fictive de sensibilisation et d'orientation cyber pour les utilisateurs de Practilio — projet pédagogique EPITA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Sora:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body data-page="contextes">
+<!-- LAYOUT:HEADER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<div class="fiction gutter" role="note">⚠ Projet pédagogique EPITA (ECSI3, évaluation 01). <strong>Practilio est une entreprise fictive</strong> : ce site n'est pas un service réel, aucun contact ni numéro « Practilio » n'est opérationnel.</div>
+
+<header class="top">
+  <div class="wrap gutter">
+    <div class="brandrow">
+      <div class="brand-left">
+        <button type="button" class="burger" id="menu-btn" aria-expanded="false" aria-controls="drawer" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      <a class="logo" href="../accueil/index.html" aria-label="Accueil Practilio Cyber Repères">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="1" y="1" width="26" height="26" rx="7" fill="var(--brand)"/><path d="M14 6v16M6 14h16" stroke="var(--surface)" stroke-width="3.2" stroke-linecap="round"/></svg>
+        <span>Practilio Cyber Repères <small>· FICTIF</small></span>
+      </a>
+      </div>
+      <div class="top-actions">
+        <button type="button" class="ghost" id="tuto-toggle" aria-pressed="true">Mode tutoriel : activé</button>
+        <a class="urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<div class="drawer-backdrop" id="drawer-backdrop"></div>
+<aside class="drawer" id="drawer" aria-label="Menu principal">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button type="button" class="ghost drawer-close" id="menu-close" aria-label="Fermer le menu">✕</button>
+  </div>
+  <nav aria-label="Navigation principale" id="nav">
+    <p class="nav-group">Urgence</p>
+    <ul>
+      <li><a class="nav-urgent" href="../qui-contacter/index.html"><span class="num">SOS</span>Qui contacter</a></li>
+    </ul>
+    <p class="nav-group">Comprendre</p>
+    <ul>
+      <li><a href="../accueil/index.html"><span class="num"></span>Accueil</a></li>
+      <li><a href="../bonnes-pratiques/index.html"><span class="num"></span>10 bonnes pratiques</a></li>
+      <li><a href="../pourquoi/index.html"><span class="num">01</span>Pourquoi Practilio vous sensibilise</a></li>
+      <li><a href="../notions/index.html"><span class="num">02</span>Notions clés</a></li>
+      <li><a href="../menaces/index.html"><span class="num">03</span>Les attaques</a></li>
+      <li><a href="../contextes/index.html"><span class="num">04</span>Contexte de votre établissement</a></li>
+      <li><a href="../ia/index.html"><span class="num">05</span>IA et données patients</a></li>
+    </ul>
+    <p class="nav-group">Se protéger</p>
+    <ul>
+      <li><a href="../practilio/index.html"><span class="num">06</span>Réduire sa surface d'attaque</a></li>
+    </ul>
+    <p class="nav-group">S'orienter</p>
+    <ul>
+      <li><a href="../reglementation/index.html"><span class="num">07</span>Réglementation</a></li>
+      <li><a href="../attaque_ransomware/index.html"><span class="num">08</span>Attaque par rançongiciel</a></li>
+      <li><a href="../assurance/index.html"><span class="num">09</span>Assurance &amp; risque</a></li>
+      <li><a href="../acteurs/index.html"><span class="num">10</span>Acteurs publics</a></li>
+    </ul>
+    <p class="nav-group">Se former</p>
+    <ul>
+      <li><a href="../sensibilisation/index.html"><span class="num">11</span>Sensibilisation &amp; quiz</a></li>
+    </ul>
+    <p class="nav-group">Ressources</p>
+    <ul>
+      <li><a href="../prestataires/index.html"><span class="num">12</span>Prestataires</a></li>
+      <li><a href="../outils/index.html"><span class="num">13</span>Outils</a></li>
+      <li><a href="../sources/index.html"><span class="num">14</span>Sources &amp; glossaire</a></li>
+    </ul>
+  </nav>
+  <a class="urgent drawer-urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+</aside>
+<!-- /LAYOUT:HEADER -->
+
+<main class="wrap gutter">
+<section class="view" id="v-contextes">
+  <p class="eyebrow">Mon contexte</p>
+  <h1>Contexte probable de votre établissement</h1>
+  <p class="lead">Nous avons retenu trois contextes qui diffèrent par la taille, l'organisation de l'informatique et le cadre réglementaire. Identifiez le vôtre.</p>
+
+  <article class="fiche">
+    <span class="tag">Contexte A</span>
+    <h2 style="margin:0">Cabinet libéral (1 à 5 praticiens)</h2>
+    <p><strong>Organisation de l'informatique :</strong> pas d'informaticien. Le poste du secrétariat sert à tout, la box internet est celle du fournisseur d'accès, et un « neveu qui s'y connaît » ou un dépanneur local intervient au besoin. Maturité cyber généralement faible.</p>
+    <h3>Les actifs</h3>
+    <ul><li>Comptes Practilio (agenda, dossiers patients) et messagerie, y compris MSSanté</li><li>Carte CPS (carte de professionnel de santé) ou e-CPS et son lecteur, logiciel de télétransmission (feuilles de soins électroniques)</li><li>Poste du secrétariat, smartphone du praticien, éventuellement un disque de sauvegarde</li><li>Coordonnées bancaires et facturation</li></ul>
+    <h3>Techniques d'attaque dominantes</h3>
+    <ul><li>Hameçonnage et spear phishing (faux Assurance Maladie, faux support logiciel, faux patient avec pièce jointe)</li><li>Vol de mot de passe, mot de passe partagé ou réutilisé</li><li>Rançongiciel sur le poste du cabinet</li><li>Perte ou vol du smartphone ou de l'ordinateur portable</li><li>Utilisation d'une clé USB infectée sur le poste du cabinet</li></ul>
+    <h3>Conséquences prévisibles</h3>
+    <p>Arrêt de l'activité pendant plusieurs jours, impossibilité de facturer, fuite de données de patients avec atteinte au secret médical, obligations de notification à la CNIL, perte de confiance de la patientèle.</p>
+  </article>
+
+  <article class="fiche">
+    <span class="tag">Contexte B</span>
+    <h2 style="margin:0">Maison ou centre de santé pluriprofessionnel (10 à 50 personnes)</h2>
+    <p><strong>Organisation de l'informatique :</strong> un prestataire informatique local sous contrat, souvent un « référent informatique » interne non spécialiste (coordinatrice, gestionnaire). Plusieurs professions partagent des locaux, des postes et parfois des comptes.</p>
+    <h3>Les actifs</h3>
+    <ul><li>Comptes Practilio de chaque professionnel et du secrétariat mutualisé</li><li>Petit réseau local, Wi-Fi (patients et personnel), imprimantes multifonctions</li><li>Messagerie, outils collaboratifs (agenda partagé, tableurs), logiciel de gestion</li><li>Sauvegardes gérées par le prestataire</li></ul>
+    <h3>Techniques d'attaque dominantes</h3>
+    <ul><li>Comptes partagés et accès non retirés au départ d'un remplaçant ou d'un salarié</li><li>Shadow IT : logiciels installés sans l'accord ni la supervision d'un référent cyber (tableur partagé contenant des identifiants, formulaire en ligne)</li><li>Rançongiciel qui se propage sur le réseau local</li><li>Intrusion par le Wi-Fi patients, non séparé du reste du réseau</li><li>Utilisation d'une clé USB infectée sur un poste partagé</li></ul>
+    <h3>Conséquences prévisibles</h3>
+    <p>Interruption de la prise en charge coordonnée, pertes financières, sanctions possibles en cas de manquement à la sécurité des données (RGPD), atteinte à la réputation de la structure auprès de l'ARS et des patients.</p>
+  </article>
+
+  <article class="fiche crit">
+    <span class="tag crit">Contexte C · IT + OT</span>
+    <h2 style="margin:0">Clinique ou établissement de santé partenaire</h2>
+    <p><strong>Organisation de l'informatique :</strong> une DSI (parfois mutualisée au sein d'un groupe), un RSSI ou un référent sécurité, des prestataires multiples. Deux mondes à distinguer :</p>
+    <div class="split">
+      <div class="card"><h3>IT : informatique de gestion</h3><ul><li>Dossier patient informatisé, interfaçage avec Practilio</li><li>Annuaire des comptes (Active Directory), messagerie</li><li>Facturation, PMSI, ressources humaines</li><li>Serveurs, sauvegardes, accès distants (VPN)</li></ul></div>
+      <div class="card"><h3>OT : technologies opérationnelles</h3><ul><li>Équipements biomédicaux pilotés et connectés : pousse-seringues, moniteurs, imagerie (IRM, scanner), automates de laboratoire</li><li>Gestion technique des bâtiments (GTB) : chauffage, ventilation, climatisation des blocs, contrôle d'accès</li><li><strong>Centrale de fluides médicaux</strong> (oxygène, vide, air médical) et sa supervision</li></ul></div>
+    </div>
+    <h3>Techniques d'attaque dominantes</h3>
+    <ul><li>Rançongiciel à fort impact (cas réels : CH de Corbeil-Essonnes en 2022, CH d'Armentières en 2024, hôpital Simone-Veil de Cannes en 2024). <strong>Pour en savoir plus :</strong>
+        <ul class="more">
+          <li><a href="https://www.lemondeinformatique.fr/actualites/lire-piratage-du-ch-sud-francilien-de-corbeil-essonnes-des-donnees-sensibles-divulguees-88114.html" target="_blank" rel="noopener">Centre hospitalier Sud Francilien, Corbeil-Essonnes (août 2022)</a> : rançongiciel revendiqué par LockBit, puis publication de données de patients et de personnels (Le Monde Informatique)</li>
+          <li><a href="https://www.lemondeinformatique.fr/actualites/lire-l-hopital-d-armentieres-perturbe-par-un-ransomware-92940.html" target="_blank" rel="noopener">Centre hospitalier d'Armentières (février 2024)</a> : urgences fermées 24 heures, données diffusées ensuite (Le Monde Informatique)</li>
+          <li><a href="https://www.lemondeinformatique.fr/actualites/lire-lockbit-publie-des-donnees-sensibles-du-ch-simone-veil-de-cannes-93655.html" target="_blank" rel="noopener">Hôpital Simone-Veil, Cannes (avril 2024)</a> : rançon refusée, données publiées par LockBit (Le Monde Informatique) ; voir aussi le <a href="https://cyberveille.esante.gouv.fr/sites/default/files/media/document/2024-10/RETEX_CH%20%2310_CannesVF.pdf" target="_blank" rel="noopener">retour d'expérience du CERT Santé</a></li>
+        </ul></li><li>Accès distant de maintenance oublié vers un équipement OT (VPN, prise en main à distance)</li><li>Équipements biomédicaux sous système d'exploitation obsolète, impossibles à mettre à jour sans le fabricant</li><li>Compromission de compte à privilèges, fuite massive de données</li><li>Utilisation d'une clé USB infectée, par exemple un support de résultats ou d'imagerie apporté par un patient</li></ul>
+    <h3>Conséquences prévisibles</h3>
+    <p><strong>Risques directs pour les patients</strong> (déprogrammation d'interventions, transferts, mode dégradé sur papier), arrêt d'activité de plusieurs semaines, coûts de remédiation élevés, obligations de déclaration (ARS, CNIL, CERT Santé), atteinte réputationnelle durable.</p>
+    <p class="note">Pourquoi séparer IT et OT ? Un équipement OT ne se met pas à jour comme un PC : il dépend du fabricant, son arrêt peut interrompre un soin, et sa compromission a des effets physiques. Il se protège surtout par <strong>l'inventaire, la segmentation réseau et le contrôle des accès distants</strong>.</p>
+  </article>
+</section>
+</main>
+
+<!-- LAYOUT:FOOTER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<footer class="gutter">
+  <div class="wrap">
+    <p><strong>Projet pédagogique EPITA – ECSI3-Evaluation-01.</strong> Practilio est une entreprise fictive. Ce site n'est pas un service réel et ne s'adresse à aucun professionnel de santé réel. Les coordonnées « Practilio » sont fictives.</p>
+    <p>Les organismes publics, prestataires et éditeurs cités existent ; ils sont mentionnés à titre d'orientation, sans reproduction de leurs logos ni de leurs chartes graphiques, et sans partenariat. Informations vérifiées le 23/11/2026.</p>
+  </div>
+</footer>
+<!-- /LAYOUT:FOOTER -->
+
+<script src="../shared/dialogues.js"></script>
+<script src="../shared/common.js"></script>
+<script src="contextes.js"></script>
+</body>
+</html>

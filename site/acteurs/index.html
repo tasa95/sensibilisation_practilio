@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Acteurs publics · Practilio Cyber Repères</title>
+<meta name="description" content="Plateforme fictive de sensibilisation et d'orientation cyber pour les utilisateurs de Practilio — projet pédagogique EPITA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Sora:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body data-page="acteurs">
+<!-- LAYOUT:HEADER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<div class="fiction gutter" role="note">⚠ Projet pédagogique EPITA (ECSI3, évaluation 01). <strong>Practilio est une entreprise fictive</strong> : ce site n'est pas un service réel, aucun contact ni numéro « Practilio » n'est opérationnel.</div>
+
+<header class="top">
+  <div class="wrap gutter">
+    <div class="brandrow">
+      <div class="brand-left">
+        <button type="button" class="burger" id="menu-btn" aria-expanded="false" aria-controls="drawer" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      <a class="logo" href="../accueil/index.html" aria-label="Accueil Practilio Cyber Repères">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="1" y="1" width="26" height="26" rx="7" fill="var(--brand)"/><path d="M14 6v16M6 14h16" stroke="var(--surface)" stroke-width="3.2" stroke-linecap="round"/></svg>
+        <span>Practilio Cyber Repères <small>· FICTIF</small></span>
+      </a>
+      </div>
+      <div class="top-actions">
+        <button type="button" class="ghost" id="tuto-toggle" aria-pressed="true">Mode tutoriel : activé</button>
+        <a class="urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<div class="drawer-backdrop" id="drawer-backdrop"></div>
+<aside class="drawer" id="drawer" aria-label="Menu principal">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button type="button" class="ghost drawer-close" id="menu-close" aria-label="Fermer le menu">✕</button>
+  </div>
+  <nav aria-label="Navigation principale" id="nav">
+    <p class="nav-group">Urgence</p>
+    <ul>
+      <li><a class="nav-urgent" href="../qui-contacter/index.html"><span class="num">SOS</span>Qui contacter</a></li>
+    </ul>
+    <p class="nav-group">Comprendre</p>
+    <ul>
+      <li><a href="../accueil/index.html"><span class="num"></span>Accueil</a></li>
+      <li><a href="../bonnes-pratiques/index.html"><span class="num"></span>10 bonnes pratiques</a></li>
+      <li><a href="../pourquoi/index.html"><span class="num">01</span>Pourquoi Practilio vous sensibilise</a></li>
+      <li><a href="../notions/index.html"><span class="num">02</span>Notions clés</a></li>
+      <li><a href="../menaces/index.html"><span class="num">03</span>Les attaques</a></li>
+      <li><a href="../contextes/index.html"><span class="num">04</span>Contexte de votre établissement</a></li>
+      <li><a href="../ia/index.html"><span class="num">05</span>IA et données patients</a></li>
+    </ul>
+    <p class="nav-group">Se protéger</p>
+    <ul>
+      <li><a href="../practilio/index.html"><span class="num">06</span>Réduire sa surface d'attaque</a></li>
+    </ul>
+    <p class="nav-group">S'orienter</p>
+    <ul>
+      <li><a href="../reglementation/index.html"><span class="num">07</span>Réglementation</a></li>
+      <li><a href="../attaque_ransomware/index.html"><span class="num">08</span>Attaque par rançongiciel</a></li>
+      <li><a href="../assurance/index.html"><span class="num">09</span>Assurance &amp; risque</a></li>
+      <li><a href="../acteurs/index.html"><span class="num">10</span>Acteurs publics</a></li>
+    </ul>
+    <p class="nav-group">Se former</p>
+    <ul>
+      <li><a href="../sensibilisation/index.html"><span class="num">11</span>Sensibilisation &amp; quiz</a></li>
+    </ul>
+    <p class="nav-group">Ressources</p>
+    <ul>
+      <li><a href="../prestataires/index.html"><span class="num">12</span>Prestataires</a></li>
+      <li><a href="../outils/index.html"><span class="num">13</span>Outils</a></li>
+      <li><a href="../sources/index.html"><span class="num">14</span>Sources &amp; glossaire</a></li>
+    </ul>
+  </nav>
+  <a class="urgent drawer-urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+</aside>
+<!-- /LAYOUT:HEADER -->
+
+<main class="wrap gutter">
+<section class="view" id="v-acteurs">
+  <p class="eyebrow">Acteurs publics et ressources</p>
+  <h1>Les acteurs publics vers qui vous tourner</h1>
+  <p class="lead">Les logos et chartes graphiques de ces organismes ne sont pas reproduits : nous les citons et renvoyons vers leurs ressources officielles.</p>
+  <h2>Qui solliciter selon la gravité : niveau, impact, urgence</h2>
+  <p>Plus l'incident est grave, plus il faut agir vite et plus le nombre d'interlocuteurs augmente. Repérez votre niveau, puis contactez les acteurs indiqués. Le détail situation par situation est sur la page <a href="../qui-contacter/index.html">Qui contacter</a>.</p>
+  <div class="tablebox"><table class="grille">
+    <thead><tr><th>Niveau de menace</th><th>Exemple</th><th>Impact</th><th>Urgence</th><th>Interlocuteurs</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tag ok">1 · Doute</span></td><td>Mail suspect non ouvert, appel douteux</td><td>Aucun dommage constaté</td><td>Dans la journée</td><td>Votre référent informatique. <a href="https://www.17cyber.gouv.fr" target="_blank" rel="noopener">17Cyber</a>, ou <a href="https://www.signal-spam.fr" target="_blank" rel="noopener">Signal Spam</a> pour les courriels. Practilio si le message se fait passer pour lui.</td></tr>
+      <tr><td><span class="tag warn">2 · Compromission limitée</span></td><td>Mot de passe saisi sur un faux site, connexion inconnue à un compte</td><td>Un compte exposé, sans dommage visible</td><td>Dans l'heure</td><td>Practilio, qui coupe les sessions ouvertes. Votre prestataire ou référent informatique.</td></tr>
+      <tr><td><span class="tag crit">3 · Incident grave</span></td><td>Fuite de données de patients, poste infecté</td><td>Données de patients exposées, activité perturbée</td><td>Immédiate</td><td>Votre prestataire. Practilio. La CNIL sous 72 h si les patients sont exposés. Le <a href="https://cyberveille.esante.gouv.fr/" target="_blank" rel="noopener">CERT Santé</a> (déclaration obligatoire pour les établissements). Plainte.</td></tr>
+      <tr><td><span class="tag crit">4 · Crise</span></td><td>Rançongiciel sur le système d'information, équipements de soins touchés</td><td>Arrêt des soins ou de l'activité, risque pour les patients</td><td>Immédiate, 24 h/24</td><td>Le CERT Santé (astreinte <span class="mono">09 72 43 91 25</span>). L'ARS. Un prestataire de réponse à incident qualifié (PRIS). Practilio. La CNIL. Plainte sous 72 h (condition d'indemnisation). Votre assurance.</td></tr>
+    </tbody></table></div>
+
+  <h2>Propres au secteur de la santé</h2>
+  <div class="grid">
+    <article class="card"><span class="tag">Santé</span><h3>CERT Santé (ANS)</h3><p>Centre de réponse aux incidents du secteur santé, opéré par l'Agence du numérique en santé. Reçoit les signalements d'incidents des structures de santé, appuie leur traitement et publie alertes et veille.</p><p><strong>Quand :</strong> tout incident de sécurité dans une structure de santé ; astreinte téléphonique pour les incidents majeurs : <span class="mono">09 72 43 91 25</span> (numéro indiqué sur la fiche de déclaration du CERT Santé).</p><p><a href="https://cyberveille.esante.gouv.fr/" target="_blank" rel="noopener">cyberveille.esante.gouv.fr</a></p></article>
+    <article class="card"><span class="tag">Santé</span><h3>Portail de signalement des événements sanitaires</h3><p>Point d'entrée unique du ministère pour déclarer un incident de sécurité des SI de santé, transmis à l'ARS et au CERT Santé.</p><p><a href="https://signalement.social-sante.gouv.fr" target="_blank" rel="noopener">signalement.social-sante.gouv.fr</a></p></article>
+    <article class="card"><span class="tag">Santé</span><h3>Agence du numérique en santé (ANS)</h3><p>Publie la PGSSI-S, gère la certification HDS, la carte CPS / e-CPS, Pro Santé Connect, et pilote le programme CaRE pour les établissements.</p><p><a href="https://esante.gouv.fr" target="_blank" rel="noopener">esante.gouv.fr</a></p></article>
+    <article class="card"><span class="tag">Santé</span><h3>Agences régionales de santé (ARS) et GRADeS</h3><p>L'ARS reçoit les déclarations d'incidents des établissements et coordonne la gestion de crise régionale. Les GRADeS (groupements régionaux d'appui au développement de la e-santé) accompagnent les structures en région.</p><p><a href="https://www.ars.sante.fr" target="_blank" rel="noopener">ars.sante.fr</a></p></article>
+    <article class="card"><span class="tag">Santé</span><h3>ANSM</h3><p>Agence nationale de sécurité du médicament et des produits de santé : matériovigilance des dispositifs médicaux, y compris quand une défaillance de cybersécurité affecte un équipement biomédical.</p><p><a href="https://ansm.sante.fr" target="_blank" rel="noopener">ansm.sante.fr</a></p></article>
+  </div>
+  <h2>Transverses</h2>
+  <div class="grid">
+    <article class="card"><h3>ANSSI</h3><p>Agence nationale de la sécurité des systèmes d'information, rattachée au SGDSN. Autorité nationale de cybersécurité : guides (hygiène informatique, MFA et mots de passe), qualification des prestataires et produits, futur régulateur NIS 2. Publie le <strong>ReCyF</strong> (Référentiel Cyber France, mesures recommandées pour NIS 2, document de travail publié en mars 2026) et propose <strong>MonAideCyber</strong>, un premier diagnostic gratuit réalisé par un « aidant cyber » formé par l'ANSSI, adapté aux petites structures.</p><p><a href="https://cyber.gouv.fr" target="_blank" rel="noopener">cyber.gouv.fr</a> · <a href="https://monaide.cyber.gouv.fr" target="_blank" rel="noopener">MonAideCyber</a> · <a href="https://cyber.gouv.fr/la-directive-nis-2" target="_blank" rel="noopener">NIS 2 et ReCyF</a></p></article>
+    <article class="card"><h3>CERT-FR</h3><p>CSIRT gouvernemental opéré par l'ANSSI : alertes, avis de vulnérabilités, coordination des incidents majeurs. CSIRT national destinataire des notifications CRA.</p><p><a href="https://www.cert.ssi.gouv.fr" target="_blank" rel="noopener">cert.ssi.gouv.fr</a></p></article>
+    <article class="card"><h3>Cybermalveillance.gouv.fr et 17Cyber</h3><p>Dispositif national d'assistance aux victimes pour les particuliers, entreprises et petites structures : diagnostic en ligne, fiches réflexes, mise en relation avec des prestataires de proximité (label ExpertCyber). 17Cyber est son guichet d'urgence en ligne.</p><p><a href="https://www.cybermalveillance.gouv.fr" target="_blank" rel="noopener">cybermalveillance.gouv.fr</a> · <a href="https://www.17cyber.gouv.fr" target="_blank" rel="noopener">17cyber.gouv.fr</a></p></article>
+    <article class="card"><h3>CNIL</h3><p>Autorité de protection des données : notification des violations de données (72 h), guide de la sécurité des données personnelles, recommandations mots de passe et IA.</p><p><a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a></p></article>
+    <article class="card"><h3>ENISA</h3><p>Agence de l'Union européenne pour la cybersécurité. Gère la plateforme unique de signalement du Cyber Resilience Act, opérationnelle depuis le 11/09/2026.</p><p><a href="https://www.enisa.europa.eu/topics/product-security-and-certification/single-reporting-platform-srp" target="_blank" rel="noopener">enisa.europa.eu</a></p></article>
+    <article class="card"><h3>Police et gendarmerie</h3><p>Dépôt de plainte en cas d'attaque (rançongiciel, fraude, vol de données) : indispensable pour l'enquête, et <strong>sous 72 h</strong> pour être indemnisé par l'assurance. Orientation possible via 17Cyber.</p></article>
+  </div>
+  <h2>Comprendre la menace : recherche et think tanks</h2>
+  <p>Pour les directions qui veulent comprendre le contexte stratégique et géopolitique des cyberattaques (APT, hacktivisme, conflits).</p>
+  <div class="grid">
+    <article class="card"><h3>IFRI</h3><p>Institut français des relations internationales : analyses sur la géopolitique du numérique et de la cybersécurité.</p><p><a href="https://www.ifri.org" target="_blank" rel="noopener">ifri.org</a></p></article>
+    <article class="card"><h3>IRSEM</h3><p>Institut de recherche stratégique de l'École militaire (ministère des Armées) : études sur les conflits, l'influence et le cyber.</p><p><a href="https://www.irsem.fr" target="_blank" rel="noopener">irsem.fr</a></p></article>
+    <article class="card"><h3>EuRepoC</h3><p>European Repository of Cyber Incidents : base de données européenne des cyberincidents à portée politique, avec attribution et contexte.</p><p><a href="https://eurepoc.eu" target="_blank" rel="noopener">eurepoc.eu</a></p></article>
+    <article class="card"><h3>Le Rubicon</h3><p>Média de réflexion stratégique francophone, qui publie des analyses sur la défense et le cyber.</p><p><a href="https://lerubicon.org" target="_blank" rel="noopener">lerubicon.org</a></p></article>
+  </div>
+</section>
+</main>
+
+<!-- LAYOUT:FOOTER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<footer class="gutter">
+  <div class="wrap">
+    <p><strong>Projet pédagogique EPITA – ECSI3-Evaluation-01.</strong> Practilio est une entreprise fictive. Ce site n'est pas un service réel et ne s'adresse à aucun professionnel de santé réel. Les coordonnées « Practilio » sont fictives.</p>
+    <p>Les organismes publics, prestataires et éditeurs cités existent ; ils sont mentionnés à titre d'orientation, sans reproduction de leurs logos ni de leurs chartes graphiques, et sans partenariat. Informations vérifiées le 23/11/2026.</p>
+  </div>
+</footer>
+<!-- /LAYOUT:FOOTER -->
+
+<script src="../shared/dialogues.js"></script>
+<script src="../shared/common.js"></script>
+<script src="acteurs.js"></script>
+</body>
+</html>

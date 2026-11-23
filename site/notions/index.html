@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Notions clés · Practilio Cyber Repères</title>
+<meta name="description" content="Plateforme fictive de sensibilisation et d'orientation cyber pour les utilisateurs de Practilio — projet pédagogique EPITA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Sora:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body data-page="notions">
+<!-- LAYOUT:HEADER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<div class="fiction gutter" role="note">⚠ Projet pédagogique EPITA (ECSI3, évaluation 01). <strong>Practilio est une entreprise fictive</strong> : ce site n'est pas un service réel, aucun contact ni numéro « Practilio » n'est opérationnel.</div>
+
+<header class="top">
+  <div class="wrap gutter">
+    <div class="brandrow">
+      <div class="brand-left">
+        <button type="button" class="burger" id="menu-btn" aria-expanded="false" aria-controls="drawer" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      <a class="logo" href="../accueil/index.html" aria-label="Accueil Practilio Cyber Repères">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="1" y="1" width="26" height="26" rx="7" fill="var(--brand)"/><path d="M14 6v16M6 14h16" stroke="var(--surface)" stroke-width="3.2" stroke-linecap="round"/></svg>
+        <span>Practilio Cyber Repères <small>· FICTIF</small></span>
+      </a>
+      </div>
+      <div class="top-actions">
+        <button type="button" class="ghost" id="tuto-toggle" aria-pressed="true">Mode tutoriel : activé</button>
+        <a class="urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<div class="drawer-backdrop" id="drawer-backdrop"></div>
+<aside class="drawer" id="drawer" aria-label="Menu principal">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button type="button" class="ghost drawer-close" id="menu-close" aria-label="Fermer le menu">✕</button>
+  </div>
+  <nav aria-label="Navigation principale" id="nav">
+    <p class="nav-group">Urgence</p>
+    <ul>
+      <li><a class="nav-urgent" href="../qui-contacter/index.html"><span class="num">SOS</span>Qui contacter</a></li>
+    </ul>
+    <p class="nav-group">Comprendre</p>
+    <ul>
+      <li><a href="../accueil/index.html"><span class="num"></span>Accueil</a></li>
+      <li><a href="../bonnes-pratiques/index.html"><span class="num"></span>10 bonnes pratiques</a></li>
+      <li><a href="../pourquoi/index.html"><span class="num">01</span>Pourquoi Practilio vous sensibilise</a></li>
+      <li><a href="../notions/index.html"><span class="num">02</span>Notions clés</a></li>
+      <li><a href="../menaces/index.html"><span class="num">03</span>Les attaques</a></li>
+      <li><a href="../contextes/index.html"><span class="num">04</span>Contexte de votre établissement</a></li>
+      <li><a href="../ia/index.html"><span class="num">05</span>IA et données patients</a></li>
+    </ul>
+    <p class="nav-group">Se protéger</p>
+    <ul>
+      <li><a href="../practilio/index.html"><span class="num">06</span>Réduire sa surface d'attaque</a></li>
+    </ul>
+    <p class="nav-group">S'orienter</p>
+    <ul>
+      <li><a href="../reglementation/index.html"><span class="num">07</span>Réglementation</a></li>
+      <li><a href="../attaque_ransomware/index.html"><span class="num">08</span>Attaque par rançongiciel</a></li>
+      <li><a href="../assurance/index.html"><span class="num">09</span>Assurance &amp; risque</a></li>
+      <li><a href="../acteurs/index.html"><span class="num">10</span>Acteurs publics</a></li>
+    </ul>
+    <p class="nav-group">Se former</p>
+    <ul>
+      <li><a href="../sensibilisation/index.html"><span class="num">11</span>Sensibilisation &amp; quiz</a></li>
+    </ul>
+    <p class="nav-group">Ressources</p>
+    <ul>
+      <li><a href="../prestataires/index.html"><span class="num">12</span>Prestataires</a></li>
+      <li><a href="../outils/index.html"><span class="num">13</span>Outils</a></li>
+      <li><a href="../sources/index.html"><span class="num">14</span>Sources &amp; glossaire</a></li>
+    </ul>
+  </nav>
+  <a class="urgent drawer-urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+</aside>
+<!-- /LAYOUT:HEADER -->
+
+<main class="wrap gutter">
+<section class="view" id="v-notions">
+  <p class="eyebrow">Vocabulaire</p>
+  <h1>Les notions clés, en clair</h1>
+
+  <div class="step" data-title="Qu'est-ce qu'un actif ?">
+  <p class="lead">Avant de parler de menaces, il faut savoir ce que l'on protège. En cybersécurité, ce sont les <strong>actifs</strong>.</p>
+  <div class="fiche">
+    <h2 style="margin:0">Définition</h2>
+    <p>Un <strong>actif</strong> est tout ce qui a de la valeur pour votre structure et nécessite une protection.</p>
+  </div>
+  <p class="note">Un ordinateur n'a pas de valeur en soi : il en a parce qu'il porte des dossiers de patients. On le protège pour ce qu'il contient. La première étape est donc de <strong>faire l'inventaire</strong> de ses actifs.</p>
+  </div>
+
+  <div class="step" data-title="Les actifs selon votre contexte">
+  <h2>Les actifs selon votre contexte</h2>
+  <p>L'actif principal est le même partout : les données des patients, au service de la continuité des soins. Ce sont les supports qui changent, selon la taille et l'organisation de la structure.</p>
+  <div class="split">
+    <article class="card">
+      <span class="tag">Cabinet libéral</span>
+      <h3>Actifs</h3><ul><li>Dossiers et agenda des patients dans Practilio</li><li>Facturation et télétransmission</li></ul>
+      <h3>Supports</h3><ul><li>Le poste du secrétariat</li><li>Le smartphone du praticien</li><li>Carte CPS (carte de professionnel de santé) ou e-CPS et son lecteur</li><li>Box Internet, disque de sauvegarde</li><li>Les comptes Practilio et la messagerie</li></ul>
+    </article>
+    <article class="card">
+      <span class="tag">Maison ou centre de santé</span>
+      <h3>Actifs</h3><ul><li>Dossiers partagés entre professionnels</li><li>Agenda commun et coordination des soins</li></ul>
+      <h3>Supports</h3><ul><li>Postes partagés, imprimantes multifonctions</li><li>Réseau local et Wi-Fi (personnel et patients)</li><li>Comptes de chaque professionnel et du secrétariat</li><li>Outils collaboratifs (agenda, tableurs)</li><li>Sauvegardes gérées par le prestataire</li></ul>
+    </article>
+    <article class="card">
+      <span class="tag">Clinique</span>
+      <h3>Actifs</h3><ul><li>Dossiers patients et continuité des soins</li><li>Fonctionnement des blocs et des services</li></ul>
+      <h3>Supports</h3><ul><li>Dossier patient informatisé, annuaire des comptes</li><li>Serveurs, sauvegardes, accès distants</li><li>Équipements biomédicaux connectés (pousse-seringues, imagerie)</li><li>Centrale de fluides médicaux</li><li>Gestion technique des bâtiments</li></ul>
+    </article>
+  </div>
+  </div>
+
+  <div class="step" data-title="Menace, vulnérabilité, risque">
+  <h2>Menace, vulnérabilité, attaque, risque</h2>
+  <p>Ces mots suffisent pour comprendre une analyse de risque et dialoguer avec un prestataire.</p>
+  <div class="tablebox"><table>
+    <thead><tr><th>Terme</th><th>Définition</th><th>Exemple en cabinet</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Vulnérabilité</strong></td><td>Faiblesse d'un actif, pouvant apparaître à la conception, la réalisation, l'installation, la configuration ou l'utilisation.</td><td>Un mot de passe « Cabinet2024 » utilisé par tout le monde, un manque de formation des équipes</td></tr>
+      <tr><td><strong>Menace</strong></td><td>Cause potentielle d'un incident pouvant causer des dommages à un actif si elle se concrétise.</td><td>Un groupe cybercriminel qui vise les professionnels de santé</td></tr>
+      <tr><td><strong>Attaque</strong></td><td>Concrétisation d'une menace : exploitation effective d'une vulnérabilité.</td><td>Connexion au compte Practilio avec le mot de passe deviné</td></tr>
+      <tr><td><strong>Risque</strong></td><td>Exploitation possible d'une vulnérabilité par une menace sur un actif, générant un ou plusieurs impacts. Il s'évalue en croisant impact et vraisemblance.</td><td>Vol des dossiers patients par compromission du compte partagé</td></tr>
+      <tr><td><strong>Impact</strong></td><td>Conséquence sur un actif de la réalisation d'un risque.</td><td>Fuite de données, plainte de patients, notification CNIL</td></tr>
+      <tr><td><strong>Vraisemblance (occurrence)</strong></td><td>Probabilité qu'un risque se réalise.</td><td>Élevée si aucun MFA et mot de passe faible</td></tr>
+      <tr><td><strong>Surface d'attaque</strong></td><td>Ensemble des points par lesquels un attaquant peut tenter d'entrer : comptes, postes, services exposés sur internet, accès distants, personnes.</td><td>Chaque compte, chaque poste, chaque accès distant de maintenance</td></tr>
+    </tbody></table></div>
+  </div>
+
+  <div class="step" data-title="Les principaux chemins d'attaque">
+  <h2>Les principaux chemins d'attaque</h2>
+  <p>Un <strong>chemin d'attaque</strong> est la suite d'étapes que suit un attaquant, de la porte d'entrée jusqu'à l'actif qu'il vise. Ces chemins sont les mêmes dans un cabinet, une maison de santé ou une clinique ; c'est l'ampleur des conséquences qui change. Couper une seule étape suffit souvent à arrêter l'attaque.</p>
+  <p>Ouvrez chaque chemin pour voir comment il se déroule et comment le couper.</p>
+  <div class="accs">
+    <details class="acc">
+      <summary><strong>Hameçonnage (phishing)</strong><span>un faux message pousse à cliquer ou à donner ses identifiants</span></summary>
+      <div class="acc-body">
+        <p>Un e-mail, un SMS ou un appel se fait passer pour un tiers de confiance (Assurance Maladie, support d'un logiciel, confrère, patient) et pousse à cliquer sur un lien, ouvrir une pièce jointe ou saisir ses identifiants.</p>
+        <div class="chain"><h3>Chemin type</h3><ol><li>Faux message crédible</li><li>Clic, pièce jointe ouverte ou identifiants saisis</li><li>Compte volé ou logiciel malveillant installé</li></ol></div>
+        <p><strong>Conséquences :</strong> Compte usurpé, rançongiciel, fraude au virement.</p>
+        <p><strong>Les parades :</strong> Vérifier toute demande inhabituelle par un autre canal, activer l'authentification multi-facteur, signaler le message.</p>
+      </div>
+    </details>
+    <details class="acc">
+      <summary><strong>Vol de mot de passe</strong><span>un mot de passe faible, réutilisé ou partagé ouvre la porte</span></summary>
+      <div class="acc-body">
+        <p>Le mot de passe est trop simple, réutilisé sur plusieurs sites, partagé entre collègues ou noté sur un post-it. Il peut aussi provenir de la fuite d'un autre site.</p>
+        <div class="chain"><h3>Chemin type</h3><ol><li>Mot de passe récupéré ou deviné</li><li>Connexion qui semble légitime</li><li>Accès aux dossiers et à l'agenda</li></ol></div>
+        <p><strong>Conséquences :</strong> Consultation ou vol de données de patients, actions faites en votre nom.</p>
+        <p><strong>Les parades :</strong> Une phrase de passe unique par service, un gestionnaire de mots de passe, l'authentification multi-facteur.</p>
+      </div>
+    </details>
+    <details class="acc">
+      <summary><strong>Dispositif compromis</strong><span>un ordinateur, un smartphone ou une clé USB infectés ou volés</span></summary>
+      <div class="acc-body">
+        <p>Un appareil est infecté (logiciel malveillant, clé USB piégée), n'est plus mis à jour, ou est perdu ou volé avec une session ouverte. Un équipement connecté exposé sur Internet est aussi un dispositif à risque.</p>
+        <div class="chain"><h3>Chemin type</h3><ol><li>Appareil infecté, obsolète ou volé</li><li>L'attaquant voit ce que voit l'utilisateur</li><li>Propagation au réseau ou fuite de données</li></ol></div>
+        <p><strong>Conséquences :</strong> Données lues ou chiffrées, propagation d'un rançongiciel, arrêt de l'activité.</p>
+        <p><strong>Les parades :</strong> Mises à jour automatiques, antivirus ou EDR, chiffrement des appareils, aucune clé USB inconnue, verrouillage de session.</p>
+        <div data-reco="edr"></div>
+      </div>
+    </details>
+    <details class="acc">
+      <summary><strong>Shadow IT</strong><span>un logiciel installé sans l'accord ni la supervision d'un référent cyber</span></summary>
+      <div class="acc-body">
+        <p>Un logiciel, un service en ligne ou un matériel est installé et utilisé sans l'accord ni la supervision d'un référent cyber : tableur partagé contenant des identifiants, application téléchargée hors des magasins officiels, formulaire en ligne.</p>
+        <div class="chain"><h3>Chemin type</h3><ol><li>Logiciel non validé</li><li>Non mis à jour, données hors de l'environnement maîtrisé</li><li>Faille exploitée ou fuite de données</li></ol></div>
+        <p><strong>Conséquences :</strong> Fuite de données de patients, porte d'entrée que personne ne surveille.</p>
+        <p><strong>Les parades :</strong> Une liste des logiciels autorisés, une validation par le référent avant toute installation, des droits administrateur limités.</p>
+      </div>
+    </details>
+    <details class="acc">
+      <summary><strong>Manque de revue des accès</strong><span>des comptes jamais fermés et des droits trop larges</span></summary>
+      <div class="acc-body">
+        <p>Les comptes des remplaçants, anciens salariés ou prestataires ne sont pas fermés à leur départ ; des comptes sont partagés ; certains utilisateurs ont plus de droits que nécessaire.</p>
+        <div class="chain"><h3>Chemin type</h3><ol><li>Compte oublié ou trop puissant</li><li>Réutilisé par son ancien titulaire ou un attaquant</li><li>Accès aux données sans que personne ne le remarque</li></ol></div>
+        <p><strong>Conséquences :</strong> Consultation ou copie de dossiers, impossibilité de savoir qui a fait quoi.</p>
+        <p><strong>Les parades :</strong> Fermer chaque compte le jour du départ, revoir les accès chaque trimestre, un compte nominatif par personne, le moins de droits possible.</p>
+      </div>
+    </details>
+  </div>
+  </div>
+
+  <div class="step" data-title="Qui vise quoi, et comment ?">
+  <h2>Qui vise quoi, et comment ?</h2>
+  <p>Les menaces sont aussi appelées <strong>sources d'attaque</strong> : ce sont les personnes ou groupes à l'origine des attaques. Chacune poursuit un objectif, utilise des méthodes et vise des actifs précis. Les connaître aide à choisir la bonne protection.</p>
+<!-- SCHEMA:MENACES (généré par docs/build_schema_menaces.py, ne pas modifier ici) -->
+  <figure class="diagram">
+    <div class="diagram-scroll">
+<svg class="threat-map" viewBox="0 0 1000 786" role="img" aria-labelledby="tm-title tm-desc">
+<title id="tm-title">Des sources d'attaque aux actifs visés</title>
+<desc id="tm-desc">Schéma : à gauche les menaces (sources d'attaque), à droite les actifs visés ; chaque flèche indique au centre l'objectif et la méthode. Le même contenu est disponible sous forme de tableau sous le schéma.</desc>
+<defs><marker id="tm-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="tm-head"/></marker></defs>
+<text x="125.0" y="30" class="tm-col">MENACES (SOURCES D'ATTAQUE)</text>
+<text x="510.0" y="30" class="tm-col">OBJECTIF ET MÉTHODE</text>
+<text x="885.0" y="30" class="tm-col">ACTIFS VISÉS</text>
+<path d="M240 110.0 C280 110.0 260 110 300 110" class="tm-line"/>
+<path d="M720 110 C760 110 740 154.0 778 154.0" class="tm-line" marker-end="url(#tm-arrow)"/>
+<rect x="300" y="78" width="420" height="64" rx="8" class="tm-label"/>
+<text x="314" y="104" class="tm-txt"><tspan class="tm-k">Objectif :</tspan> curiosité et/ou recherche de notoriété</text>
+<text x="314" y="127" class="tm-txt"><tspan class="tm-k">Méthode :</tspan> outils d&#x27;attaque prêts à l&#x27;emploi, failles connues</text>
+<path d="M240 198.0 C280 198.0 260 198 300 198" class="tm-line"/>
+<path d="M720 198 C760 198 740 154.0 778 154.0" class="tm-line" marker-end="url(#tm-arrow)"/>
+<rect x="300" y="166" width="420" height="64" rx="8" class="tm-label"/>
+<text x="314" y="192" class="tm-txt"><tspan class="tm-k">Objectif :</tspan> défense d&#x27;une cause, indépendance, propagande</text>
+<text x="314" y="215" class="tm-txt"><tspan class="tm-k">Méthode :</tspan> déni de service (DDoS), défiguration du site</text>
+<path d="M240 286.0 C280 286.0 260 286 300 286" class="tm-line"/>
+<path d="M720 286 C760 286 740 330.0 778 330.0" class="tm-line" marker-end="url(#tm-arrow)"/>
+<rect x="300" y="254" width="420" height="64" rx="8" class="tm-label"/>
+<text x="314" y="280" class="tm-txt"><tspan class="tm-k">Objectif :</tspan> vengeance, appât du gain, idéologie</text>
+<text x="314" y="303" class="tm-txt"><tspan class="tm-k">Méthode :</tspan> abus de leurs accès légitimes, copie de données</text>
+<path d="M240 418.0 C280 418.0 260 374 300 374" class="tm-line"/>
+<path d="M720 374 C760 374 740 330.0 778 330.0" class="tm-line" marker-end="url(#tm-arrow)"/>
+<rect x="300" y="342" width="420" height="64" rx="8" class="tm-label"/>
+<text x="314" y="368" class="tm-txt"><tspan class="tm-k">Objectif :</tspan> gain financier</text>
+<text x="314" y="391" class="tm-txt"><tspan class="tm-k">Méthode :</tspan> vol et revente de données, extorsion</text>
+<path d="M240 418.0 C280 418.0 260 462 300 462" class="tm-line"/>
+<path d="M720 462 C760 462 740 506.0 778 506.0" class="tm-line" marker-end="url(#tm-arrow)"/>
+<rect x="300" y="430" width="420" height="64" rx="8" class="tm-label"/>
+<text x="314" y="456" class="tm-txt"><tspan class="tm-k">Objectif :</tspan> gain financier</text>
+<text x="314" y="479" class="tm-txt"><tspan class="tm-k">Méthode :</tspan> rançongiciel, hameçonnage</text>
+<path d="M240 550.0 C280 550.0 260 550 300 550" class="tm-line"/>
+<path d="M720 550 C760 550 740 506.0 778 506.0" class="tm-line" marker-end="url(#tm-arrow)"/>
+<rect x="300" y="518" width="420" height="64" rx="8" class="tm-label"/>
+<text x="314" y="544" class="tm-txt"><tspan class="tm-k">Objectif :</tspan> gain financier</text>
+<text x="314" y="567" class="tm-txt"><tspan class="tm-k">Méthode :</tspan> rançongiciel loué « as a service » (RaaS)</text>
+<path d="M240 638.0 C280 638.0 260 638 300 638" class="tm-line"/>
+<path d="M720 638 C760 638 740 638.0 778 638.0" class="tm-line" marker-end="url(#tm-arrow)"/>
+<rect x="300" y="606" width="420" height="64" rx="8" class="tm-label"/>
+<text x="314" y="632" class="tm-txt"><tspan class="tm-k">Objectif :</tspan> indépendance stratégique, propagande, espionnage</text>
+<text x="314" y="655" class="tm-txt"><tspan class="tm-k">Méthode :</tspan> intrusion discrète et prolongée, hameçonnage ciblé</text>
+<path d="M240 726.0 C280 726.0 260 726 300 726" class="tm-line"/>
+<path d="M720 726 C760 726 740 726.0 778 726.0" class="tm-line" marker-end="url(#tm-arrow)"/>
+<rect x="300" y="694" width="420" height="64" rx="8" class="tm-label"/>
+<text x="314" y="720" class="tm-txt"><tspan class="tm-k">Objectif :</tspan> espionnage industriel ou économique</text>
+<text x="314" y="743" class="tm-txt"><tspan class="tm-k">Méthode :</tspan> complicité interne, hameçonnage ciblé</text>
+<rect x="10" y="82.0" width="230" height="56" rx="10" class="tm-threat"/>
+<text class="tm-name"><tspan x="113.0" y="115.0">Script kiddies</tspan></text>
+<g class="tm-help" tabindex="0" role="button" aria-label="Description : Script kiddies" data-desc="Utilisent des outils ou scripts d&#x27;attaque déjà développés par d&#x27;autres, sans nécessairement en comprendre le fonctionnement. Faible niveau de compétence propre, mais dégâts réels du fait des outils prêts à l&#x27;emploi."><circle cx="218" cy="110.0" r="11"/><text x="218" y="115.0">?</text></g>
+<rect x="10" y="170.0" width="230" height="56" rx="10" class="tm-threat"/>
+<text class="tm-name"><tspan x="113.0" y="203.0">Hacktivistes</tspan></text>
+<g class="tm-help" tabindex="0" role="button" aria-label="Description : Hacktivistes" data-desc="Agissent pour défendre une cause ou faire passer un message. Exemple : le collectif Anonymous."><circle cx="218" cy="198.0" r="11"/><text x="218" y="203.0">?</text></g>
+<rect x="10" y="258.0" width="230" height="56" rx="10" class="tm-threat"/>
+<text class="tm-name"><tspan x="113.0" y="291.0">Insiders</tspan></text>
+<g class="tm-help" tabindex="0" role="button" aria-label="Description : Insiders" data-desc="Personnes présentes au sein même de la structure : salariés, prestataires, remplaçants."><circle cx="218" cy="286.0" r="11"/><text x="218" y="291.0">?</text></g>
+<rect x="10" y="390.0" width="230" height="56" rx="10" class="tm-threat"/>
+<text class="tm-name"><tspan x="113.0" y="423.0">Cybercriminels</tspan></text>
+<g class="tm-help" tabindex="0" role="button" aria-label="Description : Cybercriminels" data-desc="Agissent seuls ou en groupes organisés à des fins lucratives : rançongiciels, vol et revente de données, fraude, extorsion."><circle cx="218" cy="418.0" r="11"/><text x="218" y="423.0">?</text></g>
+<rect x="10" y="522.0" width="230" height="56" rx="10" class="tm-threat"/>
+<text class="tm-name"><tspan x="113.0" y="555.0">Affiliés</tspan></text>
+<g class="tm-help" tabindex="0" role="button" aria-label="Description : Affiliés" data-desc="Utilisent des outils de « cybercriminalité as a service » développés par des tiers (par exemple un Ransomware-as-a-Service), en échange d&#x27;une commission."><circle cx="218" cy="550.0" r="11"/><text x="218" y="555.0">?</text></g>
+<rect x="10" y="610.0" width="230" height="56" rx="10" class="tm-threat"/>
+<text class="tm-name"><tspan x="113.0" y="643.0">APT</tspan></text>
+<g class="tm-help" tabindex="0" role="button" aria-label="Description : APT" data-desc="Advanced Persistent Threat : groupes de menace structurés et soutenus par des États, qui mènent des campagnes d&#x27;attaque prolongées et discrètes."><circle cx="218" cy="638.0" r="11"/><text x="218" y="643.0">?</text></g>
+<rect x="10" y="698.0" width="230" height="56" rx="10" class="tm-threat"/>
+<text class="tm-name"><tspan x="113.0" y="722.0">Entreprises</tspan><tspan x="113.0" y="740.0">concurrentes</tspan></text>
+<g class="tm-help" tabindex="0" role="button" aria-label="Description : Entreprises concurrentes" data-desc="Entreprises qui cherchent à obtenir les informations commerciales ou stratégiques d&#x27;un concurrent."><circle cx="218" cy="726.0" r="11"/><text x="218" y="731.0">?</text></g>
+<rect x="780" y="126.0" width="210" height="56" rx="10" class="tm-asset"/>
+<text class="tm-name"><tspan x="885.0" y="150.0">Site web et</tspan><tspan x="885.0" y="168.0">services exposés</tspan></text>
+<rect x="780" y="302.0" width="210" height="56" rx="10" class="tm-asset"/>
+<text class="tm-name"><tspan x="885.0" y="335.0">Données des patients</tspan></text>
+<rect x="780" y="478.0" width="210" height="56" rx="10" class="tm-asset"/>
+<text class="tm-name"><tspan x="885.0" y="511.0">Continuité des soins</tspan></text>
+<rect x="780" y="610.0" width="210" height="56" rx="10" class="tm-asset"/>
+<text class="tm-name"><tspan x="885.0" y="634.0">Systèmes et</tspan><tspan x="885.0" y="652.0">équipements critiques</tspan></text>
+<rect x="780" y="698.0" width="210" height="56" rx="10" class="tm-asset"/>
+<text class="tm-name"><tspan x="885.0" y="722.0">Informations</tspan><tspan x="885.0" y="740.0">stratégiques</tspan></text>
+</svg>
+    </div>
+    <figcaption>Lecture : une menace, ou source d'attaque (à gauche), poursuit un objectif par une méthode (au centre) pour atteindre un actif (à droite). Survolez ou touchez « ? » pour la description de chaque menace.</figcaption>
+  </figure>
+  <details class="diagram-table"><summary>Afficher le schéma sous forme de tableau</summary>
+  <div class="tablebox"><table><thead><tr><th>Menace (source d'attaque)</th><th>Description</th><th>Objectif / motivation</th><th>Méthode</th><th>Actif visé</th></tr></thead><tbody><tr><td><strong>Script kiddies</strong></td><td>Utilisent des outils ou scripts d&#x27;attaque déjà développés par d&#x27;autres, sans nécessairement en comprendre le fonctionnement. Faible niveau de compétence propre, mais dégâts réels du fait des outils prêts à l&#x27;emploi.</td><td>Curiosité et/ou recherche de notoriété</td><td>Outils d&#x27;attaque prêts à l&#x27;emploi, failles connues</td><td>Site web et services exposés</td></tr><tr><td><strong>Hacktivistes</strong></td><td>Agissent pour défendre une cause ou faire passer un message. Exemple : le collectif Anonymous.</td><td>Défense d&#x27;une cause, indépendance, propagande</td><td>Déni de service (DDoS), défiguration du site</td><td>Site web et services exposés</td></tr><tr><td><strong>Insiders</strong></td><td>Personnes présentes au sein même de la structure : salariés, prestataires, remplaçants.</td><td>Vengeance, appât du gain, idéologie</td><td>Abus de leurs accès légitimes, copie de données</td><td>Données des patients</td></tr><tr><td><strong>Cybercriminels</strong></td><td>Agissent seuls ou en groupes organisés à des fins lucratives : rançongiciels, vol et revente de données, fraude, extorsion.</td><td>Gain financier</td><td>Vol et revente de données, extorsion</td><td>Données des patients</td></tr><tr><td><strong>Cybercriminels</strong></td><td>Agissent seuls ou en groupes organisés à des fins lucratives : rançongiciels, vol et revente de données, fraude, extorsion.</td><td>Gain financier</td><td>Rançongiciel, hameçonnage</td><td>Continuité des soins</td></tr><tr><td><strong>Affiliés</strong></td><td>Utilisent des outils de « cybercriminalité as a service » développés par des tiers (par exemple un Ransomware-as-a-Service), en échange d&#x27;une commission.</td><td>Gain financier</td><td>Rançongiciel loué « as a service » (RaaS)</td><td>Continuité des soins</td></tr><tr><td><strong>APT</strong></td><td>Advanced Persistent Threat : groupes de menace structurés et soutenus par des États, qui mènent des campagnes d&#x27;attaque prolongées et discrètes.</td><td>Indépendance stratégique, propagande, espionnage</td><td>Intrusion discrète et prolongée, hameçonnage ciblé</td><td>Systèmes et équipements critiques</td></tr><tr><td><strong>Entreprises concurrentes</strong></td><td>Entreprises qui cherchent à obtenir les informations commerciales ou stratégiques d&#x27;un concurrent.</td><td>Espionnage industriel ou économique</td><td>Complicité interne, hameçonnage ciblé</td><td>Informations stratégiques</td></tr></tbody></table></div>
+  </details>
+  <!-- /SCHEMA:MENACES -->
+  <p class="note"><strong>Un lanceur d'alerte n'est pas une source d'attaque.</strong> En France, le statut de lanceur d'alerte est protégé par la <a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000045388745" target="_blank" rel="noopener">loi n° 2022-401 du 21 mars 2022</a> (dite loi Waserman), à condition de respecter les canaux de signalement prévus. <a href="https://www.vie-publique.fr/loi/282472-loi-21-mars-2022-waserman-protection-des-lanceurs-dalerte" target="_blank" rel="noopener">Présentation sur vie-publique.fr</a></p>
+  </div>
+
+  <div class="step" data-title="Exemples de chemins d'attaque par source d'attaque">
+  <h2>Exemples de chemins d'attaque par source d'attaque</h2>
+  <p>Quelle que soit la structure, quatre sources d'attaque sont les plus fréquentes : les <strong>script kiddies</strong>, les <strong>insiders</strong>, les <strong>affiliés</strong> et les <strong>cybercriminels</strong>.</p>
+  <p>Pour chacune, voici <strong>un exemple</strong> de chemin d'attaque. Ce ne sont que des exemples : une même source d'attaque peut emprunter plusieurs chemins.</p>
+  <div class="chains">
+    <article class="chain"><h3>Script kiddies</h3><ol><li>Un outil scanne Internet au hasard</li><li>Il trouve une box ou un logiciel mal configuré</li><li>Il accède à des fichiers ou des images médicales</li><li>Publication pour se faire remarquer</li></ol></article>
+    <article class="chain"><h3>Insiders</h3><ol><li>Un remplaçant parti garde son mot de passe</li><li>Il se reconnecte au compte, jamais fermé</li><li>Il consulte ou copie des dossiers de patients</li></ol></article>
+    <article class="chain"><h3>Affiliés</h3><ol><li>E-mail piégé avec une pièce jointe</li><li>Le rançongiciel loué s'installe sur un poste</li><li>Il se propage et chiffre fichiers et sauvegardes</li><li>Demande de rançon, soins à l'arrêt</li></ol></article>
+    <article class="chain"><h3>Cybercriminels</h3><ol><li>Faux e-mail « Assurance Maladie »</li><li>Identifiants saisis sur un faux site</li><li>Connexion au compte, faute de MFA</li><li>Vol et revente des données, ou fraude au virement</li></ol></article>
+  </div>
+  <p class="note">Les <strong>insiders</strong> ne sont pas toujours malveillants : une erreur, un accès jamais retiré ou un logiciel installé sans accord suffisent. Les hacktivistes, les APT et les entreprises concurrentes sont plus rares pour un cabinet, un centre de santé ou une clinique ; ils visent surtout les grands établissements, les éditeurs et les industriels.</p>
+  </div>
+
+  <div class="step" data-title="Évaluer la vraisemblance">
+  <h2>Évaluer la vraisemblance : occurrence × complexité</h2>
+  <p>La <strong>vraisemblance</strong> est la probabilité qu'une attaque se produise. Elle s'estime avec deux critères&nbsp;:</p>
+  <ul>
+    <li><strong>L'occurrence</strong> : le nombre de fois où cette attaque s'est déjà produite, dans l'écosystème de santé ou dans votre établissement. Une attaque déjà subie chez vous a toutes les chances de se reproduire.</li>
+    <li><strong>La complexité de l'attaque</strong> : plus une attaque est simple à mener, plus elle est vraisemblable. Un faux e-mail demande peu de moyens ; une intrusion dans un équipement biomédical en demande beaucoup.</li>
+  </ul>
+  <div class="tablebox"><table>
+    <thead><tr><th>Occurrence ↓ / Complexité de l'attaque →</th><th>Très complexe</th><th>Complexe</th><th>Simple</th><th>Très simple</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Déjà survenue dans l'établissement</strong></td><td><span class="tag warn">Possible</span></td><td><span class="tag crit">Probable</span></td><td><span class="tag crit">Probable</span></td><td><span class="tag crit">Quasi certaine</span></td></tr>
+      <tr><td><strong>Fréquente dans l'écosystème de santé</strong></td><td><span class="tag warn">Possible</span></td><td><span class="tag warn">Possible</span></td><td><span class="tag crit">Probable</span></td><td><span class="tag crit">Probable</span></td></tr>
+      <tr><td><strong>Rare, déjà observée ailleurs</strong></td><td><span class="tag ok">Peu probable</span></td><td><span class="tag warn">Possible</span></td><td><span class="tag warn">Possible</span></td><td><span class="tag crit">Probable</span></td></tr>
+      <tr><td><strong>Jamais observée</strong></td><td><span class="tag ok">Peu probable</span></td><td><span class="tag ok">Peu probable</span></td><td><span class="tag warn">Possible</span></td><td><span class="tag warn">Possible</span></td></tr>
+    </tbody></table></div>
+  <p>Exemple : le vol d'un mot de passe sur un compte sans authentification multi-facteur est <em>fréquent dans l'écosystème de santé</em> et <em>très simple</em> à mener : sa vraisemblance est <strong>probable</strong>.</p>
+  </div>
+
+  <div class="step" data-title="Évaluer un risque">
+  <h2>Évaluer un risque : impact × vraisemblance</h2>
+  <p>On croise ensuite la vraisemblance obtenue à l'étape précédente avec l'<strong>impact</strong>, c'est-à-dire la gravité des conséquences si l'attaque réussit.</p>
+  <div class="tablebox"><table>
+    <thead><tr><th>Vraisemblance ↓ / Impact →</th><th>Mineur</th><th>Significatif</th><th>Grave</th><th>Critique</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Quasi certaine</strong></td><td><span class="tag warn">Moyen</span></td><td><span class="tag crit">Élevé</span></td><td><span class="tag crit">Critique</span></td><td><span class="tag crit">Critique</span></td></tr>
+      <tr><td><strong>Probable</strong></td><td><span class="tag ok">Faible</span></td><td><span class="tag warn">Moyen</span></td><td><span class="tag crit">Élevé</span></td><td><span class="tag crit">Critique</span></td></tr>
+      <tr><td><strong>Possible</strong></td><td><span class="tag ok">Faible</span></td><td><span class="tag warn">Moyen</span></td><td><span class="tag warn">Moyen</span></td><td><span class="tag crit">Élevé</span></td></tr>
+      <tr><td><strong>Peu probable</strong></td><td><span class="tag ok">Faible</span></td><td><span class="tag ok">Faible</span></td><td><span class="tag warn">Moyen</span></td><td><span class="tag warn">Moyen</span></td></tr>
+    </tbody></table></div>
+  <p>Exemple : compte Practilio partagé sans MFA → vraisemblance <em>probable</em>, impact <em>grave</em> (fuite de dossiers) → risque <strong>élevé</strong>, à traiter en priorité.</p>
+  </div>
+
+  <div class="step" data-title="Continuité d'activité">
+  <h2>Continuité d'activité</h2>
+  <div class="tablebox"><table>
+    <thead><tr><th>Terme</th><th>Définition</th></tr></thead>
+    <tbody>
+      <tr><td><strong>PCA</strong> (Plan de Continuité d'Activité)</td><td>Mesures et procédures pour poursuivre les activités essentielles en cas de sinistre ou d'incident majeur. En cabinet : agenda papier de secours, liste des patients du jour imprimée la veille, procédure de soins sans informatique.</td></tr>
+      <tr><td><strong>PRA</strong> (Plan de Reprise d'Activité)</td><td>Sous-ensemble du PCA centré sur la restauration des systèmes informatiques après un sinistre. La stratégie de sauvegarde (backup) s'y inscrit.</td></tr>
+      <tr><td><strong>SPOF</strong> (Single Point of Failure)</td><td>Élément dont la défaillance arrête tout le système, faute de redondance. Ex. : un seul poste qui fait tourner la télétransmission.</td></tr>
+    </tbody></table></div>
+  <p>Les définitions complètes de tous les termes (C2, botnet, DoS, DDoS, phishing, etc.) sont rassemblées dans le <a href="../sources/index.html">glossaire</a>.</p>
+  </div>
+</section>
+</main>
+
+<!-- LAYOUT:FOOTER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<footer class="gutter">
+  <div class="wrap">
+    <p><strong>Projet pédagogique EPITA – ECSI3-Evaluation-01.</strong> Practilio est une entreprise fictive. Ce site n'est pas un service réel et ne s'adresse à aucun professionnel de santé réel. Les coordonnées « Practilio » sont fictives.</p>
+    <p>Les organismes publics, prestataires et éditeurs cités existent ; ils sont mentionnés à titre d'orientation, sans reproduction de leurs logos ni de leurs chartes graphiques, et sans partenariat. Informations vérifiées le 23/11/2026.</p>
+  </div>
+</footer>
+<!-- /LAYOUT:FOOTER -->
+
+<script src="../shared/dialogues.js"></script>
+<script src="../shared/common.js"></script>
+<script src="notions.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>10 bonnes pratiques · Practilio Cyber Repères</title>
+<meta name="description" content="Plateforme fictive de sensibilisation et d'orientation cyber pour les utilisateurs de Practilio — projet pédagogique EPITA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Sora:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body data-page="bonnes-pratiques">
+<!-- LAYOUT:HEADER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<div class="fiction gutter" role="note">⚠ Projet pédagogique EPITA (ECSI3, évaluation 01). <strong>Practilio est une entreprise fictive</strong> : ce site n'est pas un service réel, aucun contact ni numéro « Practilio » n'est opérationnel.</div>
+
+<header class="top">
+  <div class="wrap gutter">
+    <div class="brandrow">
+      <div class="brand-left">
+        <button type="button" class="burger" id="menu-btn" aria-expanded="false" aria-controls="drawer" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      <a class="logo" href="../accueil/index.html" aria-label="Accueil Practilio Cyber Repères">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="1" y="1" width="26" height="26" rx="7" fill="var(--brand)"/><path d="M14 6v16M6 14h16" stroke="var(--surface)" stroke-width="3.2" stroke-linecap="round"/></svg>
+        <span>Practilio Cyber Repères <small>· FICTIF</small></span>
+      </a>
+      </div>
+      <div class="top-actions">
+        <button type="button" class="ghost" id="tuto-toggle" aria-pressed="true">Mode tutoriel : activé</button>
+        <a class="urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<div class="drawer-backdrop" id="drawer-backdrop"></div>
+<aside class="drawer" id="drawer" aria-label="Menu principal">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button type="button" class="ghost drawer-close" id="menu-close" aria-label="Fermer le menu">✕</button>
+  </div>
+  <nav aria-label="Navigation principale" id="nav">
+    <p class="nav-group">Urgence</p>
+    <ul>
+      <li><a class="nav-urgent" href="../qui-contacter/index.html"><span class="num">SOS</span>Qui contacter</a></li>
+    </ul>
+    <p class="nav-group">Comprendre</p>
+    <ul>
+      <li><a href="../accueil/index.html"><span class="num"></span>Accueil</a></li>
+      <li><a href="../bonnes-pratiques/index.html"><span class="num"></span>10 bonnes pratiques</a></li>
+      <li><a href="../pourquoi/index.html"><span class="num">01</span>Pourquoi Practilio vous sensibilise</a></li>
+      <li><a href="../notions/index.html"><span class="num">02</span>Notions clés</a></li>
+      <li><a href="../menaces/index.html"><span class="num">03</span>Les attaques</a></li>
+      <li><a href="../contextes/index.html"><span class="num">04</span>Contexte de votre établissement</a></li>
+      <li><a href="../ia/index.html"><span class="num">05</span>IA et données patients</a></li>
+    </ul>
+    <p class="nav-group">Se protéger</p>
+    <ul>
+      <li><a href="../practilio/index.html"><span class="num">06</span>Réduire sa surface d'attaque</a></li>
+    </ul>
+    <p class="nav-group">S'orienter</p>
+    <ul>
+      <li><a href="../reglementation/index.html"><span class="num">07</span>Réglementation</a></li>
+      <li><a href="../attaque_ransomware/index.html"><span class="num">08</span>Attaque par rançongiciel</a></li>
+      <li><a href="../assurance/index.html"><span class="num">09</span>Assurance &amp; risque</a></li>
+      <li><a href="../acteurs/index.html"><span class="num">10</span>Acteurs publics</a></li>
+    </ul>
+    <p class="nav-group">Se former</p>
+    <ul>
+      <li><a href="../sensibilisation/index.html"><span class="num">11</span>Sensibilisation &amp; quiz</a></li>
+    </ul>
+    <p class="nav-group">Ressources</p>
+    <ul>
+      <li><a href="../prestataires/index.html"><span class="num">12</span>Prestataires</a></li>
+      <li><a href="../outils/index.html"><span class="num">13</span>Outils</a></li>
+      <li><a href="../sources/index.html"><span class="num">14</span>Sources &amp; glossaire</a></li>
+    </ul>
+  </nav>
+  <a class="urgent drawer-urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+</aside>
+<!-- /LAYOUT:HEADER -->
+
+<main class="wrap gutter">
+<section class="view" id="v-bonnes-pratiques" data-no-tuto>
+  <p class="eyebrow">L'essentiel</p>
+  <h1>10 bonnes pratiques à retenir</h1>
+  <p class="lead">Les gestes qui évitent la plupart des incidents, dans un cabinet comme dans une clinique. Chaque bonne pratique renvoie vers la page du site qui l'explique en détail.</p>
+  <div class="bps">
+    <article class="bp"><span class="bp-num">01</span><div><h2>Activer l'authentification multi-facteur</h2><p>Sur chaque compte Practilio et sur la messagerie. Même volé, un mot de passe ne suffit plus pour entrer.</p><p class="bp-more"><a href="../outils-mfa-iam-pam/index.html">MFA →</a></p></div></article>
+    <article class="bp"><span class="bp-num">02</span><div><h2>Une phrase de passe unique par service</h2><p>Longue plutôt que compliquée, différente pour chaque service, rangée dans un gestionnaire de mots de passe de type KeePassXC.</p><p class="bp-more"><a href="../outils-mots-de-passe/index.html">Gestionnaire de mots de passe →</a></p></div></article>
+    <article class="bp"><span class="bp-num">03</span><div><h2>Ne jamais communiquer un mot de passe ou un code</h2><p>Ni par téléphone, ni par e-mail, ni par SMS. Practilio ne vous les demandera jamais.</p><p class="bp-more"><a href="../menaces/index.html#etape-2">Hameçonnage →</a></p></div></article>
+    <article class="bp"><span class="bp-num">04</span><div><h2>Vérifier toute demande urgente ou inhabituelle</h2><p>Un virement, un changement de RIB, une pièce jointe inattendue : rappelez votre interlocuteur au numéro que vous connaissez déjà.</p><p class="bp-more"><a href="../menaces/index.html#etape-2">Ingénierie sociale →</a></p></div></article>
+    <article class="bp"><span class="bp-num">05</span><div><h2>Mettre à jour ordinateurs, smartphones et logiciels</h2><p>Activez les mises à jour automatiques et appliquez celles demandées par Practilio dès leur publication.</p><p class="bp-more"><a href="../practilio/index.html#etape-5">Guide d'hygiène de l'ANSSI →</a></p></div></article>
+    <article class="bp"><span class="bp-num">06</span><div><h2>Sauvegarder, dont une copie hors ligne</h2><p>Trois copies, sur deux supports différents, dont une déconnectée du réseau. Testez une restauration au moins tous les trois mois.</p><p class="bp-more"><a href="../outils-sauvegarde/index.html">Sauvegarde →</a></p></div></article>
+    <article class="bp"><span class="bp-num">07</span><div><h2>Un compte par personne, fermé à son départ</h2><p>Pas de compte partagé. Fermez le compte le jour du départ et revoyez les accès au moins tous les trois mois.</p><p class="bp-more"><a href="../menaces/index.html#etape-4">Revue des accès →</a></p></div></article>
+    <article class="bp"><span class="bp-num">08</span><div><h2>Ne jamais brancher une clé USB inconnue</h2><p>Une clé trouvée ou apportée peut infecter le poste qui ouvre Practilio. Utilisez un poste dédié pour les supports des patients.</p><p class="bp-more"><a href="../menaces/index.html#etape-5">Clés USB →</a></p></div></article>
+    <article class="bp"><span class="bp-num">09</span><div><h2>Garder les données de patients dans des outils validés</h2><p>Pas de données de patients dans une IA grand public ou un tableur en ligne. Échangez par la messagerie sécurisée MSSanté ou l'Espace Patient.</p><p class="bp-more"><a href="../ia/index.html">IA et données patients →</a></p></div></article>
+    <article class="bp"><span class="bp-num">10</span><div><h2>Verrouiller sa session et signaler sans attendre</h2><p>Verrouillez l'écran dès que vous quittez votre poste. Au moindre doute, prévenez : chaque heure compte.</p><p class="bp-more"><a href="../qui-contacter/index.html">Qui contacter →</a></p></div></article>
+  </div>
+  <p class="note">Ces bonnes pratiques reprennent les recommandations du <a href="https://messervices.cyber.gouv.fr/guides/guide-dhygiene-informatique" target="_blank" rel="noopener">Guide d'hygiène informatique de l'ANSSI</a> et de <a href="https://www.cybermalveillance.gouv.fr" target="_blank" rel="noopener">Cybermalveillance.gouv.fr</a>, adaptées aux utilisateurs de Practilio.</p>
+</section>
+</main>
+
+<!-- LAYOUT:FOOTER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<footer class="gutter">
+  <div class="wrap">
+    <p><strong>Projet pédagogique EPITA – ECSI3-Evaluation-01.</strong> Practilio est une entreprise fictive. Ce site n'est pas un service réel et ne s'adresse à aucun professionnel de santé réel. Les coordonnées « Practilio » sont fictives.</p>
+    <p>Les organismes publics, prestataires et éditeurs cités existent ; ils sont mentionnés à titre d'orientation, sans reproduction de leurs logos ni de leurs chartes graphiques, et sans partenariat. Informations vérifiées le 23/11/2026.</p>
+  </div>
+</footer>
+<!-- /LAYOUT:FOOTER -->
+
+<script src="../shared/dialogues.js"></script>
+<script src="../shared/common.js"></script>
+<script src="bonnes-pratiques.js"></script>
+</body>
+</html>

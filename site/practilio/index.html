@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Réduire sa surface d'attaque · Practilio Cyber Repères</title>
+<meta name="description" content="Plateforme fictive de sensibilisation et d'orientation cyber pour les utilisateurs de Practilio — projet pédagogique EPITA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Sora:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body data-page="practilio">
+<!-- LAYOUT:HEADER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<div class="fiction gutter" role="note">⚠ Projet pédagogique EPITA (ECSI3, évaluation 01). <strong>Practilio est une entreprise fictive</strong> : ce site n'est pas un service réel, aucun contact ni numéro « Practilio » n'est opérationnel.</div>
+
+<header class="top">
+  <div class="wrap gutter">
+    <div class="brandrow">
+      <div class="brand-left">
+        <button type="button" class="burger" id="menu-btn" aria-expanded="false" aria-controls="drawer" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      <a class="logo" href="../accueil/index.html" aria-label="Accueil Practilio Cyber Repères">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="1" y="1" width="26" height="26" rx="7" fill="var(--brand)"/><path d="M14 6v16M6 14h16" stroke="var(--surface)" stroke-width="3.2" stroke-linecap="round"/></svg>
+        <span>Practilio Cyber Repères <small>· FICTIF</small></span>
+      </a>
+      </div>
+      <div class="top-actions">
+        <button type="button" class="ghost" id="tuto-toggle" aria-pressed="true">Mode tutoriel : activé</button>
+        <a class="urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<div class="drawer-backdrop" id="drawer-backdrop"></div>
+<aside class="drawer" id="drawer" aria-label="Menu principal">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button type="button" class="ghost drawer-close" id="menu-close" aria-label="Fermer le menu">✕</button>
+  </div>
+  <nav aria-label="Navigation principale" id="nav">
+    <p class="nav-group">Urgence</p>
+    <ul>
+      <li><a class="nav-urgent" href="../qui-contacter/index.html"><span class="num">SOS</span>Qui contacter</a></li>
+    </ul>
+    <p class="nav-group">Comprendre</p>
+    <ul>
+      <li><a href="../accueil/index.html"><span class="num"></span>Accueil</a></li>
+      <li><a href="../bonnes-pratiques/index.html"><span class="num"></span>10 bonnes pratiques</a></li>
+      <li><a href="../pourquoi/index.html"><span class="num">01</span>Pourquoi Practilio vous sensibilise</a></li>
+      <li><a href="../notions/index.html"><span class="num">02</span>Notions clés</a></li>
+      <li><a href="../menaces/index.html"><span class="num">03</span>Les attaques</a></li>
+      <li><a href="../contextes/index.html"><span class="num">04</span>Contexte de votre établissement</a></li>
+      <li><a href="../ia/index.html"><span class="num">05</span>IA et données patients</a></li>
+    </ul>
+    <p class="nav-group">Se protéger</p>
+    <ul>
+      <li><a href="../practilio/index.html"><span class="num">06</span>Réduire sa surface d'attaque</a></li>
+    </ul>
+    <p class="nav-group">S'orienter</p>
+    <ul>
+      <li><a href="../reglementation/index.html"><span class="num">07</span>Réglementation</a></li>
+      <li><a href="../attaque_ransomware/index.html"><span class="num">08</span>Attaque par rançongiciel</a></li>
+      <li><a href="../assurance/index.html"><span class="num">09</span>Assurance &amp; risque</a></li>
+      <li><a href="../acteurs/index.html"><span class="num">10</span>Acteurs publics</a></li>
+    </ul>
+    <p class="nav-group">Se former</p>
+    <ul>
+      <li><a href="../sensibilisation/index.html"><span class="num">11</span>Sensibilisation &amp; quiz</a></li>
+    </ul>
+    <p class="nav-group">Ressources</p>
+    <ul>
+      <li><a href="../prestataires/index.html"><span class="num">12</span>Prestataires</a></li>
+      <li><a href="../outils/index.html"><span class="num">13</span>Outils</a></li>
+      <li><a href="../sources/index.html"><span class="num">14</span>Sources &amp; glossaire</a></li>
+    </ul>
+  </nav>
+  <a class="urgent drawer-urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+</aside>
+<!-- /LAYOUT:HEADER -->
+
+<main class="wrap gutter">
+<section class="view" id="v-practilio">
+  <p class="eyebrow">Se protéger</p>
+  <h1>Réduire sa surface d'attaque</h1>
+
+  <div class="step" data-title="La surface d'attaque">
+  <p class="lead">La <strong>surface d'attaque</strong> est l'ensemble des portes par lesquelles un attaquant peut entrer : comptes, postes, réseau, accès distants, personnes. La réduire, c'est fermer les portes inutiles et surveiller les autres. Practilio s'en charge sur ses logiciels et ses services ; votre établissement s'en charge chez lui.</p>
+  <h2>Les services Practilio et leurs risques</h2>
+  <div class="tablebox"><table>
+    <thead><tr><th>Service</th><th>Risque principal côté utilisateurs</th><th>Bon réflexe</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Prise de rendez-vous en ligne</strong></td><td>Compte praticien usurpé (rendez-vous annulés ou détournés), faux sites de prise de rendez-vous qui imitent la plateforme</td><td>Activer la MFA sur tous les comptes. Vérifier l'adresse du site avant de se connecter.</td></tr>
+      <tr><td><strong>Téléconsultation</strong> (navigateur ou application mobile)</td><td>Application installée hors des magasins officiels via un lien reçu par SMS ou e-mail, poste ou téléphone non à jour, consultation menée dans un lieu non confidentiel</td><td>Installer l'application uniquement depuis l'App Store ou Google Play. Utiliser un appareil à jour et verrouillé. Consulter dans une pièce fermée, avec un casque.</td></tr>
+      <tr><td><strong>Gestion d'agenda</strong></td><td>Identifiants partagés entre secrétaires et remplaçants, accès conservés après un départ</td><td>Un compte nominatif par personne. Fermer le compte le jour du départ.</td></tr>
+      <tr><td><strong>Ordonnances et comptes rendus dans l'Espace Patient</strong></td><td>Dépôt d'un document dans le mauvais dossier (fuite de données), document piégé envoyé par un faux patient</td><td>Vérifier l'identité du patient avant le dépôt. Ouvrir les documents reçus dans la plateforme, jamais en les téléchargeant sur un poste non protégé.</td></tr>
+      <tr><td><strong>Rappels automatiques</strong> (SMS, e-mail, notifications)</td><td>Smishing qui imite les rappels (« rendez-vous annulé, payez 2 € pour le reprogrammer »)</td><td>Un rappel Practilio ne demande <strong>jamais</strong> de paiement, de code ou de mot de passe : le dire aux patients</td></tr>
+    </tbody></table></div>
+  </div>
+
+  <div class="step" data-title="Ce que fait Practilio">
+  <h2>Ce que fait Practilio pour réduire la surface d'attaque de votre établissement</h2>
+  <div class="split two">
+    <div class="card"><h3>Des comptes mieux protégés</h3><ul><li>Double authentification (MFA) sur les comptes, compatible avec Pro Santé Connect (carte CPS ou e-CPS). <strong>Elle doit être activée par le référent informatique ou l'équipe informatique de l'établissement.</strong></li><li>Alerte en cas de connexion depuis un appareil ou un pays inhabituel</li><li>Journal des connexions consultable dans votre espace</li><li>Coupure à distance des sessions ouvertes, sur simple signalement</li></ul></div>
+    <div class="card"><h3>Des droits limités au métier</h3><ul><li>Chaque profil n'accède qu'à ce dont il a besoin (tableau ci-dessous)</li><li>L'administrateur technique de l'établissement gère les comptes sans voir les données médicales</li><li>Les équipes techniques de Practilio administrent les serveurs sans pouvoir lire les données médicales</li></ul></div>
+    <div class="card"><h3>Des logiciels maintenus</h3><ul><li>Veille sur les failles et correctifs de sécurité de la plateforme et de l'application mobile</li><li>Application de téléconsultation diffusée uniquement sur l'App Store et Google Play</li><li>Practilio s'engage à informer ses utilisateurs en cas de vulnérabilité exploitée, avec les mesures à prendre, comme l'exige le Cyber Resilience Act</li></ul></div>
+    <div class="card"><h3>Des échanges plus sûrs</h3><ul><li>Espace Patient pour transmettre ordonnances, comptes rendus et documents, plutôt que l'e-mail</li><li>Rappels de rendez-vous qui ne demandent jamais de paiement, de code ou de mot de passe</li><li>Hébergement certifié HDS (voir la leçon <a href="../pourquoi/index.html">Pourquoi Practilio vous sensibilise</a>)</li></ul></div>
+  </div>
+  <div class="fiche">
+    <h3>Des outils et des prestataires pour aller plus loin</h3>
+    <p>Selon la taille de votre établissement, des outils peuvent compléter ces protections : <a href="../outils-pare-feu/index.html"><strong>pare-feu</strong></a>, gestion des identités et des accès (<a href="../outils-mfa-iam-pam/index.html"><strong>IAM</strong></a>), détection et réponse sur les postes (<a href="../outils-edr/index.html"><strong>EDR</strong></a>) ou étendue au réseau et à la messagerie (<a href="../outils-xdr/index.html"><strong>XDR</strong></a>), et pour les services hébergés dans le cloud, détection des erreurs de configuration (<a href="../outils-cloud/index.html"><strong>CSPM</strong></a>) et protection des applications cloud (<a href="../outils-cloud/index.html"><strong>CNAPP</strong></a>). Chaque terme renvoie vers une fiche dédiée (à quoi sert l'outil, pour qui, par où commencer, exemples d'éditeurs) ; vue d'ensemble dans la leçon <a href="../outils/index.html">Outils</a>.</p>
+    <div data-reco="edr xdr"></div>
+    <p>Des prestataires peuvent aussi vous accompagner. Privilégiez ceux qualifiés par l'ANSSI :</p>
+    <ul>
+      <li><a href="https://cyber.gouv.fr/offre-de-service/solutions-certifiees-et-qualifiees/services-de-securite-evalue/solutions-en-cours-de-qualification/pris/" target="_blank" rel="noopener">Prestataires de réponse aux incidents de sécurité (PRIS)</a></li>
+      <li><a href="https://cyber.gouv.fr/offre-de-service/solutions-certifiees-et-qualifiees/services-de-securite-evalue/solutions-en-cours-de-qualification/pdis/" target="_blank" rel="noopener">Prestataires de détection des incidents de sécurité (PDIS)</a></li>
+      <li><a href="https://cyber.gouv.fr/offre-de-service/solutions-certifiees-et-qualifiees/services-de-securite-evalue/solutions-en-cours-de-qualification/passi/" target="_blank" rel="noopener">Prestataires d'audit de la sécurité des systèmes d'information (PASSI)</a></li>
+      <li><a href="https://cyber.gouv.fr/offre-de-service/solutions-certifiees-et-qualifiees/services-de-securite-evalue/solutions-en-cours-de-qualification/pacs/" target="_blank" rel="noopener">Prestataires d'accompagnement et de conseil en sécurité des systèmes d'information (PACS)</a> (un PACS analyse le risque, l'architecture et la préparation à la gestion de crise)</li>
+    </ul>
+  </div>
+  </div>
+
+  <div class="step" data-title="Qui a accès à quoi ?">
+  <h2>Qui a accès à quoi ?</h2>
+  <p>Chaque profil n'a que les droits nécessaires à sa mission (principe du <strong>moindre privilège</strong>). Ce cloisonnement limite les dégâts si un compte est volé, à condition que chacun garde son compte pour lui.</p>
+  <div class="tablebox"><table>
+    <thead><tr><th>Profil</th><th>Peut faire</th><th>Ne peut pas faire</th><th>Où vous former sur ce site</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Praticien</strong></td><td>Gérer son propre agenda. Consulter et enrichir le dossier médical propre à son établissement.</td><td>Accéder aux dossiers d'un autre établissement</td><td><a href="../sensibilisation/index.html#profil-dirigeant">Leçon 11, onglet « Praticiens &amp; direction »</a></td></tr>
+      <tr><td><strong>Secrétaire médicale</strong></td><td>Gérer les agendas de l'établissement</td><td>Accéder au contenu médical des dossiers</td><td><a href="../sensibilisation/index.html#profil-employe">Leçon 11, onglet « Secrétariat &amp; accueil »</a></td></tr>
+      <tr><td><strong>Administrateur technique de l'établissement</strong></td><td>Créer, modifier et fermer les comptes utilisateurs de l'établissement</td><td>Accéder aux données médicales</td><td><a href="../sensibilisation/index.html#profil-it">Leçon 11, onglet « Administrateurs &amp; IT »</a></td></tr>
+      <tr><td><strong>Patient</strong></td><td>Consulter exclusivement son dossier, ses rendez-vous et ses ordonnances. Envoyer des documents à son établissement via l'Espace Patient.</td><td>Voir les données d'un autre patient</td><td><a href="#etape-6">Encadré « Et les patients ? », étape 6 de cette leçon</a></td></tr>
+      <tr><td><strong>Équipe technique Practilio</strong> (administrateurs système)</td><td>Administrer les serveurs et les bases de données</td><td>Lire les données médicales</td><td>Formation interne à Practilio</td></tr>
+    </tbody></table></div>
+  <p class="note">Conséquence pratique : <strong>personne chez Practilio ne vous demandera de lui communiquer un dossier patient ou vos identifiants</strong> pour « vérifier » quelque chose. Une telle demande est une tentative d'escroquerie.</p>
+  </div>
+
+  <div class="step" data-title="Ce que Practilio attend de vous">
+  <h2>Ce que Practilio attend de vous</h2>
+  <div class="tablebox"><table>
+    <thead><tr><th>Engagement</th><th>Pourquoi</th><th>Qui s'en charge</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Activer la MFA</strong> sur chaque compte Practilio (application d'authentification, clé de sécurité ou e-CPS)</td><td>Un mot de passe volé ne suffit plus pour entrer</td><td>Chaque utilisateur, vérifié par le titulaire ou la direction</td></tr>
+      <tr><td><strong>Un compte nominatif par personne</strong>, jamais de compte partagé</td><td>Traçabilité des accès aux dossiers, retrait facile au départ</td><td>Titulaire ou référent informatique</td></tr>
+      <tr><td><strong>Mots de passe longs et uniques</strong>, rangés dans un gestionnaire de mots de passe</td><td>La réutilisation d'un mot de passe fuité est la première porte d'entrée</td><td>Chaque utilisateur</td></tr>
+      <tr><td><strong>Postes à jour</strong> avec <a href="../outils-edr/index.html">antivirus/EDR</a>, verrouillage automatique de session</td><td>Un poste compromis voit tout ce que voit l'utilisateur</td><td>Référent ou prestataire informatique</td></tr>
+      <tr><td><strong>Retirer les accès</strong> le jour du départ d'un salarié, remplaçant ou stagiaire</td><td>Les comptes « orphelins » sont exploités par les attaquants</td><td>Titulaire ou direction</td></tr>
+      <tr><td><strong>Ne pas exporter</strong> de données patients vers des outils non maîtrisés (IA grand public, tableurs en ligne)</td><td>Les données quittent l'environnement HDS</td><td>Chaque utilisateur</td></tr>
+      <tr><td><strong>Signaler sans attendre</strong> tout doute (voir l'étape <a href="#etape-6">Signaler un incident</a>)</td><td>Chaque heure compte pour contenir un incident</td><td>Tout le monde</td></tr>
+    </tbody></table></div>
+  </div>
+
+  <div class="step" data-title="Les mesures de l'ANSSI">
+  <h2>Ce que vous devez faire : le Guide d'hygiène informatique de l'ANSSI</h2>
+  <p data-tuto-anchor>Pour réduire la surface d'attaque de votre établissement, appuyez-vous sur le <a href="https://messervices.cyber.gouv.fr/guides/guide-dhygiene-informatique" target="_blank" rel="noopener">Guide d'hygiène informatique</a> de l'ANSSI (<a href="https://messervices.cyber.gouv.fr/documents-guides/guide_hygiene_informatique_anssi.pdf" target="_blank" rel="noopener">PDF</a>, version de 2017). Il réunit <strong>42 mesures</strong> en <strong>10 thèmes</strong>. Ouvrez chaque thème : vous y trouverez les mesures du guide, puis leur traduction concrète pour un cabinet ou un établissement de santé.</p>
+  <div class="accs">
+    <details class="acc acc-ok">
+      <summary><strong>I · Sensibiliser et former</strong><span>mesures 1 à 3</span></summary>
+      <div class="acc-body">
+        <p class="acc-label">Les mesures du guide</p>
+        <ol class="measures"><li value="1">Former les équipes opérationnelles à la sécurité des systèmes d'information</li><li value="2">Sensibiliser les utilisateurs aux bonnes pratiques élémentaires de sécurité informatique</li><li value="3">Maîtriser les risques de l'infogérance</li></ol>
+        <p class="acc-label">Concrètement, chez vous</p>
+        <ul><li>Former chaque personne dès son arrivée, puis chaque année (leçon <a href="../sensibilisation/index.html">Sensibilisation &amp; quiz</a>)</li><li>Rappeler la règle d'or face à l'hameçonnage : toute demande urgente ou inhabituelle se vérifie par un autre canal, avec un numéro déjà connu</li><li>Vérifier les engagements de sécurité dans le contrat de votre prestataire informatique</li></ul>
+      </div>
+    </details>
+    <details class="acc acc-ok">
+      <summary><strong>II · Connaître le système d'information</strong><span>mesures 4 à 7</span></summary>
+      <div class="acc-body">
+        <p class="acc-label">Les mesures du guide</p>
+        <ol class="measures"><li value="4">Identifier les informations et serveurs les plus sensibles et maintenir un schéma du réseau</li><li value="5">Disposer d'un inventaire exhaustif des comptes privilégiés et le maintenir à jour</li><li value="6">Organiser les procédures d'arrivée, de départ et de changement de fonction des utilisateurs</li><li value="7">Autoriser la connexion au réseau de l'entité aux seuls équipements maîtrisés</li></ol>
+        <p class="acc-label">Concrètement, chez vous</p>
+        <ul><li>Tenir la liste de vos actifs : postes, logiciels, comptes et lieux où sont stockées les données de patients</li><li>Fermer chaque compte le jour du départ d'un salarié, d'un remplaçant, d'un stagiaire ou d'un prestataire</li><li>Revoir les accès au moins tous les 3 mois, par l'équipe informatique ou le référent : qui a un compte ? travaille-t-il encore ici ? ses droits correspondent-ils à son métier ? reste-t-il des comptes partagés ?</li><li>N'accepter sur le réseau du cabinet que les appareils de la structure</li></ul>
+      </div>
+    </details>
+    <details class="acc acc-ok">
+      <summary><strong>III · Authentifier et contrôler les accès</strong><span>mesures 8 à 13</span></summary>
+      <div class="acc-body">
+        <p class="acc-label">Les mesures du guide</p>
+        <ol class="measures"><li value="8">Identifier nommément chaque personne accédant au système et distinguer les rôles utilisateur/administrateur</li><li value="9">Attribuer les bons droits sur les ressources sensibles du système d'information</li><li value="10">Définir et vérifier des règles de choix et de dimensionnement des mots de passe</li><li value="11">Protéger les mots de passe stockés sur les systèmes</li><li value="12">Changer les éléments d'authentification par défaut sur les équipements et services</li><li value="13">Privilégier lorsque c'est possible une authentification forte</li></ol>
+        <p class="acc-label">Concrètement, chez vous</p>
+        <ul><li>Un compte nominatif par personne, jamais de compte partagé</li><li>Des droits limités au métier de chacun : c'est le moindre privilège</li><li>Une phrase de passe unique par service, rangée dans un gestionnaire de mots de passe</li><li>Changer les mots de passe d'origine de la box, des imprimantes et des équipements</li><li>Activer l'authentification multi-facteur partout, y compris via Pro Santé Connect (carte CPS ou e-CPS), et refuser toute demande de validation que vous n'avez pas lancée</li></ul>
+      </div>
+    </details>
+    <details class="acc acc-ok">
+      <summary><strong>IV · Sécuriser les postes</strong><span>mesures 14 à 18</span></summary>
+      <div class="acc-body">
+        <p class="acc-label">Les mesures du guide</p>
+        <ol class="measures"><li value="14">Mettre en place un niveau de sécurité minimal sur l'ensemble du parc informatique</li><li value="15">Se protéger des menaces relatives à l'utilisation de supports amovibles</li><li value="16">Utiliser un outil de gestion centralisée afin d'homogénéiser les politiques de sécurité</li><li value="17">Activer et configurer le pare-feu local des postes de travail</li><li value="18">Chiffrer les données sensibles transmises par voie Internet</li></ol>
+        <p class="acc-label">Concrètement, chez vous</p>
+        <ul><li>Un antivirus ou un EDR à jour et un verrouillage automatique de session sur chaque poste</li><li>Ne jamais brancher une clé USB d'origine inconnue ; lire les supports apportés par les patients (CD d'imagerie, clé de résultats) sur un poste dédié ou une station de décontamination</li><li>Activer le pare-feu de chaque poste</li><li>Échanger les données de santé par la messagerie sécurisée <a href="https://mssante.fr" target="_blank" rel="noopener">MSSanté</a> ou l'Espace Patient, et limiter les exports</li></ul>
+        <div data-reco="edr"></div>
+      </div>
+    </details>
+    <details class="acc acc-ok">
+      <summary><strong>V · Sécuriser le réseau</strong><span>mesures 19 à 26</span></summary>
+      <div class="acc-body">
+        <p class="acc-label">Les mesures du guide</p>
+        <ol class="measures"><li value="19">Segmenter le réseau et mettre en place un cloisonnement entre ces zones</li><li value="20">S'assurer de la sécurité des réseaux d'accès Wi-Fi et de la séparation des usages</li><li value="21">Utiliser des protocoles sécurisés dès qu'ils existent</li><li value="22">Mettre en place une passerelle d'accès sécurisé à Internet</li><li value="23">Cloisonner les services visibles depuis Internet du reste du système d'information</li><li value="24">Protéger sa messagerie professionnelle</li><li value="25">Sécuriser les interconnexions réseau dédiées avec les partenaires</li><li value="26">Contrôler et protéger l'accès aux salles serveurs et aux locaux techniques</li></ol>
+        <p class="acc-label">Concrètement, chez vous</p>
+        <ul><li>Séparer le Wi-Fi des patients du réseau du personnel</li><li>Isoler les équipements biomédicaux et la gestion technique des bâtiments dans leur propre réseau (établissements)</li><li>Fermer par défaut les accès de maintenance à distance des prestataires, et les ouvrir seulement à la demande</li><li>Garder la box, le serveur et les équipements réseau dans un local fermé</li></ul>
+      </div>
+    </details>
+    <details class="acc acc-ok">
+      <summary><strong>VI · Sécuriser l'administration</strong><span>mesures 27 à 29</span></summary>
+      <div class="acc-body">
+        <p class="acc-label">Les mesures du guide</p>
+        <ol class="measures"><li value="27">Interdire l'accès à Internet depuis les postes ou serveurs utilisés pour l'administration du système d'information</li><li value="28">Utiliser un réseau dédié et cloisonné pour l'administration du système d'information</li><li value="29">Limiter au strict besoin opérationnel les droits d'administration sur les postes de travail</li></ol>
+        <p class="acc-label">Concrètement, chez vous</p>
+        <ul><li>Retirer les droits d'administration aux utilisateurs : ils ne peuvent plus installer de logiciels sans accord, ce qui limite le shadow IT</li><li>Utiliser un compte d'administration distinct, réservé à l'administration et jamais à la navigation ou à la messagerie</li><li>Tenir une liste des logiciels autorisés</li></ul>
+      </div>
+    </details>
+    <details class="acc acc-ok">
+      <summary><strong>VII · Gérer le nomadisme</strong><span>mesures 30 à 33</span></summary>
+      <div class="acc-body">
+        <p class="acc-label">Les mesures du guide</p>
+        <ol class="measures"><li value="30">Prendre des mesures de sécurisation physique des terminaux nomades</li><li value="31">Chiffrer les données sensibles, en particulier sur le matériel potentiellement perdable</li><li value="32">Sécuriser la connexion réseau des postes utilisés en situation de nomadisme</li><li value="33">Adopter des politiques de sécurité dédiées aux terminaux mobiles</li></ol>
+        <p class="acc-label">Concrètement, chez vous</p>
+        <ul><li>Un code de verrouillage et le chiffrement du disque sur chaque portable et smartphone</li><li>Éviter les Wi-Fi publics, ou passer par une connexion sécurisée</li><li>Pouvoir effacer à distance un appareil perdu (gestion des appareils mobiles, MDM)</li><li>Signaler immédiatement une perte ou un vol à Practilio, qui coupe les sessions ouvertes</li></ul>
+      </div>
+    </details>
+    <details class="acc acc-ok">
+      <summary><strong>VIII · Maintenir à jour le système d'information</strong><span>mesures 34 à 35</span></summary>
+      <div class="acc-body">
+        <p class="acc-label">Les mesures du guide</p>
+        <ol class="measures"><li value="34">Définir une politique de mise à jour des composants du système d'information</li><li value="35">Anticiper la fin de la maintenance des logiciels et systèmes et limiter les adhérences logicielles</li></ol>
+        <p class="acc-label">Concrètement, chez vous</p>
+        <ul><li>Activer les mises à jour automatiques et appliquer celles demandées par Practilio dès leur publication</li><li>Remplacer les systèmes qui ne sont plus mis à jour ; pour un équipement biomédical, voir avec son fabricant</li></ul>
+      </div>
+    </details>
+    <details class="acc acc-ok">
+      <summary><strong>IX · Superviser, auditer, réagir</strong><span>mesures 36 à 40</span></summary>
+      <div class="acc-body">
+        <p class="acc-label">Les mesures du guide</p>
+        <ol class="measures"><li value="36">Activer et configurer les journaux des composants les plus importants</li><li value="37">Définir et appliquer une politique de sauvegarde des composants critiques</li><li value="38">Procéder à des contrôles et audits de sécurité réguliers puis appliquer les actions correctives associées</li><li value="39">Désigner un référent en sécurité des systèmes d'information et le faire connaître auprès du personnel</li><li value="40">Définir une procédure de gestion des incidents de sécurité</li></ol>
+        <p class="acc-label">Concrètement, chez vous</p>
+        <ul><li>Consulter régulièrement le journal des connexions de votre espace Practilio</li><li>Sauvegardes 3-2-1 : 3 copies, sur 2 supports différents, dont 1 hors ligne, et une restauration testée chaque trimestre</li><li>Désigner un référent cyber et le faire connaître de toute l'équipe</li><li>Préparer la réponse à incident : les <a href="../attaque_ransomware/index.html">premières actions</a>, la page <a href="../qui-contacter/index.html">Qui contacter</a>, ne jamais payer de rançon, un plan de continuité pour travailler sans informatique</li></ul>
+      </div>
+    </details>
+    <details class="acc acc-ok">
+      <summary><strong>X · Pour aller plus loin</strong><span>mesures 41 à 42</span></summary>
+      <div class="acc-body">
+        <p class="acc-label">Les mesures du guide</p>
+        <ol class="measures"><li value="41">Mener une analyse de risques formelle</li><li value="42">Privilégier l'usage de produits et de services qualifiés par l'ANSSI</li></ol>
+        <p class="acc-label">Concrètement, chez vous</p>
+        <ul><li>Évaluer vos risques avec la grille impact × vraisemblance de la leçon <a href="../notions/index.html">Notions clés</a></li><li>Choisir des prestataires et des produits qualifiés par l'ANSSI (voir <a href="../prestataires/index.html">Prestataires</a>)</li></ul>
+      </div>
+    </details>
+  </div>
+  <p class="note">Les intitulés des mesures sont ceux du guide de l'ANSSI. Les exemples « Concrètement, chez vous » sont des adaptations proposées par Practilio pour un cabinet ou un établissement de santé. Les mesures VI et X concernent surtout les établissements dotés d'un service informatique.</p>
+  </div>
+
+  <div class="step" data-title="Signaler un incident">
+  <h2>Signaler un incident à Practilio</h2>
+  <div class="fiche warn">
+    <p><strong>Formulaire « Signaler » de votre espace Practilio</strong>, rubrique Sécurité, accessible même sans connexion. <em>(fictif)</em></p>
+    <p>Adresse dédiée : <span class="mono">securite@practilio.example</span> · Ligne sécurité 24 h/24 : <span class="mono">08 36 65 65 65</span> <em>(coordonnées fictives, non opérationnelles)</em></p>
+    <p>Signalez : une connexion que vous ne reconnaissez pas, un mail ou un appel se réclamant de Practilio qui vous demande un code, un poste infecté qui s'est connecté à Practilio, une perte de téléphone ou d'ordinateur portable connecté à votre compte.</p>
+    <p><strong>Practilio ne vous demandera jamais</strong> votre mot de passe ni un code de vérification, ni par téléphone, ni par e-mail, ni par SMS.</p>
+  </div>
+
+  <h2>Et les patients ?</h2>
+  <div class="fiche">
+    <p>Les patients utilisent aussi Practilio : prise de rendez-vous, téléconsultation, Espace Patient, rappels. Ce site s'adresse aux professionnels, mais vous êtes leur premier relais. Trois messages à leur transmettre, par exemple par une affiche en salle d'attente :</p>
+    <ul><li>Un rappel de rendez-vous ne demande <strong>jamais</strong> de paiement, de code ou de mot de passe.</li><li>L'application de téléconsultation s'installe uniquement depuis l'App Store ou Google Play, jamais depuis un lien reçu par SMS.</li><li>Pour envoyer un document au cabinet, utilisez l'Espace Patient plutôt qu'un e-mail ordinaire.</li></ul>
+    <p>Un patient victime d'escroquerie peut s'adresser à <a href="https://www.cybermalveillance.gouv.fr" target="_blank" rel="noopener">Cybermalveillance.gouv.fr</a>.</p>
+  </div>
+  </div>
+</section>
+</main>
+
+<!-- LAYOUT:FOOTER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<footer class="gutter">
+  <div class="wrap">
+    <p><strong>Projet pédagogique EPITA – ECSI3-Evaluation-01.</strong> Practilio est une entreprise fictive. Ce site n'est pas un service réel et ne s'adresse à aucun professionnel de santé réel. Les coordonnées « Practilio » sont fictives.</p>
+    <p>Les organismes publics, prestataires et éditeurs cités existent ; ils sont mentionnés à titre d'orientation, sans reproduction de leurs logos ni de leurs chartes graphiques, et sans partenariat. Informations vérifiées le 23/11/2026.</p>
+  </div>
+</footer>
+<!-- /LAYOUT:FOOTER -->
+
+<script src="../shared/dialogues.js"></script>
+<script src="../shared/common.js"></script>
+<script src="practilio.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+@startuml carte-du-site
+' Carte du site Practilio Cyber Repères (projet pédagogique EPITA, Practilio est fictive).
+' Mise à jour : 23/11/2026. Rendu : plantuml -tpng docs/carte-du-site.puml  (produit docs/carte-du-site.png)
+' Chaque rectangle = un dossier de site/ (index.html + <dossier>.js). Les numéros sont ceux des leçons du chemin 2.
+
+skinparam defaultFontName "DejaVu Sans"
+skinparam shadowing false
+skinparam roundCorner 10
+skinparam ArrowColor #4f6670
+skinparam rectangle {
+  BorderColor #4f6670
+  BackgroundColor #ffffff
+}
+skinparam package {
+  BorderColor #4f6670
+  FontStyle bold
+}
+top to bottom direction
+
+rectangle "**Accueil** (accueil/)\nEncadré « Avant de commencer » :\nPractilio est fictive, projet pédagogique EPITA\n+ choix entre deux chemins" as accueil #fff3c4
+
+package "Chemin 1 · Urgence" #fbe7e7 {
+  rectangle "**Qui contacter**\n(qui-contacter/)\nStructure × situation\n→ « Prévenir… » dans l'ordre" as qui #ffffff
+  rectangle "**08 · Premières actions en cas**\n**d'attaque de ransomware**\n(attaque_ransomware/)\n8 actions, guide ANSSI, DFIR ORC" as ransom #ffffff
+}
+
+package "Chemin 2 · Sensibilisation complète (14 leçons, BD Professeur Cyber / Camille)" #e5f4ea {
+  rectangle "**01 · Pourquoi Practilio**\n**vous sensibilise**\n(pourquoi/)\nPérimètre Practilio (HDS, vulnérabilités)\n/ périmètre de la structure" as l01
+  rectangle "**02 · Notions clés**\n(notions/)" as l02
+  rectangle "**03 · Les attaques**\n(menaces/)\nRançongiciel, hameçonnage,\ncompromission de comptes,\nrevue des accès, autres attaques" as l03
+  rectangle "**04 · Contexte probable**\n**de votre établissement**\n(contextes/)\nCabinet, centre de santé,\nclinique IT + OT" as l04
+  rectangle "**06 · Réduire sa surface**\n**d'attaque**\n(practilio/)\nCe que fait Practilio,\nGuide d'hygiène ANSSI (42 mesures)" as l05
+  rectangle "**11 · Sensibilisation & quiz**\n(sensibilisation/)\n3 profils, scénarios, quiz corrigés" as l06
+  rectangle "**05 · IA et données patients**\n(ia/)" as l07
+  rectangle "**07 · Réglementation**\n(reglementation/)\nQuestionnaire droit commun / santé" as l08
+  rectangle "**09 · Assurance & risque**\n(assurance/)" as l10
+  rectangle "**10 · Acteurs publics**\n(acteurs/)" as l11
+  rectangle "**12 · Prestataires**\n(prestataires/)" as l12
+  rectangle "**13 · Outils**\n(outils/)" as l13
+  rectangle "**14 · Sources & glossaire**\n(sources/)" as l14
+}
+
+accueil --> qui : « Qui contacter »
+accueil --> ransom : « Premières actions\nen cas d'attaque de ransomware »
+accueil --> l01 : « Commencer le parcours »
+
+qui ..> l10 : plainte 72 h\n(assurance)
+
+
+l01 --> l02
+l02 --> l03
+l03 --> l04
+l04 --> l07
+l07 --> l05
+l05 --> l08
+l08 --> ransom
+ransom --> l10
+l10 --> l11
+l11 --> l06
+l06 --> l12
+l12 --> l13
+l13 --> l14
+
+note bottom of accueil
+  Sur toutes les pages :
+  bandeau « Practilio fictive »,
+  menu ☰ (SOS Qui contacter en tête),
+  bouton rouge « Incident en cours ? » → qui-contacter/
+end note
+@enduml

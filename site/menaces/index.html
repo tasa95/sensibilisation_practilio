@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Les attaques · Practilio Cyber Repères</title>
+<meta name="description" content="Plateforme fictive de sensibilisation et d'orientation cyber pour les utilisateurs de Practilio — projet pédagogique EPITA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Sora:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body data-page="menaces">
+<!-- LAYOUT:HEADER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<div class="fiction gutter" role="note">⚠ Projet pédagogique EPITA (ECSI3, évaluation 01). <strong>Practilio est une entreprise fictive</strong> : ce site n'est pas un service réel, aucun contact ni numéro « Practilio » n'est opérationnel.</div>
+
+<header class="top">
+  <div class="wrap gutter">
+    <div class="brandrow">
+      <div class="brand-left">
+        <button type="button" class="burger" id="menu-btn" aria-expanded="false" aria-controls="drawer" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      <a class="logo" href="../accueil/index.html" aria-label="Accueil Practilio Cyber Repères">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="1" y="1" width="26" height="26" rx="7" fill="var(--brand)"/><path d="M14 6v16M6 14h16" stroke="var(--surface)" stroke-width="3.2" stroke-linecap="round"/></svg>
+        <span>Practilio Cyber Repères <small>· FICTIF</small></span>
+      </a>
+      </div>
+      <div class="top-actions">
+        <button type="button" class="ghost" id="tuto-toggle" aria-pressed="true">Mode tutoriel : activé</button>
+        <a class="urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<div class="drawer-backdrop" id="drawer-backdrop"></div>
+<aside class="drawer" id="drawer" aria-label="Menu principal">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button type="button" class="ghost drawer-close" id="menu-close" aria-label="Fermer le menu">✕</button>
+  </div>
+  <nav aria-label="Navigation principale" id="nav">
+    <p class="nav-group">Urgence</p>
+    <ul>
+      <li><a class="nav-urgent" href="../qui-contacter/index.html"><span class="num">SOS</span>Qui contacter</a></li>
+    </ul>
+    <p class="nav-group">Comprendre</p>
+    <ul>
+      <li><a href="../accueil/index.html"><span class="num"></span>Accueil</a></li>
+      <li><a href="../bonnes-pratiques/index.html"><span class="num"></span>10 bonnes pratiques</a></li>
+      <li><a href="../pourquoi/index.html"><span class="num">01</span>Pourquoi Practilio vous sensibilise</a></li>
+      <li><a href="../notions/index.html"><span class="num">02</span>Notions clés</a></li>
+      <li><a href="../menaces/index.html"><span class="num">03</span>Les attaques</a></li>
+      <li><a href="../contextes/index.html"><span class="num">04</span>Contexte de votre établissement</a></li>
+      <li><a href="../ia/index.html"><span class="num">05</span>IA et données patients</a></li>
+    </ul>
+    <p class="nav-group">Se protéger</p>
+    <ul>
+      <li><a href="../practilio/index.html"><span class="num">06</span>Réduire sa surface d'attaque</a></li>
+    </ul>
+    <p class="nav-group">S'orienter</p>
+    <ul>
+      <li><a href="../reglementation/index.html"><span class="num">07</span>Réglementation</a></li>
+      <li><a href="../attaque_ransomware/index.html"><span class="num">08</span>Attaque par rançongiciel</a></li>
+      <li><a href="../assurance/index.html"><span class="num">09</span>Assurance &amp; risque</a></li>
+      <li><a href="../acteurs/index.html"><span class="num">10</span>Acteurs publics</a></li>
+    </ul>
+    <p class="nav-group">Se former</p>
+    <ul>
+      <li><a href="../sensibilisation/index.html"><span class="num">11</span>Sensibilisation &amp; quiz</a></li>
+    </ul>
+    <p class="nav-group">Ressources</p>
+    <ul>
+      <li><a href="../prestataires/index.html"><span class="num">12</span>Prestataires</a></li>
+      <li><a href="../outils/index.html"><span class="num">13</span>Outils</a></li>
+      <li><a href="../sources/index.html"><span class="num">14</span>Sources &amp; glossaire</a></li>
+    </ul>
+  </nav>
+  <a class="urgent drawer-urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+</aside>
+<!-- /LAYOUT:HEADER -->
+
+<main class="wrap gutter">
+<section class="view" id="v-menaces">
+  <p class="eyebrow">Les attaques</p>
+  <h1>Les attaques qui peuvent toucher votre établissement</h1>
+  <div class="step" data-title="Le rançongiciel">
+  <p class="lead">Le maillon humain reste un enjeu majeur : erreur humaine, ingénierie sociale et manque de sensibilisation conduisent à des comportements à risque. Voici les attaques les plus fréquentes, illustrées par des situations du secteur.</p>
+
+  <article class="fiche crit">
+    <h2 style="margin:0">Rançongiciel (ransomware)</h2>
+    <p>Logiciel malveillant qui <strong>chiffre</strong> les fichiers et systèmes et réclame une rançon. Les groupes pratiquent la <strong>double extorsion</strong> : ils volent les données avant de chiffrer, puis menacent de les publier.</p>
+    <p><strong>Comment il entre :</strong> pièce jointe ou lien piégé, mot de passe volé sur un accès distant (VPN, bureau à distance), vulnérabilité non corrigée, clé USB infectée.</p>
+    <p><strong>Cas réels :</strong> le Centre hospitalier Sud Francilien (Corbeil-Essonnes) en août 2022, le CH d'Armentières en février 2024 et l'hôpital Simone-Veil de Cannes en avril 2024 ont dû fonctionner en mode dégradé, avec déprogrammations et publication de données.</p>
+    <p><strong>Pour aller plus loin :</strong> le guide de l'ANSSI et du ministère de la Justice <a href="https://messervices.cyber.gouv.fr/guides/attaques-par-rancongiciels-tous-concernes" target="_blank" rel="noopener"><em>Attaques par rançongiciels, tous concernés</em></a> (2020).</p>
+  </article>
+  </div>
+
+  <div class="step" data-title="Hameçonnage et ingénierie sociale">
+  <h2>Hameçonnage et ingénierie sociale</h2>
+  <p data-tuto-anchor>L'<strong>ingénierie sociale</strong> consiste à manipuler une personne plutôt qu'une machine : l'attaquant se fait passer pour quelqu'un de confiance afin d'obtenir une information, un accès ou un virement. L'hameçonnage en est la forme la plus courante.</p>
+  <article class="fiche warn">
+    <div class="tablebox"><table>
+      <thead><tr><th>Technique</th><th>Définition</th><th>Exemple santé</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Phishing</strong> (hameçonnage)</td><td>Message envoyé en masse, généralement par e-mail, se faisant passer pour un tiers de confiance afin d'obtenir des informations sensibles ou une action (clic, virement, pièce jointe).</td><td>« Votre carte e-CPS expire, réactivez-la ici »</td></tr>
+        <tr><td><strong>Spear phishing</strong></td><td>Variante <strong>ciblée</strong> : message personnalisé pour une personne ou une structure, après une phase de reconnaissance (OSINT), donc plus crédible.</td><td>Mail au nom d'un confrère réel (trouvé sur l'annuaire en ligne) : « Voici le compte rendu de Mme D., votre patiente », avec une pièce jointe piégée</td></tr>
+        <tr><td><strong>Pretexting</strong></td><td>Invention d'un scénario ou d'une identité crédible (un « prétexte ») pour gagner la confiance et obtenir une information ou un accès.</td><td>« Je suis le nouveau technicien Practilio, je dois vérifier votre compte »</td></tr>
+        <tr><td><strong>Vishing</strong></td><td>Hameçonnage par appel téléphonique (voice + phishing).</td><td>Appel au secrétariat demandant le code reçu par SMS</td></tr>
+        <tr><td><strong>Smishing</strong></td><td>Hameçonnage par SMS (SMS + phishing).</td><td>« Assurance Maladie : remboursement en attente, cliquez »</td></tr>
+      </tbody></table></div>
+    <p><strong>Les signes d'un spear phishing :</strong> une urgence inhabituelle, une adresse d'expéditeur légèrement différente, une demande qui sort de la procédure normale (code, virement, changement de RIB), une pièce jointe inattendue, même de la part d'un contact connu.</p>
+  </article>
+  </div>
+
+  <div class="step" data-title="Compromission de comptes">
+  <h2>Compromission de comptes</h2>
+  <p data-tuto-anchor>Un compte est <strong>compromis</strong> quand une autre personne s'y connecte à votre place, avec vos identifiants. Pour la plateforme, c'est vous : elle voit une connexion normale.</p>
+  <article class="fiche crit">
+    <h3>Comment l'attaquant obtient vos identifiants</h3>
+    <ul><li>Un <strong>hameçonnage</strong> : vous saisissez votre mot de passe sur un faux site de connexion</li><li>Un <strong>mot de passe réutilisé</strong> : il a fuité d'un autre site, et l'attaquant l'essaie partout (on parle de « bourrage d'identifiants »)</li><li>Un <strong>mot de passe faible ou partagé</strong> : deviné, noté sur un post-it, transmis à un collègue</li><li>La <strong>fatigue MFA</strong> : l'attaquant envoie des demandes de validation en boucle jusqu'à ce que vous acceptiez</li></ul>
+    <h3>Les signes qui doivent alerter</h3>
+    <ul><li>Une alerte de connexion depuis un appareil ou un pays inhabituel</li><li>Une demande de validation MFA que vous n'avez pas déclenchée</li><li>Des rendez-vous modifiés, des messages envoyés ou des documents consultés sans vous</li></ul>
+    <p><strong>Conséquences :</strong> consultation ou vol de dossiers de patients, actions faites en votre nom, rebond vers d'autres comptes.</p>
+  </article>
+  </div>
+
+  <div class="step" data-title="Revue des accès manquante">
+  <h2>Revue des accès manquante</h2>
+  <p data-tuto-anchor>Sans <strong>revue des accès</strong>, personne ne vérifie régulièrement qui a un compte et avec quels droits. Les comptes oubliés et les droits trop larges deviennent des portes ouvertes que personne ne surveille.</p>
+  <article class="fiche warn">
+    <h3>Situations fréquentes</h3>
+    <ul><li>Le compte d'un remplaçant, d'un stagiaire ou d'un ancien salarié est encore actif plusieurs mois après son départ</li><li>Un prestataire garde un accès de maintenance après la fin de sa mission</li><li>Plusieurs personnes partagent le même compte : impossible de savoir qui a fait quoi</li><li>Un utilisateur a plus de droits que nécessaire, par exemple une secrétaire avec des droits d'administration</li></ul>
+    <p><strong>Conséquences :</strong> un ancien titulaire ou un attaquant utilise un compte oublié sans que personne ne le remarque, consultation ou copie de dossiers, aucune traçabilité.</p>
+  </article>
+  </div>
+
+  <div class="step" data-title="Les autres attaques">
+  <h2>Les autres attaques</h2>
+  <div class="grid">
+    <article class="fiche"><h3>Clés USB et supports amovibles</h3><p>Une clé trouvée ou offerte peut contenir un programme qui s'exécute dès le branchement. Les supports apportés par des patients (CD d'imagerie, clé de résultats) sont un vecteur fréquent.</p></article>
+    <article class="fiche"><h3>Fuite de données</h3><p>Export envoyé par erreur, document laissé sur une imprimante, base exposée chez un prestataire. Fin 2024, une fuite chez un éditeur de logiciels hospitaliers a concerné des centaines de milliers de patients.</p></article>
+    <article class="fiche"><h3>Perte de matériel</h3><p>Portable ou smartphone perdu ou volé, parfois avec une session ouverte : quiconque le trouve accède aux données et aux comptes qu'il contient.</p></article>
+    <article class="fiche"><h3>Indisponibilité (DoS, DDoS)</h3><p>Saturation d'un service pour le rendre indisponible, souvent depuis un botnet piloté par un serveur C2. Concerne surtout les sites internet des établissements.</p></article>
+  </div>
+  </div>
+</section>
+</main>
+
+<!-- LAYOUT:FOOTER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<footer class="gutter">
+  <div class="wrap">
+    <p><strong>Projet pédagogique EPITA – ECSI3-Evaluation-01.</strong> Practilio est une entreprise fictive. Ce site n'est pas un service réel et ne s'adresse à aucun professionnel de santé réel. Les coordonnées « Practilio » sont fictives.</p>
+    <p>Les organismes publics, prestataires et éditeurs cités existent ; ils sont mentionnés à titre d'orientation, sans reproduction de leurs logos ni de leurs chartes graphiques, et sans partenariat. Informations vérifiées le 23/11/2026.</p>
+  </div>
+</footer>
+<!-- /LAYOUT:FOOTER -->
+
+<script src="../shared/dialogues.js"></script>
+<script src="../shared/common.js"></script>
+<script src="menaces.js"></script>
+</body>
+</html>

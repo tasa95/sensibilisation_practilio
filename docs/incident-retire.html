@@ -1,0 +1,67 @@
+<!-- Page « Incident : délais et obligations » (site/incident/) retirée du site le 23/11/2026 à la demande de l'utilisateur.
+     Contenu : encadré vers les premières actions, guide ANSSI « Attaques par rançongiciels » et son sommaire, grille niveau de menace / urgence / interlocuteurs,
+     délais réglementaires (RGPD 72 h, art. L.1111-8-2 CSP, CRA 24 h / 72 h / 14 j / 1 mois, NIS 2), « Ce que Practilio fait en cas d'incident ».
+     Les liens sont relatifs à une page du site (../<page>/index.html). -->
+<section class="view" id="v-incident">
+  <p class="eyebrow">Incident grave ou vulnérabilité exploitée</p>
+  <h1>Que faire en cas d'incident ?</h1>
+  <p class="lead">Attaque par rançongiciel : appliquez d'abord les <a href="../attaque_ransomware/index.html">premières actions</a>, puis <a href="../qui-contacter/index.html">identifiez qui contacter</a>. Cette page rassemble les délais à respecter et le rôle de chacun.</p>
+  <div class="fiche crit">
+    <h2 style="margin:0">Attaque par rançongiciel en cours ?</h2>
+    <p>Les 8 premières actions à appliquer immédiatement (couper Internet, isoler, ne pas éteindre, conserver les preuves, alerter, ne pas payer, déposer plainte) sont sur une page dédiée.</p>
+    <p><a class="btn btn-crit" href="../attaque_ransomware/index.html">Premières actions en cas d'attaque de ransomware</a></p>
+  </div>
+
+  <div class="fiche">
+    <h2 style="margin:0">Le guide de référence : « Attaques par rançongiciels, tous concernés »</h2>
+    <p>Guide de l'ANSSI et de la Direction des affaires criminelles et des grâces (ministère de la Justice), version 1.0, septembre 2020, destiné aux dirigeants et aux responsables informatiques. <a href="https://messervices.cyber.gouv.fr/guides/attaques-par-rancongiciels-tous-concernes" target="_blank" rel="noopener">Page du guide</a> · <a href="https://messervices.cyber.gouv.fr/documents-guides/anssi-guide-attaques_par_rancongiciels_tous_concernes-v1.0.pdf" target="_blank" rel="noopener">PDF</a></p>
+    <p>Sa partie « Réagir en cas d'attaque » (p. 23) se lit dans cet ordre :</p>
+    <div class="tablebox"><table>
+      <thead><tr><th>Chapitre du guide</th><th>Page</th><th>Sur ce site</th></tr></thead>
+      <tbody>
+        <tr><td>Adopter les bons réflexes</td><td class="mono">24</td><td><a href="../attaque_ransomware/index.html">Les 8 premières actions</a></td></tr>
+        <tr><td>Piloter la gestion de la crise cyber</td><td class="mono">26</td><td>Plan de continuité : <a href="../notions/index.html">Notions clés</a> (PCA, PRA)</td></tr>
+        <tr><td>Trouver de l'assistance technique</td><td class="mono">27</td><td><a href="../prestataires/index.html">Prestataires</a> (PRIS, ExpertCyber) et <a href="../acteurs/index.html">Acteurs publics</a></td></tr>
+        <tr><td>Communiquer au juste niveau</td><td class="mono">28</td><td>Ce que Practilio vous communique : bas de cette page</td></tr>
+        <tr><td>Ne pas payer la rançon</td><td class="mono">29</td><td><a href="../attaque_ransomware/index.html">Action n° 7</a></td></tr>
+        <tr><td>Déposer plainte</td><td class="mono">30</td><td><a href="../attaque_ransomware/index.html">Action n° 8</a> et <a href="../assurance/index.html">Assurance</a></td></tr>
+        <tr><td>Restaurer les systèmes depuis des sources saines</td><td class="mono">32</td><td>Sauvegardes 3-2-1 : <a href="../menaces/index.html">Menaces</a></td></tr>
+      </tbody></table></div>
+  </div>
+
+  <div class="fiche crit">
+    <h2 style="margin:0">Qui contacter ?</h2>
+    <p>Selon votre structure et ce qui se passe, la page dédiée vous donne le niveau d'urgence et la liste ordonnée des interlocuteurs : prestataire, Practilio, CERT Santé, ARS, CNIL, plainte, assurance.</p>
+    <p><a class="btn btn-crit" href="../qui-contacter/index.html">Qui contacter</a></p>
+  </div>
+
+  <h2>Niveau de menace, impact, urgence : la grille</h2>
+  <div class="tablebox"><table>
+    <thead><tr><th>Niveau</th><th>Exemple</th><th>Urgence</th><th>Interlocuteurs</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tag ok">1 · Doute</span></td><td>Mail suspect non ouvert, appel douteux</td><td>Dans la journée</td><td>Référent interne ; signalement (17Cyber, ou Signal Spam pour les courriels) ; Practilio si l'usurpation vise Practilio</td></tr>
+      <tr><td><span class="tag warn">2 · Compromission limitée</span></td><td>Mot de passe saisi sur un faux site, connexion inconnue à un compte</td><td>Dans l'heure</td><td>Changer le mot de passe, Practilio (coupure des sessions), prestataire informatique</td></tr>
+      <tr><td><span class="tag crit">3 · Incident grave</span></td><td>Fuite de données patients, poste infecté</td><td>Immédiate</td><td>Prestataire, Practilio, CNIL sous 72 h si risque pour les personnes, CERT Santé / ARS (établissements), plainte</td></tr>
+      <tr><td><span class="tag crit">4 · Crise</span></td><td>Rançongiciel sur le SI, équipements de soins touchés</td><td>Immédiate, 24 h/24</td><td>CERT Santé (astreinte), ARS, prestataire de réponse à incident (PRIS), ANSSI/CERT-FR via le CERT Santé, Practilio, CNIL, plainte sous 72 h (condition d'indemnisation), assurance</td></tr>
+    </tbody></table></div>
+
+  <h2>Les délais réglementaires à connaître</h2>
+  <div class="tablebox"><table>
+    <thead><tr><th>Qui</th><th>Texte</th><th>À qui</th><th>Délais</th></tr></thead>
+    <tbody>
+      <tr><td>Vous (responsable de traitement)</td><td>RGPD, art. 33 et 34</td><td>CNIL ; patients si risque élevé</td><td>Notification à la CNIL dans les 72 h après en avoir pris connaissance</td></tr>
+      <tr><td>Practilio (sous-traitant)</td><td>RGPD, art. 33.2</td><td>Vous, ses clients</td><td>Dans les meilleurs délais</td></tr>
+      <tr><td>Établissements de santé et autres structures listées par le Code de la santé publique</td><td>Art. L.1111-8-2 et D.1111-16-2 s. du CSP</td><td>Portail <a href="https://signalement.social-sante.gouv.fr" target="_blank" rel="noopener">signalement.social-sante.gouv.fr</a> (ARS + CERT Santé)</td><td>Sans délai</td></tr>
+      <tr><td>Practilio (fabricant de produits logiciels)</td><td>Cyber Resilience Act, règlement (UE) 2024/2847, art. 14 (applicable depuis le 11/09/2026)</td><td>Plateforme unique de signalement de l'ENISA → CSIRT national (CERT-FR en France)</td><td>Alerte précoce sous 24 h ; notification complète sous 72 h ; rapport final sous 14 jours après la mise à disposition d'un correctif (vulnérabilité) ou sous 1 mois (incident grave)</td></tr>
+      <tr><td>Entités essentielles et importantes</td><td>NIS 2, directive (UE) 2022/2555, art. 23</td><td>CSIRT / autorité nationale (ANSSI)</td><td>24 h / 72 h / 1 mois. <em>En France : loi de transposition non promulguée au 23/11/2026.</em></td></tr>
+    </tbody></table></div>
+  <p class="note corr"><strong>Précision sur le CRA :</strong> les délais 24 h / 72 h / 14 jours / 1 mois du Cyber Resilience Act s'imposent aux <strong>fabricants</strong> de produits comportant des éléments numériques (ici Practilio pour ses applications), pas aux cabinets ni aux établissements utilisateurs. Ce que cela change pour vous : si Practilio découvre une vulnérabilité activement exploitée dans ses produits, Practilio la déclare et doit informer les utilisateurs concernés, avec les mesures à prendre. Suivez nos alertes et appliquez les mises à jour demandées.</p>
+
+  <h2>Ce que Practilio fait en cas d'incident grave ou de vulnérabilité exploitée</h2>
+  <ol class="steps">
+    <li><div><strong>Contenir</strong> : coupure des sessions à risque, blocage des comptes compromis, correctif d'urgence.</div></li>
+    <li><div><strong>Déclarer</strong> : signalement via la plateforme unique de l'ENISA (CRA) et, le cas échéant, au CERT Santé ; information de l'hébergeur HDS.</div></li>
+    <li><div><strong>Vous informer</strong> : message dans votre espace et par e-mail, avec ce qui est touché, ce qui ne l'est pas, ce que vous devez vérifier de votre côté et les éléments pour votre propre déclaration CNIL.</div></li>
+    <li><div><strong>Corriger et rendre compte</strong> : correctif, rapport final, retour d'expérience publié sur ce site.</div></li>
+  </ol>
+</section>

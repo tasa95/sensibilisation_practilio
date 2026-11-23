@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Outils · Practilio Cyber Repères</title>
+<meta name="description" content="Plateforme fictive de sensibilisation et d'orientation cyber pour les utilisateurs de Practilio — projet pédagogique EPITA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Sora:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body data-page="outils">
+<!-- LAYOUT:HEADER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<div class="fiction gutter" role="note">⚠ Projet pédagogique EPITA (ECSI3, évaluation 01). <strong>Practilio est une entreprise fictive</strong> : ce site n'est pas un service réel, aucun contact ni numéro « Practilio » n'est opérationnel.</div>
+
+<header class="top">
+  <div class="wrap gutter">
+    <div class="brandrow">
+      <div class="brand-left">
+        <button type="button" class="burger" id="menu-btn" aria-expanded="false" aria-controls="drawer" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      <a class="logo" href="../accueil/index.html" aria-label="Accueil Practilio Cyber Repères">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="1" y="1" width="26" height="26" rx="7" fill="var(--brand)"/><path d="M14 6v16M6 14h16" stroke="var(--surface)" stroke-width="3.2" stroke-linecap="round"/></svg>
+        <span>Practilio Cyber Repères <small>· FICTIF</small></span>
+      </a>
+      </div>
+      <div class="top-actions">
+        <button type="button" class="ghost" id="tuto-toggle" aria-pressed="true">Mode tutoriel : activé</button>
+        <a class="urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<div class="drawer-backdrop" id="drawer-backdrop"></div>
+<aside class="drawer" id="drawer" aria-label="Menu principal">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button type="button" class="ghost drawer-close" id="menu-close" aria-label="Fermer le menu">✕</button>
+  </div>
+  <nav aria-label="Navigation principale" id="nav">
+    <p class="nav-group">Urgence</p>
+    <ul>
+      <li><a class="nav-urgent" href="../qui-contacter/index.html"><span class="num">SOS</span>Qui contacter</a></li>
+    </ul>
+    <p class="nav-group">Comprendre</p>
+    <ul>
+      <li><a href="../accueil/index.html"><span class="num"></span>Accueil</a></li>
+      <li><a href="../bonnes-pratiques/index.html"><span class="num"></span>10 bonnes pratiques</a></li>
+      <li><a href="../pourquoi/index.html"><span class="num">01</span>Pourquoi Practilio vous sensibilise</a></li>
+      <li><a href="../notions/index.html"><span class="num">02</span>Notions clés</a></li>
+      <li><a href="../menaces/index.html"><span class="num">03</span>Les attaques</a></li>
+      <li><a href="../contextes/index.html"><span class="num">04</span>Contexte de votre établissement</a></li>
+      <li><a href="../ia/index.html"><span class="num">05</span>IA et données patients</a></li>
+    </ul>
+    <p class="nav-group">Se protéger</p>
+    <ul>
+      <li><a href="../practilio/index.html"><span class="num">06</span>Réduire sa surface d'attaque</a></li>
+    </ul>
+    <p class="nav-group">S'orienter</p>
+    <ul>
+      <li><a href="../reglementation/index.html"><span class="num">07</span>Réglementation</a></li>
+      <li><a href="../attaque_ransomware/index.html"><span class="num">08</span>Attaque par rançongiciel</a></li>
+      <li><a href="../assurance/index.html"><span class="num">09</span>Assurance &amp; risque</a></li>
+      <li><a href="../acteurs/index.html"><span class="num">10</span>Acteurs publics</a></li>
+    </ul>
+    <p class="nav-group">Se former</p>
+    <ul>
+      <li><a href="../sensibilisation/index.html"><span class="num">11</span>Sensibilisation &amp; quiz</a></li>
+    </ul>
+    <p class="nav-group">Ressources</p>
+    <ul>
+      <li><a href="../prestataires/index.html"><span class="num">12</span>Prestataires</a></li>
+      <li><a href="../outils/index.html"><span class="num">13</span>Outils</a></li>
+      <li><a href="../sources/index.html"><span class="num">14</span>Sources &amp; glossaire</a></li>
+    </ul>
+  </nav>
+  <a class="urgent drawer-urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+</aside>
+<!-- /LAYOUT:HEADER -->
+
+<main class="wrap gutter">
+<section class="view" id="v-outils">
+  <p class="eyebrow">Catégories d'outils</p>
+  <h1>Les outils, par catégorie</h1>
+  <p class="lead">Un outil ne remplace pas une bonne pratique. Commencez par les catégories marquées « socle » ; les éditeurs cités sont des exemples existants, sans recommandation de Practilio, sauf pour l'EDR, le XDR et le SIEM, pour lesquels l'équipe Practilio indique sa liste d'outils préconisés sous le tableau. <strong>Cliquez sur une catégorie</strong> pour ouvrir sa fiche détaillée.</p>
+  <div class="tablebox"><table>
+    <thead><tr><th>Catégorie</th><th>Technologie, à quoi ça sert</th><th>Exemples d'éditeurs et produits</th><th>Pour qui</th></tr></thead>
+    <tbody>
+      <tr><td><strong><a href="../outils-mots-de-passe/index.html">Gestionnaire de mots de passe</a></strong> <span class="tag ok">socle</span></td><td>Coffre chiffré qui génère et stocke des mots de passe uniques, avec partage contrôlé</td><td><a href="https://keepassxc.org" target="_blank" rel="noopener">KeePassXC</a> (préconisé), <a href="https://bitwarden.com" target="_blank" rel="noopener">Bitwarden</a>, <a href="https://www.dashlane.com" target="_blank" rel="noopener">Dashlane</a>, <a href="https://keepass.info" target="_blank" rel="noopener">KeePass</a>, <a href="https://www.keepersecurity.com" target="_blank" rel="noopener">Keeper</a></td><td>Tous</td></tr>
+      <tr><td><strong><a href="../outils-mfa-iam-pam/index.html">MFA / IAM / PAM</a></strong> <span class="tag ok">socle</span></td><td>Authentification forte (application, clé FIDO2), gestion centralisée des identités, contrôle des comptes à privilèges</td><td><a href="https://www.yubico.com" target="_blank" rel="noopener">Yubico</a> (clés YubiKey), <a href="https://www.inwebo.com" target="_blank" rel="noopener">inWebo</a>, <a href="https://www.microsoft.com/fr-fr/security/business/identity-access/microsoft-entra-id" target="_blank" rel="noopener">Microsoft Entra ID</a>, <a href="https://www.okta.com" target="_blank" rel="noopener">Okta</a>, <a href="https://www.sailpoint.com" target="_blank" rel="noopener">SailPoint</a> (IGA, revue des droits), <a href="https://www.cyberark.com" target="_blank" rel="noopener">CyberArk</a> et <a href="https://www.wallix.com" target="_blank" rel="noopener">Wallix</a> (PAM)</td><td>Tous / IT</td></tr>
+      <tr><td><strong><a href="../outils-sauvegarde/index.html">Sauvegarde</a></strong> <span class="tag ok">socle</span></td><td>Copies régulières, immuables ou hors ligne, restauration testée</td><td><a href="https://www.veeam.com/fr" target="_blank" rel="noopener">Veeam</a>, <a href="https://www.atempo.com" target="_blank" rel="noopener">Atempo</a>, <a href="https://www.acronis.com/fr-fr/" target="_blank" rel="noopener">Acronis</a>, <a href="https://www.rubrik.com" target="_blank" rel="noopener">Rubrik</a></td><td>Tous</td></tr>
+      <tr><td><strong><a href="../outils-edr/index.html">EDR</a> / <a href="../outils-xdr/index.html">XDR</a></strong> <span class="tag ok">socle</span></td><td>Détection et réponse sur les postes et serveurs : bloque les comportements malveillants (chiffrement massif, connexions C2), isole un poste à distance</td><td><a href="https://harfanglab.io" target="_blank" rel="noopener">HarfangLab</a>, <a href="https://www.microsoft.com/fr-fr/security/business/endpoint-security/microsoft-defender-endpoint" target="_blank" rel="noopener">Microsoft Defender for Endpoint</a>, <a href="https://www.crowdstrike.com" target="_blank" rel="noopener">CrowdStrike Falcon</a>, <a href="https://www.sentinelone.com" target="_blank" rel="noopener">SentinelOne</a>, <a href="https://www.trendmicro.com" target="_blank" rel="noopener">Trend Micro</a></td><td>Tous (géré par le prestataire en cabinet)</td></tr>
+      <tr><td><strong><a href="../outils-mdm/index.html">MDM</a></strong></td><td>Gestion des smartphones, tablettes et portables : chiffrement, code, effacement à distance, contrôle des applications et des ports USB</td><td><a href="https://www.microsoft.com/fr-fr/security/business/microsoft-intune" target="_blank" rel="noopener">Microsoft Intune</a>, <a href="https://www.jamf.com" target="_blank" rel="noopener">Jamf</a>, <a href="https://www.ivanti.com" target="_blank" rel="noopener">Ivanti</a></td><td>MSP, clinique</td></tr>
+      <tr><td><strong><a href="../outils-scan-vulnerabilites/index.html">Scan de vulnérabilités</a></strong></td><td>Inventaire des failles connues (CVE) sur les postes, serveurs et services exposés</td><td><a href="https://www.tenable.com" target="_blank" rel="noopener">Tenable</a> (Nessus), <a href="https://www.qualys.com" target="_blank" rel="noopener">Qualys</a>, <a href="https://www.rapid7.com" target="_blank" rel="noopener">Rapid7</a>, <a href="https://www.greenbone.net" target="_blank" rel="noopener">Greenbone</a> (OpenVAS)</td><td>IT, clinique</td></tr>
+      <tr><td><strong><a href="../outils-pare-feu/index.html">Pare-feu et segmentation</a></strong></td><td>Filtrage des flux, séparation des réseaux (Wi-Fi patients, OT, administration), VPN</td><td><a href="https://www.stormshield.com" target="_blank" rel="noopener">Stormshield</a>, <a href="https://www.fortinet.com" target="_blank" rel="noopener">Fortinet</a>, <a href="https://www.paloaltonetworks.com" target="_blank" rel="noopener">Palo Alto Networks</a>, <a href="https://www.checkpoint.com" target="_blank" rel="noopener">Check Point</a>, <a href="https://www.cisco.com" target="_blank" rel="noopener">Cisco</a></td><td>MSP, clinique</td></tr>
+      <tr><td><strong><a href="../outils-sase/index.html">SASE / Zero Trust</a></strong></td><td>Accès distant sécurisé sans VPN classique : chaque accès est authentifié et autorisé (« ne jamais faire confiance, toujours vérifier »), passerelle web et accès ZTNA dans le cloud. Utile pour les accès des praticiens hors site et des mainteneurs</td><td><a href="https://www.zscaler.com" target="_blank" rel="noopener">Zscaler</a>, <a href="https://www.netskope.com" target="_blank" rel="noopener">Netskope</a>, <a href="https://www.cloudflare.com" target="_blank" rel="noopener">Cloudflare</a>, Palo Alto Networks (Prisma Access)</td><td>Clinique, groupe</td></tr>
+      <tr><td><strong><a href="../outils-siem/index.html">SIEM / SOAR / SOC</a></strong></td><td>Collecte et corrélation des journaux pour détecter les incidents (SIEM), automatisation de la réponse (SOAR), exploités 24 h/24 par un SOC interne ou externalisé</td><td><a href="https://www.splunk.com" target="_blank" rel="noopener">Splunk</a> (Cisco), <a href="https://www.microsoft.com/fr-fr/security/business/siem-and-xdr/microsoft-sentinel" target="_blank" rel="noopener">Microsoft Sentinel</a>, <a href="https://www.sekoia.io" target="_blank" rel="noopener">Sekoia.io</a></td><td>Clinique (souvent via un MSSP)</td></tr>
+      <tr><td><strong><a href="../outils-donnees/index.html">Sécurité de la donnée</a></strong></td><td>Classification, chiffrement, prévention des fuites (DLP), détection d'accès anormaux aux fichiers</td><td><a href="https://www.varonis.com" target="_blank" rel="noopener">Varonis</a>, <a href="https://www.thalesgroup.com/fr/marches/securite-numerique-et-cybersecurite" target="_blank" rel="noopener">Thales</a> (chiffrement), Microsoft Purview</td><td>Clinique</td></tr>
+      <tr><td><strong><a href="../outils-grc/index.html">GRC</a></strong> (gouvernance, risque, conformité)</td><td>Pilotage de la sécurité : analyse de risques (méthode EBIOS Risk Manager de l'ANSSI), suivi de conformité (RGPD, NIS 2, ReCyF, ISO 27001), gestion des tiers</td><td><a href="https://www.egerie.eu" target="_blank" rel="noopener">EGERIE</a>, <a href="https://www.onetrust.com" target="_blank" rel="noopener">OneTrust</a> (aussi registre RGPD), <a href="https://www.servicenow.com" target="_blank" rel="noopener">ServiceNow</a></td><td>Clinique, groupe</td></tr>
+      <tr><td><strong><a href="../outils-ot-sante/index.html">Sécurité OT santé</a></strong> (biomédical et GTB)</td><td>Découverte passive des équipements biomédicaux et de la GTB, détection d'anomalies sur les protocoles industriels et médicaux (DICOM, HL7, BACnet, Modbus), aide à la segmentation</td><td><a href="https://claroty.com" target="_blank" rel="noopener">Claroty</a> (ex-Medigate), <a href="https://www.armis.com" target="_blank" rel="noopener">Armis</a>, <a href="https://www.nozominetworks.com" target="_blank" rel="noopener">Nozomi Networks</a>, <a href="https://www.forescout.com" target="_blank" rel="noopener">Forescout</a>, <a href="https://asimily.com" target="_blank" rel="noopener">Asimily</a></td><td>Clinique</td></tr>
+      <tr><td><strong><a href="../outils-cti/index.html">CTI</a></strong> (renseignement sur la menace)</td><td>Indicateurs de compromission, suivi des groupes de rançongiciels et des fuites</td><td><a href="https://www.sekoia.io" target="_blank" rel="noopener">Sekoia.io</a>, <a href="https://www.recordedfuture.com" target="_blank" rel="noopener">Recorded Future</a>, <a href="https://filigran.io" target="_blank" rel="noopener">Filigran</a> (OpenCTI, open source),<a href="https://cloud.google.com/security/products/threat-intelligence" target="_blank" rel="noopener">Google Threat Intelligence (Mandiant)</a> ; gratuit : alertes du CERT-FR et du CERT Santé</td><td>Clinique, prestataire</td></tr>
+      <tr><td><strong><a href="../outils-messagerie-sante/index.html">Messagerie sécurisée de santé</a></strong> <span class="tag ok">socle</span></td><td>Échange de données de santé entre professionnels dans un espace de confiance</td><td><a href="https://mssante.fr" target="_blank" rel="noopener">MSSanté</a> (espace de confiance national, plusieurs opérateurs de messagerie)</td><td>Tous</td></tr>
+      <tr><td><strong><a href="../outils-cloud/index.html">CSPM / CNAPP</a></strong> (sécurité du cloud)</td><td>Détection des erreurs de configuration du cloud (CSPM) et protection des applications et serveurs cloud (CNAPP)</td><td><a href="https://www.microsoft.com/fr-fr/security/business/cloud-security/microsoft-defender-cloud" target="_blank" rel="noopener">Microsoft Defender for Cloud</a>, <a href="https://www.wiz.io" target="_blank" rel="noopener">Wiz</a>, <a href="https://orca.security/" target="_blank" rel="noopener">Orca Security</a>, <a href="https://www.paloaltonetworks.com/cortex/cloud" target="_blank" rel="noopener">Palo Alto Networks Cortex Cloud</a>, <a href="https://www.checkpoint.com/cloudguard/" target="_blank" rel="noopener">Check Point CloudGuard</a></td><td>Groupes, services hébergés dans le cloud</td></tr>
+    </tbody></table></div>
+  <h2>Quoi prioriser</h2>
+  <ol class="steps">
+    <li><div><strong>Cabinet :</strong> gestionnaire de mots de passe + MFA, sauvegarde hors ligne, antivirus/EDR à jour, MSSanté.</div></li>
+    <li><div><strong>Maison / centre de santé :</strong> socle cabinet + MDM, pare-feu avec Wi-Fi patients séparé.</div></li>
+    <li><div><strong>Clinique :</strong> socle + EDR supervisé (SOC), scan de vulnérabilités, segmentation et sécurité OT, PAM pour les comptes d'administration et les accès des mainteneurs.</div></li>
+  </ol>
+</section>
+</main>
+
+<!-- LAYOUT:FOOTER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<footer class="gutter">
+  <div class="wrap">
+    <p><strong>Projet pédagogique EPITA – ECSI3-Evaluation-01.</strong> Practilio est une entreprise fictive. Ce site n'est pas un service réel et ne s'adresse à aucun professionnel de santé réel. Les coordonnées « Practilio » sont fictives.</p>
+    <p>Les organismes publics, prestataires et éditeurs cités existent ; ils sont mentionnés à titre d'orientation, sans reproduction de leurs logos ni de leurs chartes graphiques, et sans partenariat. Informations vérifiées le 23/11/2026.</p>
+  </div>
+</footer>
+<!-- /LAYOUT:FOOTER -->
+
+<script src="../shared/dialogues.js"></script>
+<script src="../shared/common.js"></script>
+<script src="outils.js"></script>
+</body>
+</html>

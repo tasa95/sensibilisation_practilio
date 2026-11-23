@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Assurance &amp; risque · Practilio Cyber Repères</title>
+<meta name="description" content="Plateforme fictive de sensibilisation et d'orientation cyber pour les utilisateurs de Practilio — projet pédagogique EPITA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Sora:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body data-page="assurance">
+<!-- LAYOUT:HEADER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<div class="fiction gutter" role="note">⚠ Projet pédagogique EPITA (ECSI3, évaluation 01). <strong>Practilio est une entreprise fictive</strong> : ce site n'est pas un service réel, aucun contact ni numéro « Practilio » n'est opérationnel.</div>
+
+<header class="top">
+  <div class="wrap gutter">
+    <div class="brandrow">
+      <div class="brand-left">
+        <button type="button" class="burger" id="menu-btn" aria-expanded="false" aria-controls="drawer" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      <a class="logo" href="../accueil/index.html" aria-label="Accueil Practilio Cyber Repères">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="1" y="1" width="26" height="26" rx="7" fill="var(--brand)"/><path d="M14 6v16M6 14h16" stroke="var(--surface)" stroke-width="3.2" stroke-linecap="round"/></svg>
+        <span>Practilio Cyber Repères <small>· FICTIF</small></span>
+      </a>
+      </div>
+      <div class="top-actions">
+        <button type="button" class="ghost" id="tuto-toggle" aria-pressed="true">Mode tutoriel : activé</button>
+        <a class="urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<div class="drawer-backdrop" id="drawer-backdrop"></div>
+<aside class="drawer" id="drawer" aria-label="Menu principal">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button type="button" class="ghost drawer-close" id="menu-close" aria-label="Fermer le menu">✕</button>
+  </div>
+  <nav aria-label="Navigation principale" id="nav">
+    <p class="nav-group">Urgence</p>
+    <ul>
+      <li><a class="nav-urgent" href="../qui-contacter/index.html"><span class="num">SOS</span>Qui contacter</a></li>
+    </ul>
+    <p class="nav-group">Comprendre</p>
+    <ul>
+      <li><a href="../accueil/index.html"><span class="num"></span>Accueil</a></li>
+      <li><a href="../bonnes-pratiques/index.html"><span class="num"></span>10 bonnes pratiques</a></li>
+      <li><a href="../pourquoi/index.html"><span class="num">01</span>Pourquoi Practilio vous sensibilise</a></li>
+      <li><a href="../notions/index.html"><span class="num">02</span>Notions clés</a></li>
+      <li><a href="../menaces/index.html"><span class="num">03</span>Les attaques</a></li>
+      <li><a href="../contextes/index.html"><span class="num">04</span>Contexte de votre établissement</a></li>
+      <li><a href="../ia/index.html"><span class="num">05</span>IA et données patients</a></li>
+    </ul>
+    <p class="nav-group">Se protéger</p>
+    <ul>
+      <li><a href="../practilio/index.html"><span class="num">06</span>Réduire sa surface d'attaque</a></li>
+    </ul>
+    <p class="nav-group">S'orienter</p>
+    <ul>
+      <li><a href="../reglementation/index.html"><span class="num">07</span>Réglementation</a></li>
+      <li><a href="../attaque_ransomware/index.html"><span class="num">08</span>Attaque par rançongiciel</a></li>
+      <li><a href="../assurance/index.html"><span class="num">09</span>Assurance &amp; risque</a></li>
+      <li><a href="../acteurs/index.html"><span class="num">10</span>Acteurs publics</a></li>
+    </ul>
+    <p class="nav-group">Se former</p>
+    <ul>
+      <li><a href="../sensibilisation/index.html"><span class="num">11</span>Sensibilisation &amp; quiz</a></li>
+    </ul>
+    <p class="nav-group">Ressources</p>
+    <ul>
+      <li><a href="../prestataires/index.html"><span class="num">12</span>Prestataires</a></li>
+      <li><a href="../outils/index.html"><span class="num">13</span>Outils</a></li>
+      <li><a href="../sources/index.html"><span class="num">14</span>Sources &amp; glossaire</a></li>
+    </ul>
+  </nav>
+  <a class="urgent drawer-urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+</aside>
+<!-- /LAYOUT:HEADER -->
+
+<main class="wrap gutter">
+<section class="view" id="v-assurance">
+  <p class="eyebrow">Gestion du risque</p>
+  <h1>Assurance cyber et transfert du risque</h1>
+  <p class="lead">Face à un risque, une structure a quatre options : le <strong>réduire</strong> (mesures de sécurité), l'<strong>éviter</strong> (renoncer à une activité trop risquée), l'<strong>accepter</strong> (en connaissance de cause) ou le <strong>partager / transférer</strong>. L'assurance cyber permet de transférer une partie des conséquences financières d'un incident à un assureur.</p>
+
+  <h2>Ce que disent les rapports de référence</h2>
+  <div class="grid">
+    <article class="card"><span class="tag">Assureur · janvier 2026</span><h3>Allianz Risk Barometer 2026</h3><p>Les cyberincidents restent le <strong>risque n° 1 des entreprises dans le monde</strong>, pour la cinquième année consécutive (42 % des 3 338 experts interrogés dans 97 pays). L'intelligence artificielle monte au 2<sup>e</sup> rang ; l'interruption d'activité recule au 3<sup>e</sup>.</p><p><a href="https://commercial.allianz.com/news-and-insights/reports/allianz-risk-barometer.html" target="_blank" rel="noopener">commercial.allianz.com</a></p></article>
+    <article class="card"><span class="tag">Forum économique mondial · janvier 2026</span><h3>Global Risks Report 2026 (WEF)</h3><p>Rapport annuel établi avec le courtier Marsh McLennan et l'assureur Zurich. L'« insécurité cyber » est classée <strong>6<sup>e</sup> risque mondial à deux ans</strong>, derrière notamment la confrontation géoéconomique et la désinformation (2<sup>e</sup>).</p><p><a href="https://www.weforum.org/publications/global-risks-report-2026/" target="_blank" rel="noopener">weforum.org</a></p></article>
+    <article class="card"><span class="tag">Gestionnaires de risques · juin 2026</span><h3>AMRAE – LUCY 2026</h3><p>Étude « Lumière sur la cyberassurance » de l'Association pour le management des risques et des assurances de l'entreprise, à partir des données de courtiers : volume de primes, nombre et coût des sinistres, taux de couverture par taille d'entreprise. Elle montre un marché français qui se développe vers les ETI, avec des PME encore peu couvertes.</p><p><a href="https://www.amrae.fr/lucy-light-upon-cyber-insurance-2026-edition" target="_blank" rel="noopener">amrae.fr</a></p></article>
+  </div>
+  <p class="note"><em>Chiffres repris des communiqués des éditeurs des rapports, consultés le 23/11/2026. Pour LUCY, se référer au PDF officiel de l'AMRAE pour les montants détaillés.</em></p>
+
+  <h2>Ce que l'assurance cyber couvre généralement</h2>
+  <div class="split">
+    <div class="card yes"><h3>✔ Souvent couvert (selon contrat)</h3><ul><li>Frais d'assistance et de réponse à incident (prestataire, avocat, communication de crise)</li><li>Frais de restauration des données et des systèmes</li><li>Pertes d'exploitation pendant l'arrêt</li><li>Frais de notification des patients</li><li>Responsabilité civile en cas de réclamation de tiers (patients)</li></ul></div>
+    <div class="card no"><h3>✘ Limites fréquentes</h3><ul><li>Franchises et plafonds, souvent bas pour les petites structures</li><li>Exclusions (faute intentionnelle, défaut de mise à jour connu, actes de guerre selon les rédactions)</li><li>Amendes administratives : non assurables dans de nombreux cas</li><li>Conditions de souscription : MFA, sauvegardes hors ligne et <a href="../outils-edr/index.html">EDR</a> sont de plus en plus exigés par les assureurs</li><li>Atteinte à la réputation et perte de confiance des patients : non compensables</li></ul></div>
+  </div>
+
+  <div class="fiche crit">
+    <h3>Obligation à connaître : la plainte sous 72 heures</h3>
+    <p>Depuis le 24 avril 2023 (loi n° 2023-22 du 24 janvier 2023, dite LOPMI), l'indemnisation par un assureur des pertes liées à une cyberattaque est subordonnée au <strong>dépôt d'une plainte dans les 72 heures</strong> après la connaissance de l'attaque (article L.12-10-1 du Code des assurances). Elle concerne les personnes morales et les personnes physiques dans le cadre de leur activité professionnelle, donc aussi un praticien libéral.</p>
+  </div>
+
+  <h2>Assurance : par où commencer ?</h2>
+  <div class="split">
+    <div class="card"><h3>Cabinet</h3><p>Vérifiez si votre contrat de responsabilité civile professionnelle ou multirisque inclut une garantie cyber, et ses plafonds. Une offre cyber dédiée aux petites structures existe chez de nombreux assureurs et mutuelles professionnelles.</p></div>
+    <div class="card"><h3>Maison / centre de santé</h3><p>Faites le point avec votre courtier : pertes d'exploitation, frais de réponse à incident, assistance 24 h/24. Les questionnaires de souscription sont un bon audit gratuit de votre maturité.</p></div>
+    <div class="card"><h3>Clinique</h3><p>Associez le RSSI, la direction financière et le courtier. Alignez la police avec votre PCA/PRA et votre contrat de réponse à incident (prestataire agréé par l'assureur ou non).</p></div>
+  </div>
+  <p class="note">L'assurance <strong>ne remplace pas</strong> la sécurité : elle finance la reprise, elle n'empêche ni l'arrêt des soins ni la fuite des données. Le transfert ne concerne que la part financière ; la responsabilité vis-à-vis des patients et de la CNIL reste la vôtre.</p>
+</section>
+</main>
+
+<!-- LAYOUT:FOOTER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<footer class="gutter">
+  <div class="wrap">
+    <p><strong>Projet pédagogique EPITA – ECSI3-Evaluation-01.</strong> Practilio est une entreprise fictive. Ce site n'est pas un service réel et ne s'adresse à aucun professionnel de santé réel. Les coordonnées « Practilio » sont fictives.</p>
+    <p>Les organismes publics, prestataires et éditeurs cités existent ; ils sont mentionnés à titre d'orientation, sans reproduction de leurs logos ni de leurs chartes graphiques, et sans partenariat. Informations vérifiées le 23/11/2026.</p>
+  </div>
+</footer>
+<!-- /LAYOUT:FOOTER -->
+
+<script src="../shared/dialogues.js"></script>
+<script src="../shared/common.js"></script>
+<script src="assurance.js"></script>
+</body>
+</html>

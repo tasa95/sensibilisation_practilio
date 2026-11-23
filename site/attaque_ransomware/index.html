@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Attaque par rançongiciel · Practilio Cyber Repères</title>
+<meta name="description" content="Plateforme fictive de sensibilisation et d'orientation cyber pour les utilisateurs de Practilio — projet pédagogique EPITA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Sora:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body data-page="attaque_ransomware">
+<!-- LAYOUT:HEADER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<div class="fiction gutter" role="note">⚠ Projet pédagogique EPITA (ECSI3, évaluation 01). <strong>Practilio est une entreprise fictive</strong> : ce site n'est pas un service réel, aucun contact ni numéro « Practilio » n'est opérationnel.</div>
+
+<header class="top">
+  <div class="wrap gutter">
+    <div class="brandrow">
+      <div class="brand-left">
+        <button type="button" class="burger" id="menu-btn" aria-expanded="false" aria-controls="drawer" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      <a class="logo" href="../accueil/index.html" aria-label="Accueil Practilio Cyber Repères">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="1" y="1" width="26" height="26" rx="7" fill="var(--brand)"/><path d="M14 6v16M6 14h16" stroke="var(--surface)" stroke-width="3.2" stroke-linecap="round"/></svg>
+        <span>Practilio Cyber Repères <small>· FICTIF</small></span>
+      </a>
+      </div>
+      <div class="top-actions">
+        <button type="button" class="ghost" id="tuto-toggle" aria-pressed="true">Mode tutoriel : activé</button>
+        <a class="urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<div class="drawer-backdrop" id="drawer-backdrop"></div>
+<aside class="drawer" id="drawer" aria-label="Menu principal">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button type="button" class="ghost drawer-close" id="menu-close" aria-label="Fermer le menu">✕</button>
+  </div>
+  <nav aria-label="Navigation principale" id="nav">
+    <p class="nav-group">Urgence</p>
+    <ul>
+      <li><a class="nav-urgent" href="../qui-contacter/index.html"><span class="num">SOS</span>Qui contacter</a></li>
+    </ul>
+    <p class="nav-group">Comprendre</p>
+    <ul>
+      <li><a href="../accueil/index.html"><span class="num"></span>Accueil</a></li>
+      <li><a href="../bonnes-pratiques/index.html"><span class="num"></span>10 bonnes pratiques</a></li>
+      <li><a href="../pourquoi/index.html"><span class="num">01</span>Pourquoi Practilio vous sensibilise</a></li>
+      <li><a href="../notions/index.html"><span class="num">02</span>Notions clés</a></li>
+      <li><a href="../menaces/index.html"><span class="num">03</span>Les attaques</a></li>
+      <li><a href="../contextes/index.html"><span class="num">04</span>Contexte de votre établissement</a></li>
+      <li><a href="../ia/index.html"><span class="num">05</span>IA et données patients</a></li>
+    </ul>
+    <p class="nav-group">Se protéger</p>
+    <ul>
+      <li><a href="../practilio/index.html"><span class="num">06</span>Réduire sa surface d'attaque</a></li>
+    </ul>
+    <p class="nav-group">S'orienter</p>
+    <ul>
+      <li><a href="../reglementation/index.html"><span class="num">07</span>Réglementation</a></li>
+      <li><a href="../attaque_ransomware/index.html"><span class="num">08</span>Attaque par rançongiciel</a></li>
+      <li><a href="../assurance/index.html"><span class="num">09</span>Assurance &amp; risque</a></li>
+      <li><a href="../acteurs/index.html"><span class="num">10</span>Acteurs publics</a></li>
+    </ul>
+    <p class="nav-group">Se former</p>
+    <ul>
+      <li><a href="../sensibilisation/index.html"><span class="num">11</span>Sensibilisation &amp; quiz</a></li>
+    </ul>
+    <p class="nav-group">Ressources</p>
+    <ul>
+      <li><a href="../prestataires/index.html"><span class="num">12</span>Prestataires</a></li>
+      <li><a href="../outils/index.html"><span class="num">13</span>Outils</a></li>
+      <li><a href="../sources/index.html"><span class="num">14</span>Sources &amp; glossaire</a></li>
+    </ul>
+  </nav>
+  <a class="urgent drawer-urgent" href="../qui-contacter/index.html">Incident en cours ?</a>
+</aside>
+<!-- /LAYOUT:HEADER -->
+
+<main class="wrap gutter">
+<section class="view" id="v-attaque_ransomware">
+  <p class="eyebrow">Urgence · rançongiciel</p>
+  <h1>Premières actions en cas d'attaque de ransomware</h1>
+  <div class="fiche crit">
+    <h2 style="margin:0">Rançongiciel ou attaque en cours : les premières actions</h2>
+    <p>Ces actions suivent les « bons réflexes » du guide de l'ANSSI <a href="https://messervices.cyber.gouv.fr/guides/attaques-par-rancongiciels-tous-concernes" target="_blank" rel="noopener"><em>Attaques par rançongiciels, tous concernés</em></a>, adaptés à un cabinet ou à un établissement de santé.</p>
+    <ol class="steps">
+      <li><div><strong>Couper les connexions Internet du réseau attaqué.</strong> En établissement : couper les routeurs de bordure (liens Internet). En cabinet : débrancher la box Internet. L'attaquant ne peut plus piloter son rançongiciel ni lancer une nouvelle vague.</div></li>
+      <li><div><strong>Identifier et isoler les machines touchées</strong> : débrancher le câble réseau, couper le Wi-Fi, ou isoler par VLAN en établissement. <strong>Déconnecter les sauvegardes reliées au réseau</strong> (disque USB branché, NAS) pour les protéger du chiffrement.</div></li>
+      <li><div><strong>Ne pas éteindre les machines touchées</strong> : on perdrait les données en mémoire vive (clés, processus, connexions), utiles à l'enquête.</div></li>
+      <li><div><strong>Ne pas démarrer les machines restées éteintes.</strong></div></li>
+      <li><div><strong>Conserver les preuves</strong> (journaux, images mémoire et disque), si possible par un professionnel (prestataire qualifié PRIS). Ouvrir tout de suite une <strong>main courante</strong> : heure, constats, actions menées, personnes prévenues.</div></li>
+      <li><div><strong>Alerter</strong> :<ul><li>la direction et le service ou prestataire informatique</li><li>le <strong>CERT Santé</strong> pour une structure de santé (déclaration obligatoire pour les établissements)</li><li><strong>Practilio</strong> si des comptes Practilio sont concernés</li><li>la <strong>CNIL</strong> sous 72 h si des données de patients sont touchées</li></ul>Le détail est sur la page <a href="../qui-contacter/index.html">Qui contacter</a>.</div></li>
+      <li><div><strong>Ne pas payer la rançon</strong> : rien ne garantit la restitution des données, et cela finance les criminels.</div></li>
+      <li><div><strong>Déposer plainte</strong> auprès de la police ou de la gendarmerie, <strong>dans les 72 heures</strong> si vous voulez être indemnisé par votre assurance (art. L.12-10-1 du Code des assurances). La plainte permet aussi l'ouverture d'une enquête, qui peut aboutir à la récupération de clés de déchiffrement.</div></li>
+    </ol>
+    <div class="note corr"><ul><li>Pour une structure de santé, le point d'entrée de l'alerte est le <strong>CERT Santé</strong>, qui se coordonne avec l'ANSSI/CERT-FR.</li><li>Pour une petite structure, le point d'entrée est <strong>17Cyber</strong>.</li></ul></div>
+    <p class="note"><strong>Bon à savoir :</strong> l'ANSSI a développé un logiciel de collecte d'informations, <strong>DFIR ORC</strong>, publié en open source. Il rassemble les traces techniques d'un poste Windows (journaux, registre, fichiers système) sans les analyser, pour l'enquête menée ensuite par des spécialistes. Il est notamment utilisé par le CERT Santé. <a href="https://github.com/DFIR-ORC/dfir-orc" target="_blank" rel="noopener">DFIR ORC sur GitHub</a></p>
+  </div>
+</section>
+</main>
+
+<!-- LAYOUT:FOOTER (synchronisé par docs/sync_layout.py, ne pas modifier ici) -->
+<footer class="gutter">
+  <div class="wrap">
+    <p><strong>Projet pédagogique EPITA – ECSI3-Evaluation-01.</strong> Practilio est une entreprise fictive. Ce site n'est pas un service réel et ne s'adresse à aucun professionnel de santé réel. Les coordonnées « Practilio » sont fictives.</p>
+    <p>Les organismes publics, prestataires et éditeurs cités existent ; ils sont mentionnés à titre d'orientation, sans reproduction de leurs logos ni de leurs chartes graphiques, et sans partenariat. Informations vérifiées le 23/11/2026.</p>
+  </div>
+</footer>
+<!-- /LAYOUT:FOOTER -->
+
+<script src="../shared/dialogues.js"></script>
+<script src="../shared/common.js"></script>
+<script src="attaque_ransomware.js"></script>
+</body>
+</html>
