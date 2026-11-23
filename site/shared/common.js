@@ -151,15 +151,10 @@
     nav.innerHTML=(prev?'<a href="../'+prev[0]+'/index.html">← Leçon '+i+' : '+prev[1]+'</a>':'<span></span>')+(next?'<a class="next" href="../'+next[0]+'/index.html">Leçon '+(i+2)+' : '+next[1]+' →</a>':'<a class="next" href="../accueil/index.html">Revenir à l\'accueil</a>');
     sec.appendChild(nav);
   });
-  var tb=document.getElementById("tuto-toggle");
-  function setTuto(on){
-    document.documentElement.classList.toggle("tuto-off",!on);
-    tb.setAttribute("aria-pressed",on?"true":"false");
-    tb.textContent=on?"Mode tutoriel : activé":"Mode tutoriel : désactivé";
-    store("pcr-tuto",on);
-  }
-  var saved=store("pcr-tuto"); setTuto(saved===null?true:!!saved);
-  tb.addEventListener("click",function(){setTuto(tb.getAttribute("aria-pressed")!=="true");});
+  /* Mode tutoriel toujours actif : le bouton « Mode tutoriel » a été retiré (demande de l'utilisateur, 23/11/2026).
+     On efface un éventuel choix « désactivé » mémorisé avant le retrait. */
+  document.documentElement.classList.remove("tuto-off");
+  try{ localStorage.removeItem("pcr-tuto"); }catch(e){}
 
   /* ---------- Pages découpées en étapes (boutons Précédent / Suivant) ----------
      Toute page dont la section contient des blocs <div class="step" data-title="…"> n'en affiche qu'un à la fois.
