@@ -44,7 +44,7 @@ site/
 
 ## Contraintes du sujet à ne jamais casser
 
-- **Bandeau visible sur chaque page** : « projet pédagogique EPITA, Practilio est une entreprise fictive ». Coordonnées Practilio fictives : `securite@practilio.example` ; téléphone `08 36 65 65 65` (choisi par l'utilisateur), harmonisé sur `qui-contacter/` et `practilio/` (étape « Signaler un incident à Practilio »).
+- **Bandeau visible sur chaque page** : « projet pédagogique EPITA, Practilio est une entreprise fictive ». Coordonnées Practilio fictives : `securite@practilio.example` ; téléphone `01 00 00 00 00` (choisi par l'utilisateur), harmonisé sur `qui-contacter/` et `practilio/` (étape « Signaler un incident à Practilio »).
 - Page « Qui contacter » : style voulu par l'utilisateur = verbes d'action simples (« Prévenir… », « Contacter… », « Effectuer une notification… »), sans détails techniques ; pas de « niveau », pas de mention « (fictif) ».
 - **Aucun logo ni charte graphique d'organisme réel** (ANSSI, CNIL…) : citer + lien uniquement.
 - **Chaque acteur, prestataire, éditeur, texte cité doit exister et être vérifié** ; une référence inventée ou un lien mort est plus sanctionné qu'une absence. Vérifier par WebSearch + `curl` (un 403/429 = protection anti-bot, pas un lien mort). Ne pas attribuer de qualification ANSSI (PASSI/PRIS/PDIS) à un prestataire nommé sans vérification sur la liste officielle.

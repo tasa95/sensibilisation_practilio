@@ -3,7 +3,7 @@
   var store=window.PCR.store;
   /* ---------- Qui contacter ---------- */
   var C={
-    practilio:'Prévenir <strong>l\'entreprise Practilio</strong> à l\'adresse <span class="mono">securite@practilio.example</span> ou au numéro d\'urgence <span class="mono">08 36 65 65 65</span>.',
+    practilio:'Prévenir <strong>l\'entreprise Practilio</strong> à l\'adresse <span class="mono">securite@practilio.example</span> ou au numéro d\'urgence <span class="mono">01 00 00 00 00</span>.',
     cyberm:'Contacter <strong>17Cyber</strong> ou <strong>Cybermalveillance.gouv.fr</strong> : <a href="https://www.17cyber.gouv.fr" target="_blank" rel="noopener">17cyber.gouv.fr</a> · <a href="https://www.cybermalveillance.gouv.fr" target="_blank" rel="noopener">cybermalveillance.gouv.fr</a>.',
     presta:'Prévenir <strong>votre référent informatique ou votre prestataire de sécurité</strong> : prestataire de détection des incidents de sécurité (PDIS) ou prestataire de réponse aux incidents de sécurité (PRIS). <a href="https://cyber.gouv.fr/offre-de-service/solutions-certifiees-et-qualifiees/services-de-securite-evalue/solutions-en-cours-de-qualification/pdis/" target="_blank" rel="noopener">Voir les prestataires PDIS</a>.' + ' <a href="https://cyber.gouv.fr/offre-de-service/solutions-certifiees-et-qualifiees/services-de-securite-evalue/solutions-en-cours-de-qualification/pris/" target="_blank" rel="noopener">Voir les prestataires PRIS</a>.',
     cert:'Prévenir le <strong>CERT Santé</strong> : <a href="https://cyberveille.esante.gouv.fr/" target="_blank" rel="noopener">cyberveille.esante.gouv.fr</a>, astreinte <span class="mono">09 72 43 91 25</span> pour les incidents majeurs.',
