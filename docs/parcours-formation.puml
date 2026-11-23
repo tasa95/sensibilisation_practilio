@@ -1,0 +1,59 @@
+@startuml parcours-formation
+' Parcours de formation (chemin 2) de Practilio Cyber Repères : de l'arrivée sur le site au contrôle des acquis et à son suivi.
+' Mise à jour : 23/11/2026. Rendu : plantuml -tpng docs/parcours-formation.puml
+
+skinparam defaultFontName "DejaVu Sans"
+skinparam shadowing false
+skinparam ArrowColor #4f6670
+skinparam ActivityBorderColor #4f6670
+skinparam ActivityBackgroundColor #ffffff
+skinparam ActivityDiamondBackgroundColor #e1f0f2
+skinparam PartitionBorderColor #4f6670
+
+title Parcours de formation : Practilio Cyber Repères
+
+start
+:Accueil\n« Avant de commencer » : Practilio fictive, projet EPITA;
+if (Incident en cours ?) then (oui)
+  :Chemin 1 · Urgence\nQui contacter / Premières actions; <<#fbe7e7>>
+  stop
+else (non)
+endif
+:Chemin 2 · Sensibilisation complète\n14 leçons guidées par Professeur Cyber et Camille; <<#e5f4ea>>
+
+partition "Comprendre (01-05)" {
+  :01 Pourquoi Practilio vous sensibilise\nresponsabilité partagée;
+  :02 Notions clés\nactif, risque, chemins et sources d'attaque;
+  :03 Les attaques\nrançongiciel, hameçonnage, comptes, accès;
+  :04 Contexte de votre établissement\ncabinet, centre de santé, clinique (IT + OT);
+  :05 IA et données patients;
+}
+partition "Se protéger (06)" {
+  :06 Réduire sa surface d'attaque\nce que fait Practilio, ce que vous faites,\nGuide d'hygiène informatique ANSSI;
+}
+partition "S'orienter (07-10)" {
+  :07 Réglementation (questionnaire)\n08 Attaque par rançongiciel\n09 Assurance et transfert du risque\n10 Acteurs publics (grille de gravité);
+}
+partition "Se former (11) : contrôle des acquis" {
+  :11 Sensibilisation & quiz;
+  split
+    :Secrétariat & accueil\nfiches, fiche réflexe, scénario\nquiz corrigé (7 questions);
+  split again
+    :Administrateurs & IT\nfiches, 3 scénarios\nquiz corrigé (6 questions);
+  split again
+    :Praticiens & direction\n5 décisions, scénario\nquiz corrigé (6 questions);
+  end split
+  if (Score ≥ 80 % ?) then (oui)
+    :Objectif atteint;
+  else (non)
+    :Relire les fiches\net repasser le quiz;
+  endif
+}
+partition "Suivi par Practilio" {
+  :Indicateurs suivis dans le temps\ntaux de réussite aux quiz, comptes avec MFA,\nclics et signalements en phishing simulé,\ndélai de signalement, auto-évaluation;
+}
+partition "Ressources (12-14)" {
+  :12 Prestataires · 13 Outils (16 fiches) · 14 Sources et glossaire;
+}
+stop
+@enduml

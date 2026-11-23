@@ -6,3 +6,6 @@ ECSI3-Sujet_Evaluation-01.pdf
 *.tmp
 .DS_Store
 __pycache__/
+
+# Livrables nominatifs et images intermédiaires (rapport, présentation, captures)
+rendu/

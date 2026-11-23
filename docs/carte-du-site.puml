@@ -1,6 +1,7 @@
 @startuml carte-du-site
 ' Carte du site Practilio Cyber Repères (projet pédagogique EPITA, Practilio est fictive).
 ' Mise à jour : 23/11/2026. Rendu : plantuml -tpng docs/carte-du-site.puml  (produit docs/carte-du-site.png)
+' Site public : https://tasa95.github.io/sensibilisation_practilio/
 ' Chaque rectangle = un dossier de site/ (index.html + <dossier>.js). Les numéros sont ceux des leçons du chemin 2.
 
 skinparam defaultFontName "DejaVu Sans"
@@ -17,7 +18,8 @@ skinparam package {
 }
 top to bottom direction
 
-rectangle "**Accueil** (accueil/)\nEncadré « Avant de commencer » :\nPractilio est fictive, projet pédagogique EPITA\n+ choix entre deux chemins" as accueil #fff3c4
+rectangle "**Accueil** (accueil/)\nEncadré « Avant de commencer » :\nPractilio est fictive, projet pédagogique EPITA\n+ deux chemins + 10 bonnes pratiques" as accueil #fff3c4
+rectangle "**10 bonnes pratiques à retenir**\n(bonnes-pratiques/, hors leçons)\nchaque pratique renvoie à sa page" as bp #e1f0f2
 
 package "Chemin 1 · Urgence" #fbe7e7 {
   rectangle "**Qui contacter**\n(qui-contacter/)\nStructure × situation\n→ « Prévenir… » dans l'ordre" as qui #ffffff
@@ -25,41 +27,52 @@ package "Chemin 1 · Urgence" #fbe7e7 {
 }
 
 package "Chemin 2 · Sensibilisation complète (14 leçons, BD Professeur Cyber / Camille)" #e5f4ea {
-  rectangle "**01 · Pourquoi Practilio**\n**vous sensibilise**\n(pourquoi/)\nPérimètre Practilio (HDS, vulnérabilités)\n/ périmètre de la structure" as l01
-  rectangle "**02 · Notions clés**\n(notions/)" as l02
-  rectangle "**03 · Les attaques**\n(menaces/)\nRançongiciel, hameçonnage,\ncompromission de comptes,\nrevue des accès, autres attaques" as l03
-  rectangle "**04 · Contexte probable**\n**de votre établissement**\n(contextes/)\nCabinet, centre de santé,\nclinique IT + OT" as l04
-  rectangle "**06 · Réduire sa surface**\n**d'attaque**\n(practilio/)\nCe que fait Practilio,\nGuide d'hygiène ANSSI (42 mesures)" as l05
-  rectangle "**11 · Sensibilisation & quiz**\n(sensibilisation/)\n3 profils, scénarios, quiz corrigés" as l06
-  rectangle "**05 · IA et données patients**\n(ia/)" as l07
-  rectangle "**07 · Réglementation**\n(reglementation/)\nQuestionnaire droit commun / santé" as l08
-  rectangle "**09 · Assurance & risque**\n(assurance/)" as l10
-  rectangle "**10 · Acteurs publics**\n(acteurs/)" as l11
-  rectangle "**12 · Prestataires**\n(prestataires/)" as l12
-  rectangle "**13 · Outils**\n(outils/)" as l13
-  rectangle "**14 · Sources & glossaire**\n(sources/)" as l14
+  package "Comprendre" {
+    rectangle "**01 · Pourquoi Practilio**\n**vous sensibilise**\nPérimètre Practilio / structure" as l01
+    rectangle "**02 · Notions clés**\nActif, chemins d'attaque,\nsources d'attaque, risque" as l02
+    rectangle "**03 · Les attaques**\nUne page par attaque" as l03
+    rectangle "**04 · Contexte de**\n**votre établissement**\nCabinet, centre, clinique (IT + OT)" as l04
+    rectangle "**05 · IA et données patients**" as l05
+  }
+  package "Se protéger" {
+    rectangle "**06 · Réduire sa surface**\n**d'attaque**\nCe que fait Practilio,\nGuide d'hygiène ANSSI (42 mesures)" as l06
+  }
+  package "S'orienter" {
+    rectangle "**07 · Réglementation**\nQuestionnaire droit commun / santé" as l07
+    rectangle "**09 · Assurance & risque**" as l09
+    rectangle "**10 · Acteurs publics**\nGrille niveau / impact /\nurgence / interlocuteurs" as l10
+  }
+  package "Se former" {
+    rectangle "**11 · Sensibilisation & quiz**\n3 profils, scénarios,\nquiz corrigés, indicateurs" as l11
+  }
+  package "Ressources" {
+    rectangle "**12 · Prestataires**\nPRIS, PDIS, PASSI, PACS" as l12
+    rectangle "**13 · Outils**\n+ 16 fiches outils-<type>/" as l13
+    rectangle "**14 · Sources & glossaire**" as l14
+  }
 }
 
 accueil --> qui : « Qui contacter »
-accueil --> ransom : « Premières actions\nen cas d'attaque de ransomware »
+accueil --> ransom : « Premières actions »
 accueil --> l01 : « Commencer le parcours »
-
-qui ..> l10 : plainte 72 h\n(assurance)
-
+accueil --> bp : « 10 bonnes pratiques »
+bp ..> l06
+bp ..> qui
 
 l01 --> l02
 l02 --> l03
 l03 --> l04
-l04 --> l07
-l07 --> l05
-l05 --> l08
-l08 --> ransom
-ransom --> l10
+l04 --> l05
+l05 --> l06
+l06 --> l07
+l07 --> ransom : leçon 08
+ransom --> l09 : leçon 09
+l09 --> l10
 l10 --> l11
-l11 --> l06
-l06 --> l12
+l11 --> l12
 l12 --> l13
 l13 --> l14
+l10 ..> qui : détail par situation
 
 note bottom of accueil
   Sur toutes les pages :
