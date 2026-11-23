@@ -103,9 +103,6 @@
     </div>
     <article class="fiche ok"><h3>Fiche réflexe : « J'ai cliqué sur un lien douteux »</h3>
       <ol><li>Je n'ai pas honte : je préviens immédiatement le titulaire ou le référent.</li><li>Si j'ai saisi un mot de passe : je le change tout de suite depuis un autre poste.</li><li>Je signale à Practilio si c'était mon compte Practilio.</li><li>Je garde le mail (sans le transférer) pour l'analyse.</li></ol></article>
-    <article class="fiche warn"><h3>Scénario : le tableur des mots de passe</h3>
-      <p>Au cabinet, la secrétaire a créé un tableur en ligne « Codes cabinet » partagé par lien, avec les identifiants Practilio, la box et la messagerie de chacun. C'est pratique pour les remplaçants. Le lien circule dans un mail transféré à un ancien remplaçant.</p>
-      <p><strong>Que se passe-t-il ?</strong> Toute personne ayant le lien a accès à tous les comptes. Aucun moyen de savoir qui s'en est servi. <strong>Bonne réponse :</strong> un compte nominatif par personne, un gestionnaire de mots de passe avec partage contrôlé, MFA, et retrait des accès au départ du remplaçant.</p></article>
   </div>
 
   <!-- IT -->
@@ -114,20 +111,11 @@
       <div class="card"><h3>Administrer les comptes Practilio</h3><p>L'administrateur technique de l'établissement crée et ferme les comptes, sans accès aux données médicales. Ses règles : un compte nominatif par personne, le bon profil (praticien, secrétaire), MFA imposée, fermeture le jour du départ, revue des comptes actifs chaque trimestre. Son propre compte est le plus sensible : MFA résistante à l'hameçonnage obligatoire.</p></div>
       <div class="card"><h3>Comptes et MFA</h3><p>MFA obligatoire sur les accès distants, la messagerie et les comptes d'administration. Privilégiez les facteurs résistants à l'hameçonnage (FIDO2, carte CPS / e-CPS via Pro Santé Connect) plutôt que le SMS. Comptes d'administration séparés des comptes de travail.</p></div>
       <div class="card"><h3>Mots de passe</h3><p>Politique alignée sur les recommandations ANSSI et CNIL : longueur avant complexité, pas de renouvellement forcé sans motif, blocage des mots de passe déjà fuités, gestionnaire de mots de passe d'entreprise.</p></div>
-      <div class="card"><h3>Supports amovibles</h3><p>Blocage par défaut de l'exécution automatique, contrôle des périphériques via l'EDR ou le MDM, poste ou station de décontamination dédiés aux supports externes.</p><div data-reco="edr"></div></div>
+      <div class="card"><h3>Supports amovibles</h3><p>Blocage par défaut de l'exécution automatique, contrôle des périphériques via l'EDR ou le MDM, poste ou station de décontamination dédiés aux supports externes.</p></div>
       <div class="card"><h3>Sauvegardes</h3><p>3-2-1 avec une copie hors ligne ou immuable, chiffrée. <strong>Testez une restauration</strong> au moins une fois par trimestre. Une sauvegarde jamais restaurée n'est pas une sauvegarde.</p></div>
       <div class="card"><h3>Mises à jour et exposition</h3><p>Correctifs critiques en priorité sur tout ce qui est exposé sur internet (VPN, pare-feu, messagerie). Suivez les alertes du CERT-FR et du CERT Santé. Inventaire des services exposés.</p></div>
       <div class="card"><h3>OT et accès distants</h3><p>Inventoriez les équipements biomédicaux et la GTB, isolez-les dans des segments réseau dédiés, et <strong>tenez un registre des accès de maintenance</strong> : qui, vers quoi, jusqu'à quand.</p></div>
     </div>
-    <article class="fiche warn"><h3>Scénario : l'interconnexion oubliée</h3>
-      <p>À la clinique, un tunnel VPN a été ouvert il y a trois ans pour que le fabricant maintienne à distance la supervision de la <strong>centrale de fluides médicaux</strong>. Le contrat a changé, le technicien est parti, le tunnel est resté ouvert avec un mot de passe générique. Personne ne le voit dans l'inventaire de la DSI.</p>
-      <p><strong>Risque :</strong> un accès direct à un équipement dont dépend l'oxygène des patients. <strong>Actions :</strong> inventaire des flux entrants, fermeture par défaut, ouverture à la demande et tracée, MFA, segmentation OT, revue annuelle des accès tiers.</p></article>
-    <article class="fiche warn"><h3>Scénario : le module installé hors store</h3>
-      <p>Au centre de santé, un associé a installé une application de facturation téléchargée depuis un site tiers (« version complète gratuite ») sur le poste partagé, avec des droits administrateur. L'application ouvre une connexion vers un serveur inconnu.</p>
-      <p><strong>Actions :</strong> retrait des droits administrateur aux utilisateurs, liste des logiciels autorisés, installation uniquement via le prestataire ou des sources officielles, EDR pour détecter les connexions vers des serveurs de commande (C2).</p><div data-reco="edr"></div></article>
-    <article class="fiche warn"><h3>Scénario : la fausse application de téléconsultation</h3>
-      <p>Un praticien reçoit un SMS : « Nouvelle version obligatoire de votre application de téléconsultation, installez-la ici ». Le lien télécharge une application Android hors du Google Play, qui demande l'accès aux SMS et à l'accessibilité. Elle intercepte ensuite les codes MFA reçus par SMS.</p>
-      <p><strong>Actions :</strong> installation uniquement depuis les magasins officiels (règle imposée par le MDM sur les appareils professionnels), MFA par application ou clé plutôt que par SMS, signalement à Practilio qui prévient les autres utilisateurs.</p></article>
   </div>
 
   <!-- DIRIGEANT -->
@@ -140,9 +128,6 @@
       <div class="card"><h3>Budget et aides</h3><p>Pour les établissements, le programme public <a href="https://esante.gouv.fr/strategie-nationale/cybersecurite" target="_blank" rel="noopener">CaRE</a> finance la montée en maturité cyber. Pour les petites structures, Cybermalveillance.gouv.fr oriente vers des prestataires labellisés.</p></div>
       <div class="card"><h3>Mesurer</h3><p>Suivez quatre chiffres : % de comptes avec MFA, date du dernier test de restauration, résultats du quiz de l'équipe, nombre de signalements reçus (un nombre en hausse est bon signe).</p></div>
     </div>
-    <article class="fiche warn"><h3>Scénario : le site monté par la communication</h3>
-      <p>La direction de la clinique découvre qu'un service a créé, avec un prestataire web, un site de prise de rendez-vous et un formulaire « questionnaire pré-opératoire » qui recueille des données de santé. Hébergement non HDS, pas de mises à jour, mot de passe d'administration partagé, la DSI n'a jamais été consultée.</p>
-      <p><strong>Enjeux :</strong> données de santé hors environnement HDS, risque de fuite et de défiguration, non-conformité RGPD. <strong>Décision :</strong> recenser les services montés hors de la DSI, imposer une validation sécurité avant toute mise en ligne, rapatrier les données de santé vers des outils conformes.</p></article>
   </div>
 
   <h2>Vérifiez vos acquis : quiz du profil sélectionné</h2>
